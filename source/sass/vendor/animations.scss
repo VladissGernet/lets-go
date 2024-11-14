@@ -1,0 +1,26 @@
+$fadeScaleAnimations: (
+  'fadeScaleParticipateImage': 'participate-image',
+  'fadeScalePrizeDrawItemsWednesday': 'prize-draw-item',
+  'fadeScalePrizeDrawItemsSeptember': 'prize-draw-item',
+);
+
+$fadeInAnimations: (
+  'fadeInParticipateText': 'participate-text',
+  'fadeInPrizeDrawTitleWednesday': 'prize-draw-title',
+  'fadeInPrizeDrawTitleSeptember': 'prize-draw-title',
+  'fadeInWinners': 'winners-title',
+);
+
+@each $animationName, $dataAttribute in $fadeScaleAnimations {
+  [data-animate-#{$dataAttribute}="#{$animationName}"] [data-animate-#{$dataAttribute}] {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+@each $animationName, $dataAttribute in $fadeInAnimations {
+  [data-animate-#{$dataAttribute}="#{$animationName}"] [data-animate-#{$dataAttribute}] {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+}

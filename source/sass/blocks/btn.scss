@@ -1,0 +1,118 @@
+.btn {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 110%;
+  letter-spacing: -0.02em;
+  color: $dodger-blue;
+  display: block;
+  user-select: none;
+
+  padding: 15px 30px;
+
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  overflow: hidden;
+  transition: all $trans-default;
+
+  position: relative;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  &::before {
+    background-color: $hawkes-blue;
+  }
+
+  &::after {
+    transform: translateX(-101%);
+    background-image: linear-gradient(270deg, #363de8 0%, #359ff1 100%);
+    border-radius: 13px 0 0 13px;
+    transition: all $trans-default;
+  }
+
+  &--red {
+    background-color: $nero;
+  }
+
+  &:disabled {
+    background-color: $snow;
+    color: $heather;
+
+    pointer-events: none;
+    cursor: not-allowed;
+
+    @include vp-1023 {
+      background-color: $azure;
+    }
+  }
+
+  @include hover-focus {
+    opacity: 0.8;
+    color: $color-default-white;
+
+    &::after {
+      transform: translateX(-8%);
+    }
+
+    &:active {
+      opacity: 1;
+
+      &::after {
+        border-radius: 13px;
+        transform: translateX(0);
+      }
+    }
+  }
+
+  &--secondary {
+    color: $cornflower-blue;
+    background-color: $color-default-white;
+
+    &::before {
+      transition: all $trans-default;
+      background-image: linear-gradient(155deg, $pattens-blue 0%, $color-default-white 100%);
+      opacity: 0;
+    }
+
+    &::after {
+      display: none;
+    }
+
+    @include hover-focus {
+      color: $cornflower-blue;
+
+      &::before {
+        opacity: 1;
+      }
+    }
+
+    @include vp-1023 {
+      background-color: $alice-blue-3;
+      color: $cornflower-blue;
+      border-radius: 12px;
+      outline: 1px solid transparent;
+
+      @include hover-focus {
+        &:active {
+          &::before {
+            opacity: 0;
+          }
+
+          background-color: transparent;
+          outline: 1px solid $cornflower-blue;
+          outline-offset: -1px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+-
+  const menuItems = {
+    "о сервисе": "#",
+    "направления": "#",
+    "попутчики": "#"
+  }
+
+mixin menu()
+  nav.menu
+    //- Логотип
+    if(currentUrl === "index.html")
+      //- lighthouse снимает 10 баллов SEO за <a> без href, поэтому использую <span>
+      span.menu__logo
+        img(src="img/svg/logo-light.svg", width="200", height="50", alt="Логотип проекта Пакет X5.")
+    else
+      a.menu__logo(href="index.html", aria-label="Переход на главную")
+        img(src="img/svg/logo-light.svg", width="200", height="50", alt="Логотип проекта Пакет X5.")
+
+    //- Меню навигации
+    ul.menu__list
+      each menuLink, menuItem in menuItems
+        li.menu__item
+          +link({text: menuItem, href: menuLink}).menu__link
+
+    //- Контакты
+      .contacts
+

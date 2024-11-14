@@ -31,15 +31,15 @@
     clip: rect(0 0 0 0);
 
     &:checked + .custom-toggle__icon {
-      border: 1.5px solid $dodger-blue;
+      border: 1.5px solid $jordy-blue;
 
       &::before {
-        background-color: $dodger-blue;
+        background-color: $jordy-blue;
       }
     }
 
     &.focus-visible + span {
-      outline: 5px solid rgb($dodger-blue, 0.8);
+      outline: 5px solid rgb($jordy-blue, 0.8);
     }
 
     @include hover-focus {
@@ -54,7 +54,7 @@
     font-weight: 500;
     line-height: 135%;
     letter-spacing: -0.02em;
-    color: $dodger-blue;
+    color: $jordy-blue;
     user-select: none;
     position: relative;
 
@@ -81,7 +81,7 @@
       width: 28px;
       height: 28px;
 
-      border: 1.5px solid $dodger-blue;
+      border: 1.5px solid $jordy-blue;
 
       transition: all 0.3s ease;
 
@@ -94,7 +94,7 @@
         width: 20px;
         height: 20px;
 
-        background-color: rgba($dodger-blue, 0);
+        background-color: rgba($jordy-blue, 0);
 
         transform: translate(-50%, -50%);
 
@@ -112,7 +112,7 @@
       width: 20px;
       height: 20px;
 
-      border: 1px solid $dodger-blue;
+      border: 1px solid $jordy-blue;
       border-radius: 50%;
 
       transition: all 0.3s ease;

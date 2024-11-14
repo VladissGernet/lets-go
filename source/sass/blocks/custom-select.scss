@@ -54,7 +54,7 @@
     height: 90px;
     padding: 30px 40px 30px 30px;
 
-    background-color: $cornflower-blue;
+    background-color: $jordy-blue;
     border: none;
     border-radius: 20px;
     outline: none;
@@ -63,23 +63,23 @@
     transition: all $trans-default;
 
     &:hover {
-      background-color: $summer-sky;
+      background-color: $picton-blue;
     }
 
     &:focus-visible {
-      background-color: $summer-sky;
+      background-color: $picton-blue;
     }
 
     @include hover-focus {
-      background-color: $summer-sky;
+      background-color: $picton-blue;
 
       &:active {
-        background-color: $navy-blue;
+        background-color: $pale-cornflower-blue;
       }
     }
 
     &:active {
-      background-color: $navy-blue;
+      background-color: $pale-cornflower-blue;
     }
 
     &:disabled {
@@ -109,7 +109,7 @@
 
     list-style: none;
 
-    background-color: $alice-blue-3;
+    background-color: $pattens-blue;
     transform: translate(-50%, 100%);
     visibility: hidden;
     opacity: 0;
@@ -141,7 +141,7 @@
   }
 
   &__item {
-    color: $dodger-blue;
+    color: $jordy-blue;
     padding: 10px 20px;
     border-radius: 20px;
 
@@ -152,13 +152,13 @@
 
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
-        background-color: $dodger-blue;
+        background-color: $jordy-blue;
         color: $color-default-white;
       }
     }
 
     &.focus-visible:focus {
-      background-color: $dodger-blue;
+      background-color: $jordy-blue;
       color: $color-default-white;
     }
   }

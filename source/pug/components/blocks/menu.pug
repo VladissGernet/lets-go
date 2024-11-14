@@ -5,6 +5,22 @@
     "попутчики": "#"
   }
 
+-
+  const menuContacts = [
+    {
+      icon: "phone",
+      iconWidth: 18,
+      iconHeight: 18,
+      href: "tel:88005558628",
+    },
+    {
+      icon: "mail",
+      iconWidth: 16,
+      iconHeight: 14,
+      href: "mailto:mail@htmlacademy.ru",
+    }
+  ]
+
 mixin menu()
   nav.menu
     //- Логотип
@@ -21,7 +37,5 @@ mixin menu()
       each menuLink, menuItem in menuItems
         li.menu__item
           +link({text: menuItem, href: menuLink}).menu__link
-
-    //- Контакты
-      .contacts
-
+    +contacts(menuContacts,)
+    //- Остановился на создании универсальных контактов

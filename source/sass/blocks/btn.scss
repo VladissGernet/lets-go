@@ -3,7 +3,7 @@
   font-weight: 700;
   line-height: 110%;
   letter-spacing: -0.02em;
-  color: $dodger-blue;
+  color: $jordy-blue;
   display: block;
   user-select: none;
 
@@ -30,7 +30,7 @@
   }
 
   &::before {
-    background-color: $hawkes-blue;
+    background-color: $picton-blue;
   }
 
   &::after {
@@ -41,19 +41,15 @@
   }
 
   &--red {
-    background-color: $nero;
+    background-color: $pattens-blue;
   }
 
   &:disabled {
-    background-color: $snow;
-    color: $heather;
+    background-color: $pale-cornflower-blue;
+    color: $pattens-blue;
 
     pointer-events: none;
     cursor: not-allowed;
-
-    @include vp-1023 {
-      background-color: $azure;
-    }
   }
 
   @include hover-focus {
@@ -70,48 +66,6 @@
       &::after {
         border-radius: 13px;
         transform: translateX(0);
-      }
-    }
-  }
-
-  &--secondary {
-    color: $cornflower-blue;
-    background-color: $color-default-white;
-
-    &::before {
-      transition: all $trans-default;
-      background-image: linear-gradient(155deg, $pattens-blue 0%, $color-default-white 100%);
-      opacity: 0;
-    }
-
-    &::after {
-      display: none;
-    }
-
-    @include hover-focus {
-      color: $cornflower-blue;
-
-      &::before {
-        opacity: 1;
-      }
-    }
-
-    @include vp-1023 {
-      background-color: $alice-blue-3;
-      color: $cornflower-blue;
-      border-radius: 12px;
-      outline: 1px solid transparent;
-
-      @include hover-focus {
-        &:active {
-          &::before {
-            opacity: 0;
-          }
-
-          background-color: transparent;
-          outline: 1px solid $cornflower-blue;
-          outline-offset: -1px;
-        }
       }
     }
   }

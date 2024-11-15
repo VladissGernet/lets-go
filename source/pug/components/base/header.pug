@@ -40,7 +40,7 @@ mixin header(headerMods, currentUrl)
           each menuLink, menuItem in menuItems
             li.header__item
               +link({text: menuItem, href: menuLink}).header__link
-        +contacts(menuContacts)
+        +contacts(menuContacts, "header__contacts")
       button(class="header__toggle", type="button", data-burger)
         +icon("burger", 25, 12).header__icon.header__icon--burger
         +icon("cross", 19, 20).header__icon.header__icon--cross

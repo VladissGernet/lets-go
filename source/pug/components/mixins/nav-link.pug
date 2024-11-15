@@ -2,6 +2,7 @@ mixin link(options = {})
   - const href = options.href || "#";
   - const text = options.text || "";
 
-  a.link(href=href)&attributes(attributes)= text
+  a.nav-link(href=href)&attributes(attributes)
+    span(data-hover!=text)!= text
 
 //- +link({text: linkName, href: linkHref}).link--secondary.footer__link

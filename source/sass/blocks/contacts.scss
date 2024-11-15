@@ -1,6 +1,22 @@
 .contacts {
   font-size: 0;
 
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  width: 100%;
+
+  &__link,
+  &__link svg {
+    transition: all $trans-default;
+  }
+
   &__link {
     display: flex;
     justify-content: center;
@@ -8,6 +24,16 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: tomato;
+    background-color: $jordy-blue;
+
+    @include hover-focus {
+      background-color: $curious-blue;
+
+      &:active {
+        svg {
+          opacity: 0.3;
+        }
+      }
+    }
   }
 }

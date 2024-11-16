@@ -21,6 +21,14 @@
     },
   ]
 
+mixin logoContent()
+  span.header__logo-icon.header__logo-icon--desktop
+    img(src="img/svg/logo-light.svg", width="200", height="50", alt="Логотип проекта Пакет X5.")
+  span.header__logo-icon.header__logo-icon--tablet
+    +icon("logo-tablet", 166, 42)(aria-label="Логотип проекта Пакет X5.")
+  span.header__logo-icon.header__logo-icon--mobile
+    +icon("logo-mobile", 96, 15)(aria-label="Логотип проекта Пакет X5.")
+
 mixin header(headerMods, currentUrl)
   header.header(class=headerMods, data-header)
     .container
@@ -28,18 +36,16 @@ mixin header(headerMods, currentUrl)
       if(currentUrl === "index.html")
         //- lighthouse снимает 10 баллов SEO за <a> без href, поэтому использую <span>
         span.header__logo
-          img(src="img/svg/logo-light.svg", width="200", height="50", alt="Логотип проекта Пакет X5.")
-          +icon("logo-mobile", 96, 15)
+          +logoContent()
       else
         a.header__logo(href="index.html", aria-label="Переход на главную")
-          img(src="img/svg/logo-light.svg", width="200", height="50", alt="Логотип проекта Пакет X5.")
-          +icon("logo-mobile", 96, 15)
+          +logoContent()
       nav.header__nav
         //- Меню навигации
         ul.header__list
           each menuLink, menuItem in menuItems
             li.header__item
-              +link({text: menuItem, href: menuLink}).header__link
+              +navLink({text: menuItem, href: menuLink}).header__link
         +contacts(menuContacts, "header__contacts")
       button(class="header__toggle", type="button", data-burger)
         +icon("burger", 25, 12).header__icon.header__icon--burger

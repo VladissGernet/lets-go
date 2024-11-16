@@ -108,7 +108,6 @@
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    row-gap: 20px;
 
     position: relative;
     z-index: 1;
@@ -150,7 +149,7 @@
     box-shadow: -4px 0 10px 0 rgba(0, 0, 0, 0.25);
     display: grid;
     justify-content: space-between;
-    grid-template-columns: 220px 30px;
+    grid-template-columns: auto 30px;
     opacity: 0;
 
     animation-name: fadeInUp;
@@ -218,25 +217,25 @@
 
     &--1 {
       background-color: $picton-blue;
-      width: 345px;
+      width: calc(100% / 3.82);
       animation-delay: 0s;
     }
 
     &--2 {
       background-color: $jordy-blue;
-      width: 375px;
+      width: calc(100% / 3.52);
       animation-delay: 0.5s;
     }
 
     &--3 {
       background-color: $pale-cornflower-blue;
-      width: 375px;
+      width: calc(100% / 3.52);
       animation-delay: 1s;
     }
 
     &--4 {
       background-color: $pattens-blue;
-      width: 315px;
+      width: calc(100% / 4.19);
       animation-delay: 1.5s;
     }
 

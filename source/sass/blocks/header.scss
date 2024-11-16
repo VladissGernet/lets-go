@@ -6,8 +6,16 @@
     padding-top: 45px;
   }
 
+  @include vp-767 {
+    padding-top: 25px;
+  }
+
   .container {
     display: flex;
+
+    @include vp-767 {
+      padding-right: 16px;
+    }
   }
 
   &__logo {
@@ -51,6 +59,7 @@
 
     @include vp-767 {
       margin-right: auto;
+      margin-top: 10px;
 
       .header__logo-icon--tablet {
         display: none;

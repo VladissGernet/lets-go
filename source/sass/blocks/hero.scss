@@ -5,6 +5,7 @@
   min-height: 642px;
   border-radius: 0 0 58px 58px;
   padding-top: 95px;
+  overflow: hidden;
 
   @include vp-1023 {
     padding-top: 67px;
@@ -20,22 +21,24 @@
       bottom: 0;
       left: 0;
       background-color: $midnight-express-4;
-      height: 200px;
+      height: 201px;
     }
   }
 
   // Декоративный глобус
-  & > img {
+  &__background {
     width: 1440px;
     height: 750px;
     position: absolute;
     bottom: 0;
     z-index: 0;
-    object-fit: cover;
 
     @include vp-1023 {
       height: 906px;
-      object-position: -328px 78px;
+
+      img {
+        object-position: -176px -200px;
+      }
     }
   }
 
@@ -60,19 +63,19 @@
     }
 
     // Фикс отклонения в макете.
-    span
-      {
-        font-size: 70px;
-        line-height: 62px;
-        margin-left: -4px;
+    span {
+      font-size: 70px;
+      line-height: 62px;
+      margin-left: -4px;
 
-        @include vp-1023 {
-          margin-left: -5px;
-          font-size: 60px;
-        }
+      @include vp-1023 {
+        margin-left: -5px;
+        font-size: 60px;
       }
+    }
   }
 
+  //  Декоративный путешественник
   &__picture {
     position: absolute;
     right: 275px;
@@ -80,10 +83,21 @@
     width: 431px;
     height: 640px;
 
+    img {
+      width: 431px;
+      height: 640px;
+    }
+
     @include vp-1023 {
       width: 437px;
       height: 530px;
-      right: 41px;
+      right: 46px;
+      bottom: 280px;
+
+      img {
+        width: 437px;
+        height: 530px;
+      }
     }
   }
 
@@ -118,6 +132,7 @@
       opacity: 0; /* Начальное состояние */
       transform: translateY(40px); /* Сдвиг вниз */
     }
+
     to {
       opacity: 1; /* Конечное состояние - видимый */
       transform: translateY(0); /* Возвращаем на место */
@@ -132,7 +147,7 @@
     width: 345px;
     border-radius: 20px;
     background-color: $color-default-white;
-    box-shadow: -4px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: -4px 0 10px 0 rgba(0, 0, 0, 0.25);
     display: grid;
     justify-content: space-between;
     grid-template-columns: 220px 30px;
@@ -144,18 +159,19 @@
 
     @include vp-1023 {
       margin-right: unset;
+      padding: 30px 62px 22px 33px;
       box-shadow: none;
       border-radius: unset;
       display: block;
 
       // Верхний правый угол
       &:first-child + & {
-        border-top-left-radius: 30px;
+        border-top-left-radius: 20px;
       }
 
       // Нижний правый угол
       &:last-child {
-        border-bottom-left-radius: 30px;
+        border-bottom-left-radius: 20px;
       }
 
       // Левая колонка
@@ -172,6 +188,11 @@
       color: $midnight-express-3;
       max-width: 200px;
       word-break: break-word;
+
+      @include vp-1023 {
+        font-size: 24px;
+        max-width: 220px;
+      }
     }
 
     // Декоративный номер/счетчик
@@ -188,6 +209,8 @@
       display: block;
 
       @include vp-1023 {
+        font-size: 30px;
+        line-height: 30px;
         margin-top: 10px;
         text-align: left;
       }

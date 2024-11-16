@@ -31,6 +31,7 @@ mixin header(headerMods, currentUrl)
             li.header__item
               +navLink({text: menuItem, href: menuLink}).header__link
         +contacts("header__contacts")
+        +social()
       button(class="header__toggle", type="button", data-burger)
         +icon("burger", 25, 12).header__icon.header__icon--burger
         +icon("cross", 19, 20).header__icon.header__icon--cross

@@ -1,0 +1,22 @@
+.social {
+  display: none;
+
+  @include vp-1023 {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px;
+    justify-content: center;
+
+    &__link {
+      display: flex;
+      width: 44px;
+      height: 44px;
+      background-color: transparent;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

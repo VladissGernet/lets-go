@@ -10,6 +10,11 @@
     gap: 1px;
     justify-content: center;
 
+    &__link,
+    &__link svg {
+      transition: all $trans-default;
+    }
+
     &__link {
       display: flex;
       width: 44px;
@@ -17,6 +22,15 @@
       background-color: transparent;
       justify-content: center;
       align-items: center;
+      border-radius: 50%;
+
+      @include hover-focus {
+        background-color: $picton-blue;
+
+        &:active svg {
+          opacity: 0.3;
+        }
+      }
     }
   }
 }

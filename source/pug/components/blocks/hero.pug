@@ -1,6 +1,11 @@
 mixin hero()
   section.hero
     +img('content/hero', 'globe-back-desktop', 'png', '1440', '750', '')
+    .hero__picture
+      picture
+        source(media="(max-width: 767px)", srcset="img/content/hero/traveller-mobile.png 1x, img/hero/traveller-mobile@2x.png 2x", type="image/png")
+        source(media="(max-width: 1239px)", srcset="img/content/hero/traveller-tablet.png 1x, img/hero/traveller-tablet@2x.png 2x", type="image/png")
+        img(src="img/content/hero/traveller-desktop.png", srcset="img/hero/traveller-desktop@2x.png 2x", width="431", height="640", alt="")
     .container
       h2.hero__title
         | В&nbsp;путешествие
@@ -16,8 +21,3 @@ mixin hero()
           p Находите тех, кто&nbsp;похож на&nbsp;вас
         li.hero__item.hero__item--4
           p Путешествуйте вместе!
-      .hero__picture
-        picture
-          source(media="(max-width: 767px)", srcset="img/content/hero/traveller-mobile.png 1x, img/hero/traveller-mobile@2x.png 2x", type="image/png")
-          source(media="(max-width: 1439px)", srcset="img/content/hero/traveller-tablet.png 1x, img/hero/traveller-tablet@2x.png 2x", type="image/png")
-          img(src="img/content/hero/traveller-desktop.png", srcset="img/hero/traveller-desktop@2x.png 2x", width="431", height="640", alt="")

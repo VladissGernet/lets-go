@@ -5,22 +5,6 @@
     "попутчики": "#",
   }
 
--
-  const menuContacts = [
-    {
-      icon: "phone",
-      iconWidth: 18,
-      iconHeight: 18,
-      href: "tel:88005558628",
-    },
-    {
-      icon: "mail",
-      iconWidth: 16,
-      iconHeight: 14,
-      href: "mailto:mail@htmlacademy.ru",
-    },
-  ]
-
 mixin logoContent()
   span.header__logo-icon.header__logo-icon--desktop
     img(src="img/svg/logo-light.svg", width="200", height="50", alt="Логотип проекта Пакет X5.")
@@ -46,7 +30,7 @@ mixin header(headerMods, currentUrl)
           each menuLink, menuItem in menuItems
             li.header__item
               +navLink({text: menuItem, href: menuLink}).header__link
-        +contacts(menuContacts, "header__contacts")
+        +contacts("header__contacts")
       button(class="header__toggle", type="button", data-burger)
         +icon("burger", 25, 12).header__icon.header__icon--burger
         +icon("cross", 19, 20).header__icon.header__icon--cross

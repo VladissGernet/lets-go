@@ -1,23 +1,18 @@
-//- Пример data
-//- -
-//-   const menuContacts = [
-//-     {
-//-       icon: "phone",
-//-       iconWidth: 18,
-//-       iconHeight: 18,
-//-       href: "tel:88005558628",
-//-     },
-//-     {
-//-       icon: "mail",
-//-       iconWidth: 16,
-//-       iconHeight: 14,
-//-       href: "mailto:mail@htmlacademy.ru",
-//-     }
-//-   ]
-
-mixin contacts(data, modClass="")
+mixin contacts(modClass="")
   ul.contacts(class=modClass)
-    each item in data
-      li.contacts__item
-        a.contacts__link(href=item.href)
-          +icon(item.icon, item.iconWidth, item.iconHeight)
+    li.contacts__item
+      a.contacts__link(href="tel:88005558628")
+        span.contacts__icon.contacts__icon--desktop
+          +icon("phone", 18, 18)
+        span.contacts__icon.contacts__icon--mobile
+          +icon("phone-2", 17, 15)
+        span.contacts__text
+          | 8&nbsp;800 555-86-28
+    li.contacts__item
+      a.contacts__link(href="mailto:mail@htmlacademy.ru")
+        span.contacts__icon.contacts__icon--desktop
+          +icon("mail", 16, 14)
+        span.contacts__icon.contacts__icon--mobile
+          +icon("mail-2", 19, 13)
+        span.contacts__text
+          | mail@htmlacademy.ru

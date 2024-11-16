@@ -1,6 +1,4 @@
 .contacts {
-  font-size: 0;
-
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -10,12 +8,27 @@
   flex-wrap: wrap;
   align-content: flex-start;
 
-  &__link,
-  &__link svg {
+  @include vp-1023 {
+    display: block;
+
+    &__link {
+      display: flex;
+      align-items: top;
+    }
+  }
+
+  &__item:not(:last-child) {
+    @include vp-1023 {
+      margin-bottom: 6px;
+    }
+  }
+
+  &__icon,
+  &__icon svg {
     transition: all $trans-default;
   }
 
-  &__link {
+  &__icon {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,6 +36,12 @@
     height: 50px;
     border-radius: 50%;
     background-color: $jordy-blue;
+    font-size: 0;
+    color: $midnight-express-2;
+
+    &--mobile {
+      display: none;
+    }
 
     @include hover-focus {
       background-color: $curious-blue;
@@ -32,6 +51,36 @@
           opacity: 0.3;
         }
       }
+    }
+
+    @include vp-1023 {
+      display: inline-flex;
+      margin-right: 16px;
+      background-color: $midnight-express-2;
+      color: $pale-cornflower-blue;
+      width: 45px;
+      height: 45px;
+
+      &--desktop {
+        display: none;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 0;
+    display: none;
+
+    @include vp-1023 {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 18px;
+      text-transform: uppercase;
+      word-break: break-word;
+      color: $midnight-express;
+      display: inline-block;
+      align-self: center;
+      max-width: 200px;
     }
   }
 }

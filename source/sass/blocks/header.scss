@@ -4,10 +4,15 @@
 
   @include vp-1023 {
     padding-top: 45px;
+    transition: all $trans-default;
   }
 
   @include vp-767 {
     padding-top: 25px;
+
+    &.is-open {
+      padding-top: 15px;
+    }
   }
 
   .container {
@@ -83,7 +88,7 @@
 
     @include vp-1023 {
       margin: 0;
-      padding: 123px 20px 20px;
+      padding: 85px 25px 20px;
       opacity: 0;
       pointer-events: none;
       position: fixed;
@@ -127,8 +132,8 @@
     }
 
     @include vp-1023 {
-      flex-direction: column;
-      gap: 10px;
+      display: block;
+      min-height: 271px;
 
       &::before {
         display: none;
@@ -136,10 +141,21 @@
     }
   }
 
+  &__item {
+    @include vp-1023 {
+      width: fit-content;
+    }
+  }
+
   & &__contacts {
     margin-top: 2px;
     max-width: 170px;
     min-width: 107px;
+
+    @include vp-1023 {
+      margin-top: 0;
+      max-width: unset;
+    }
   }
 
   &__toggle {

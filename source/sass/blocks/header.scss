@@ -12,12 +12,19 @@
     padding-top: 25px;
 
     &.is-open {
-      padding-top: 15px;
+      .container {
+        transform: translateY(-10px);
+      }
+
+      .social {
+        position: relative;
+      }
     }
   }
 
   .container {
     display: flex;
+    transition: all $trans-default;
 
     @include vp-767 {
       padding-right: 16px;
@@ -89,7 +96,7 @@
 
     @include vp-1023 {
       margin: 0;
-      padding: 85px 25px 20px;
+      padding: 70px 25px 30px;
       opacity: 0;
       pointer-events: none;
       position: fixed;
@@ -106,6 +113,27 @@
         pointer-events: all;
         visibility: visible;
         background-color: $color-default-white;
+
+        &::before {
+          content: "";
+          position: absolute;
+          right: 0;
+          top: -18px;
+          left: 0;
+          background-color: $color-default-white;
+          height: calc(100% + 18px);
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          bottom: -19px;
+          left: 0;
+          background-color: $midnight-express-2;
+          height: 19px;
+          border-radius: 0 0 22px 22px;
+        }
       }
     }
   }
@@ -152,6 +180,7 @@
     margin-top: 2px;
     max-width: 170px;
     min-width: 107px;
+    position: relative;
 
     @include vp-1023 {
       margin-top: 0;

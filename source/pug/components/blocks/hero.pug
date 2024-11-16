@@ -1,0 +1,20 @@
+mixin hero()
+  section.hero
+    .container
+      h2.hero__title
+        | В&nbsp;путешествие
+        | с&nbsp;крутыми
+        | попутчиками!
+      ol.hero__list
+        li.hero__item
+          p Выберите направление
+        li.hero__item
+          p Изучите идеи путешественников
+        li.hero__item
+          p Находите тех,кто похож на вас
+        li.hero__item
+          p Путешествуйте вместе!
+      picture.hero__picture
+        source(media="(max-width: 767px)", srcset="img/content/hero/traveller-mobile.png 1x, img/hero/traveller-mobile@2x.png 2x", type="image/png")
+        source(media="(max-width: 1439px)", srcset="img/content/hero/traveller-tablet.png 1x, img/hero/traveller-tablet@2x.png 2x", type="image/png")
+        img(src="img/content/hero/traveller-desktop.png", srcset="img/hero/traveller-desktop@2x.png 2x", width="431", height="640", alt="Путешествие с крутыми попутчиками")

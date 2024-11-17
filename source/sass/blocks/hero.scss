@@ -26,6 +26,10 @@
 
     @include vp-767 {
       padding-top: 35px;
+
+      &::after {
+        height: 198px;
+      }
     }
   }
 
@@ -46,7 +50,11 @@
     }
 
     @include vp-767 {
+      height: 888px;
 
+      img {
+        object-position: -562px 56px;
+      }
     }
   }
 

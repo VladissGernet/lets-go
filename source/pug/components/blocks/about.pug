@@ -1,10 +1,5 @@
 mixin about()
   section.about
-    .about__background
-      picture
-        source(media="(max-width: 767px)", srcset="img/content/about/about-back-mobile.png 1x, img/about/about-back-mobile@2x.png 2x", type="image/png")
-        source(media="(max-width: 1023px)", srcset="img/content/about/about-back-tablet.png 1x, img/about/about-back-tablet@2x.png 2x", type="image/png")
-        img(src="img/content/about/about-back-desktop.png", srcset="img/about/about-back-desktop@2x.png 2x", width="431", height="640", alt="")
     .container
       h2 О&nbsp;сервисе
       p
@@ -15,3 +10,8 @@ mixin about()
         p
           | А если найдете кого-то близкого по духу - скорее
           | зовите в совместный трип!
+      .about__background(data-speed="0.18")
+        picture
+          source(media="(max-width: 767px)", srcset="img/content/about/about-back-mobile.png 1x, img/content/about/about-back-mobile@2x.png 2x", type="image/png")
+          source(media="(max-width: 1023px)", srcset="img/content/about/about-back-tablet.png 1x, img/content/about/about-back-tablet@2x.png 2x", type="image/png")
+          img(src="img/content/about/about-back-desktop.png", srcset="img/content/about/about-back-desktop@2x.png 2x", width="655", height="665", alt="Скриншот страницы сервиса.")

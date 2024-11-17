@@ -1,7 +1,24 @@
 .about {
   padding-top: 100px;
-  height: 400px;
   background-color: $midnight-express-4;
+  overflow: hidden;
+
+  .container {
+    min-height: 800px;
+
+    // parallax
+    position: relative;
+  }
+
+  &__background {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    // parallax
+    transition: transform 0.3s linear;
+    will-change: transform;
+  }
 
   h2 {
     margin: 0;

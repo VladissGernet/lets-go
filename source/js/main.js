@@ -3,6 +3,7 @@ import {Form} from './modules/form-validate/form';
 import {CustomSelect} from './modules/select/custom-select';
 import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
 import {Burger} from './vendor/burger';
+import {initAboutParallax} from './modules/about-parallax';
 
 // ---------------------------------
 
@@ -29,6 +30,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const burger = new Burger();
     burger.init();
+
+    initAboutParallax();
   });
 });
 

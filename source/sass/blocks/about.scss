@@ -7,28 +7,55 @@
   overflow: hidden;
   position: relative;
 
+  @include vp-1023 {
+    padding-top: 125px;
+    padding-bottom: 55px;
+  }
+
   .container {
     min-height: 659px;
     padding-left: 72px;
 
     // parallax
     position: relative;
+
+    @include vp-1023 {
+      padding-left: 42px;
+    }
   }
 
   &__background {
     position: absolute;
+    width: 655px;
+    height: 665px;
     right: 71px;
     bottom: 0;
+
+    img {
+      width: inherit;
+      height: inherit;
+    }
 
     // parallax
     transition: transform 0.3s linear;
     will-change: transform;
+
+    @include vp-1023 {
+      width: 368px;
+      height: 546px;
+      right: 8px;
+      bottom: 33px;
+    }
   }
 
   &__content {
     position: relative;
     z-index: 1;
     max-width: 650px;
+
+    @include vp-1023 {
+      max-width: 400px;
+    }
   }
 
   h2 {
@@ -48,6 +75,12 @@
     line-height: 34px;
     color: $color-default-white;
     margin: 26px 0 0;
+
+    @include vp-1023 {
+      margin-top: 35px;
+      margin-left: 5px;
+      line-height: 33px;
+    }
   }
 
   // Дополнительное описание
@@ -58,10 +91,27 @@
     color: $color-default-white;
     margin: 59px 0 0;
     letter-spacing: -0.1px;
+
+    @include vp-1023 {
+      margin-top: 105px;
+      margin-left: 4px;
+      letter-spacing: -1.6px;
+      max-width: 354px;
+
+      br {
+        display: none;
+      }
+    }
   }
 
   &__button {
     margin-top: 136px;
     min-width: 284px;
+
+    @include vp-1023 {
+      margin-top: 124px;
+      margin-left: 5px;
+      min-width: 276px;
+    }
   }
 }

@@ -1,15 +1,17 @@
 mixin about()
   section.about
     .container
-      h2 О&nbsp;сервисе
-      p
-        | Любое путешествие веселее с&nbsp;попутчиками, которые
-        | на&nbsp;одной волне с&nbsp;тобой! Делитесь своими идеями
-        | путешествий и&nbsp;черпайте вдохновение в&nbsp;чужих.
-      .about__additional
-        p
-          | А если найдете кого-то близкого по духу - скорее
-          | зовите в совместный трип!
+      .about__content
+        h2 О&nbsp;сервисе
+        .about__description
+          p
+            | Любое путешествие веселее с&nbsp;попутчиками, которые
+            | на&nbsp;одной волне с&nbsp;тобой! Делитесь своими идеями
+            | путешествий и&nbsp;черпайте вдохновение в&nbsp;чужих.
+        .about__additional
+          p
+            | А если найдете кого-то близкого по духу - скорее
+            | зовите в совместный трип!
       .about__background(data-speed="0.18")
         picture
           source(media="(max-width: 767px)", srcset="img/content/about/about-back-mobile.png 1x, img/content/about/about-back-mobile@2x.png 2x", type="image/png")

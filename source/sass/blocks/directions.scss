@@ -4,14 +4,34 @@
 
   &__swiper {
     margin: 100px auto;
-    padding: 30px;
-    width: 749px;
-    height: 610px;
+    width: 720px;
+    height: 480px;
     background-color: $solitude;
     position: relative;
     overflow: hidden;
+
+  // Закрашивание сверху и снизу
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 10px;
+      left: 0;
+      z-index: 1;
+      background-color: $solitude;
+    }
+
+    &::before {
+      top: -1px;
+    }
+
+    &::after {
+      bottom: -1px;
+    }
   }
 
+  // Градиенты размытия наверху и внизу
   .directions__fade {
     position: absolute;
     z-index: 1;
@@ -20,12 +40,12 @@
     height: 81px;
 
     &--top{
-      top: 0;
+      top: 8px;
       width: 610px;
     }
 
     &--bottom {
-      top: 505px;
+      bottom: 8px;
       width: 619px;
     }
   }

@@ -13,6 +13,7 @@ mixin about()
             | А&nbsp;если найдете кого-то близкого по&nbsp;духу&nbsp;- скорее
             br
             | зовите в&nbsp;совместный трип!
+        +btn({text: "Подробнее", href: "#", type: "submit"}).about__button
       .about__background(data-speed="0.18")
         picture
           source(media="(max-width: 767px)", srcset="img/content/about/about-back-mobile.png 1x, img/content/about/about-back-mobile@2x.png 2x", type="image/png")

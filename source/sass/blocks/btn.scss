@@ -1,72 +1,46 @@
 .btn {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 700;
-  line-height: 110%;
-  letter-spacing: -0.02em;
-  color: $jordy-blue;
-  display: block;
+  line-height: 24px;
+  color: $catalina-blue;
+  background-color: $pale-cornflower-blue;
+  display: inline-block;
   user-select: none;
 
-  padding: 15px 30px;
+  padding: 29px 60px 27px 34px;
 
-  border-radius: 12px;
+  border-radius: 20px;
   border: none;
   cursor: pointer;
-  background-color: transparent;
-  overflow: hidden;
   transition: all $trans-default;
 
   position: relative;
 
-  &::before,
-  &::after {
+  svg {
     position: absolute;
-    content: "";
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-  }
-
-  &::before {
-    background-color: $picton-blue;
-  }
-
-  &::after {
-    transform: translateX(-101%);
-    background-image: linear-gradient(270deg, #363de8 0%, #359ff1 100%);
-    border-radius: 13px 0 0 13px;
+    right: 33px;
+    top: 34px;
     transition: all $trans-default;
   }
 
-  &--red {
-    background-color: $pattens-blue;
+  @include hover-focus {
+    background-color: $picton-blue;
+
+    svg {
+      transform: rotate(-90deg);
+    }
+
+    &:active {
+      color: rgb($catalina-blue, 0.3);
+    }
   }
 
   &:disabled {
-    background-color: $pale-cornflower-blue;
+    opacity: 0.3;
+    background-color: $chambray;
     color: $pattens-blue;
 
     pointer-events: none;
     cursor: not-allowed;
-  }
-
-  @include hover-focus {
-    opacity: 0.8;
-    color: $color-default-white;
-
-    &::after {
-      transform: translateX(-8%);
-    }
-
-    &:active {
-      opacity: 1;
-
-      &::after {
-        border-radius: 13px;
-        transform: translateX(0);
-      }
-    }
   }
 }

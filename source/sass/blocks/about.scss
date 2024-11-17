@@ -2,9 +2,14 @@
   padding-top: 100px;
   background-color: $midnight-express-4;
   overflow: hidden;
+  border-radius: 0 0 58px 58px;
+  margin-bottom: -60px;
+  overflow: hidden;
+  position: relative;
 
   .container {
-    min-height: 800px;
+    min-height: 659px;
+    padding-left: 72px;
 
     // parallax
     position: relative;
@@ -12,7 +17,7 @@
 
   &__background {
     position: absolute;
-    right: 0;
+    right: 71px;
     bottom: 0;
 
     // parallax
@@ -27,10 +32,12 @@
   }
 
   h2 {
-    font-size: 95px;
+    font-size: 78px;
     font-weight: 700;
     line-height: 45px;
     color: $color-default-white;
+    text-transform: uppercase;
+    letter-spacing: 3px;
     margin: 0;
   }
 
@@ -40,6 +47,7 @@
     font-weight: 500;
     line-height: 34px;
     color: $color-default-white;
+    margin: 26px 0 0;
   }
 
   // Дополнительное описание
@@ -48,5 +56,7 @@
     font-weight: 300;
     line-height: 24px;
     color: $color-default-white;
+    margin: 59px 0 0;
+    letter-spacing: -0.1px;
   }
 }

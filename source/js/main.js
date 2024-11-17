@@ -4,6 +4,7 @@ import {CustomSelect} from './modules/select/custom-select';
 import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
 import {Burger} from './vendor/burger';
 import {initAboutParallax} from './modules/about-parallax';
+import {initDirectionsSwiper} from './modules/directions-swiper';
 
 // ---------------------------------
 
@@ -32,6 +33,7 @@ window.addEventListener('DOMContentLoaded', () => {
     burger.init();
 
     initAboutParallax();
+    initDirectionsSwiper();
   });
 });
 

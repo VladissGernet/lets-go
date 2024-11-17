@@ -1,5 +1,61 @@
 .directions {
   padding-top: 100px;
-  min-height: 400px;
   background-color: $jordy-blue;
+
+  &__swiper {
+    margin: 100px auto;
+    padding: 30px;
+    width: 749px;
+    height: 610px;
+    background-color: $solitude;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .directions__fade {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 81px;
+
+    &--top{
+      top: 0;
+      width: 610px;
+    }
+
+    &--bottom {
+      top: 505px;
+      width: 619px;
+    }
+  }
+
+  &__swiper-wrapper {
+    width: 677px;
+    margin: 0 auto;
+  }
+
+  &__slide {
+    padding: 30px;
+    background: $color-default-white;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px 0 rgb($color-default-black, 0.3);
+    user-select: none;
+    opacity: 0;
+    transition: all $trans-default;
+
+    font-size: 60px;
+
+    &--active,
+    &--prev,
+    &--next {
+      opacity: 1;
+    }
+
+    &--prev,
+    &--next {
+      transform: scale(0.9);
+    }
+  }
 }
+

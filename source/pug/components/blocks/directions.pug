@@ -1,4 +1,18 @@
 mixin directions()
   section.directions
     .container
-      .directions__content Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis, voluptatem.
+      .directions__swiper
+        .directions__fade.directions__fade--top
+          +img("content/directions", "fade-top", "png", "610", "81", "")
+        .directions__fade.directions__fade--bottom
+          +img("content/directions", "fade-bottom", "png", "619", "81", "")
+        .directions__swiper-wrapper
+          .directions__slide Slide 1
+          .directions__slide Slide 2
+          .directions__slide Slide 3
+          .directions__slide Slide 4
+          .directions__slide Slide 5
+          .directions__slide Slide 6
+          .directions__slide Slide 7
+          .directions__slide Slide 8
+          .directions__slide Slide 9

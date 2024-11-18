@@ -39,8 +39,8 @@
 
     @include vp-1023 {
       display: block;
-      padding-left: 65px;
-      padding-right: 69px;
+      padding-left: 45px;
+      padding-right: 32px;
     }
   }
 
@@ -54,6 +54,10 @@
     overflow: hidden;
     z-index: 1;
 
+    @include vp-1023 {
+      margin-top: 73px;
+    }
+
     h3 {
       font-size: 24px;
       font-weight: 700;
@@ -64,6 +68,10 @@
 
       @include vp-1279 {
         font-size: 20px;
+      }
+
+      @include vp-1023 {
+        font-size: 24px;
       }
     }
 
@@ -76,6 +84,11 @@
 
       @include vp-1279 {
         font-size: 14px;
+      }
+
+      @include vp-1023 {
+        font-size: 20px;
+        margin: 5px 0 0 0px;
       }
     }
 
@@ -103,11 +116,19 @@
   &__status {
     margin-top: 21px;
 
+    @include vp-1023 {
+      margin-top: 16px;
+    }
+
     svg {
       margin-left: 1px;
       width: 21px;
       height: 21px;
       transform: translateY(2px);
+
+      @include vp-1023 {
+        margin-left: 0;
+      }
     }
 
     span {
@@ -120,6 +141,10 @@
       @include vp-1279 {
         font-size: 14px;
       }
+
+      @include vp-1023 {
+        font-size: 20px;
+      }
     }
   }
 
@@ -130,15 +155,21 @@
     left: 50%;
     transform: translate(-50%, 0);
     height: 81px;
+    pointer-events: none;
+
+    img {
+      width: inherit;
+      height: inherit;
+    }
 
     &--top{
       top: 8px;
-      width: 610px;
+      width: 100%;
     }
 
     &--bottom {
       bottom: 8px;
-      width: 619px;
+      width: 100%;
     }
   }
 
@@ -167,7 +198,17 @@
 
     &--prev,
     &--next {
-      width: 92%;
+      width: 91%;
+    }
+
+    @include vp-1023 {
+      padding: 30px 270px 8px 30px;
+      width: 94%;
+
+      &--prev,
+      &--next {
+        width: 91%;
+      }
     }
   }
 
@@ -183,7 +224,13 @@
     img {
       max-width: inherit;
       min-width: inherit;
-      height: inherit;
+      height: 140px;
+    }
+
+    @include vp-1023 {
+      max-width: 192px;
+      height: 140px;
+      overflow: hidden;
     }
   }
 
@@ -193,6 +240,11 @@
     height: 47px;
     right: 172px;
     top: 23px;
+
+    @include vp-1023 {
+      right: 169px;
+      top: 17px;
+    }
   }
 
   &__content {
@@ -225,7 +277,7 @@
         text-align: center;
         line-height: 70px;
         letter-spacing: 3px;
-        transform: translateX(-6px);
+        transform: translateX(-15px);
       }
     }
 
@@ -243,9 +295,9 @@
 
       @include vp-1023 {
         font-size: 27px;
-        margin: 36px 0 0 9px;
+        margin: 36px 0 0 29px;
         letter-spacing: -1.6px;
-        max-width: unset;
+        max-width: 600px;
       }
     }
   }

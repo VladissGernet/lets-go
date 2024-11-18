@@ -2,13 +2,35 @@
   padding-top: 100px;
   background-color: $jordy-blue;
 
+  .container {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
   &__swiper {
-    margin: 100px auto;
+    margin: 0;
     width: 720px;
     height: 480px;
     background-color: $solitude;
     position: relative;
     overflow: hidden;
+
+    h3 {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 24px;
+      color: $color-default-black;
+      margin: 0;
+    }
+
+    p {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 20px;
+      color: rgb($charcoal, 0.3);
+      margin: 0;
+    }
 
   // Закрашивание сверху и снизу
     &::before,
@@ -31,22 +53,6 @@
     }
   }
 
-  h3 {
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 24px;
-    color: $color-default-black;
-    margin: 0;
-  }
-
-  p {
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 20px;
-    color: rgb($charcoal, 0.3);
-    margin: 0;
-  }
-
   &__status {
     span {
       font-size: 20px;
@@ -58,7 +64,7 @@
   }
 
   // Градиенты размытия наверху и внизу
-  .directions__fade {
+  &__fade {
     position: absolute;
     z-index: 1;
     left: 50%;
@@ -128,6 +134,30 @@
     right: 180px;
     top: 50%;
     transform: translateY(-50%);
+  }
+
+  &__content {
+    background-color: $color-default-white;
+
+    h2 {
+      font-size: 75px;
+      font-weight: 700;
+      line-height: 45px;
+      color: $midnight-express;
+      margin: 0;
+    }
+
+    p {
+      font-size: 23px;
+      font-weight: 500;
+      line-height: 33px;
+      color: $charcoal;
+      margin: 33px 0 0;
+    }
+  }
+
+  &__button {
+    margin-top: 155px;
   }
 }
 

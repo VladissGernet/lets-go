@@ -233,6 +233,7 @@
       line-height: 33px;
       color: $charcoal;
       margin: 28px 0 0;
+      max-width: 516px;
 
       @include vp-1279 {
         font-size: 20px;
@@ -242,12 +243,13 @@
         font-size: 27px;
         margin: 36px 0 0 9px;
         letter-spacing: -1.6px;
+        max-width: unset;
       }
     }
   }
 
   &__button {
-    margin-top: 188px;
+    margin-top: 155px;
     margin-left: 5px;
     padding-left: 36px;
     min-width: 300px;

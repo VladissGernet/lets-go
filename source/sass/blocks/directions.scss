@@ -43,6 +43,7 @@
       line-height: 24px;
       color: $color-default-black;
       margin: 0;
+      word-break: break-all;
     }
 
     p {
@@ -127,8 +128,7 @@
     position: relative;
     width: 623px;
     margin: 0 auto;
-
-    font-size: 60px;
+    overflow-y: auto;
 
     &--active,
     &--prev,

@@ -1,5 +1,6 @@
 .about {
   padding-top: 100px;
+  padding-bottom: 50px;
   background-color: $midnight-express-4;
   overflow: hidden;
   border-radius: 0 0 58px 58px;
@@ -19,7 +20,7 @@
   }
 
   .container {
-    min-height: 659px;
+    min-height: 609px;
     padding-left: 72px;
 
     // parallax
@@ -40,7 +41,7 @@
     width: 655px;
     height: 665px;
     right: 71px;
-    bottom: 0;
+    bottom: -50px;
 
     img {
       width: inherit;

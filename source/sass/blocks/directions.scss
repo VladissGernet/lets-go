@@ -21,8 +21,7 @@
   }
 
   .container {
-    padding: 0;
-    padding-left: 48px;
+    padding: 0 32px 0 45px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     position: relative;
@@ -30,7 +29,7 @@
 
   &__swiper {
     margin: 0;
-    width: 656px;
+    width:98%;
     height: 440px;
     background-color: $solitude;
     position: relative;
@@ -44,6 +43,10 @@
       color: $color-default-black;
       margin: 0;
       word-break: break-all;
+
+      @include vp-1279 {
+        font-size: 20px;
+      }
     }
 
     p {
@@ -52,6 +55,10 @@
       line-height: 20px;
       color: rgb($charcoal, 0.3);
       margin: 4px 0 0 1px;
+
+      @include vp-1279 {
+        font-size: 14px;
+      }
     }
 
   // Закрашивание сверху и снизу
@@ -76,7 +83,7 @@
   }
 
   &__status {
-    margin-top: 10px;
+    margin-top: 21px;
 
     svg {
       margin-left: 1px;
@@ -91,6 +98,10 @@
       line-height: 20px;
       color: rgb($midnight-express-3, 0.3);
       margin-left: 13px;
+
+      @include vp-1279 {
+        font-size: 14px;
+      }
     }
   }
 
@@ -126,7 +137,7 @@
     opacity: 0;
     transition: all $trans-default;
     position: relative;
-    width: 623px;
+    width: 94%;
     margin: 0 auto;
     overflow-y: auto;
 
@@ -138,7 +149,7 @@
 
     &--prev,
     &--next {
-      width: 607px;
+      width: 92%;
     }
   }
 
@@ -168,7 +179,7 @@
 
   &__content {
     margin-top: 11px;
-    margin-left: 119px;
+    margin-left: 20%;
 
     h2 {
       font-size: 61px;
@@ -178,6 +189,11 @@
       text-transform: uppercase;
       letter-spacing: 3px;
       margin: 0;
+      word-break: break-all;
+
+      @include vp-1279 {
+        font-size: 46px;
+      }
     }
 
     p {
@@ -186,6 +202,10 @@
       line-height: 33px;
       color: $charcoal;
       margin: 28px 0 0;
+
+      @include vp-1279 {
+        font-size: 20px;
+      }
     }
   }
 

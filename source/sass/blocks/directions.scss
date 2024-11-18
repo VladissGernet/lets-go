@@ -31,6 +31,32 @@
     }
   }
 
+  h3 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    color: $color-default-black;
+    margin: 0;
+  }
+
+  p {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 20px;
+    color: rgb($charcoal, 0.3);
+    margin: 0;
+  }
+
+  &__status {
+    span {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 20px;
+      color: rgb($midnight-express-3, 0.3);
+      margin-left: 12px;
+    }
+  }
+
   // Градиенты размытия наверху и внизу
   .directions__fade {
     position: absolute;

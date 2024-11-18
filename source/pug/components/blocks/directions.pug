@@ -1,6 +1,13 @@
 mixin directions()
   section.directions
     .container
+      .directions__content
+        h2 Направления
+        p
+          | Мы&nbsp;не&nbsp;продаем туры и&nbsp;ничего не&nbsp;рекламируем.
+          br
+          | Люди сами пишут о&nbsp;странах, куда хотели&nbsp;бы отправиться и&nbsp;чем можно там заняться.
+        +btn({text: "Показать все", href: "#", type: "submit"}).directions__button
       .directions__swiper
         .directions__fade.directions__fade--top
           +img("content/directions/fade", "fade-top", "png", "610", "81", "")
@@ -60,9 +67,3 @@ mixin directions()
                 img(src="img/content/directions/countries/thailand-desktop.png", srcset="img/content/directions/countries/thailand-desktop@2x.png 2x", width="201", height="140", alt="Вид с вершины горы вниз на песчаный пляж в Тайланде.")
             .directions__flag
               +icon("thailand", 70, 47)
-      .directions__content
-        h2 Направления
-        p
-          | Мы&nbsp;не&nbsp;продаем туры и&nbsp;ничего не&nbsp;рекламируем.
-          | Люди сами пишут о&nbsp;странах, куда хотели&nbsp;бы отправиться и&nbsp;чем можно там заняться.
-        +btn({text: "Показать все", href: "#", type: "submit"}).directions__button

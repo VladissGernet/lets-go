@@ -1,5 +1,8 @@
 import {Swiper} from 'swiper';
 
+const SLIDES_PER_VIEW = 3;
+const SPACE_BETWEEN = 10;
+
 const initDirectionsSwiper = () => {
   return new Swiper('.directions__swiper', {
     wrapperClass: 'directions__swiper-wrapper',
@@ -8,8 +11,8 @@ const initDirectionsSwiper = () => {
     slideActiveClass: 'directions__slide--active',
     slideNextClass: 'directions__slide--next',
     direction: 'vertical',
-    slidesPerView: '3',
-    spaceBetween: 30,
+    slidesPerView: SLIDES_PER_VIEW,
+    spaceBetween: SPACE_BETWEEN,
     centeredSlides: true,
     loop: true,
     grabCursor: true,

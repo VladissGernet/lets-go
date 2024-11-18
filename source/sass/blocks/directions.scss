@@ -1,5 +1,5 @@
 .directions {
-  padding-top: 100px;
+  padding-top: 142px;
   padding-bottom: 100px;
   background-color: $color-default-white;
 
@@ -26,8 +26,8 @@
 
   &__swiper {
     margin: 0;
-    width: 720px;
-    height: 480px;
+    width: 656px;
+    height: 440px;
     background-color: $solitude;
     position: relative;
     overflow: hidden;
@@ -99,7 +99,6 @@
   }
 
   &__swiper-wrapper {
-    width: 677px;
     margin: 0 auto;
   }
 
@@ -112,6 +111,8 @@
     opacity: 0;
     transition: all $trans-default;
     position: relative;
+    width: 623px;
+    margin: 0 auto;
 
     font-size: 60px;
 
@@ -123,7 +124,7 @@
 
     &--prev,
     &--next {
-      transform: scale(0.9);
+      width: 607px;
     }
   }
 

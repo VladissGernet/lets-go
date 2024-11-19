@@ -3,6 +3,10 @@ import {Swiper} from '../vendor/swiper.min';
 const SLIDES_PER_VIEW = 3;
 const SPACE_BETWEEN = 10;
 const AUTOPLAY_DELAY = 3000;
+const SwiperBreakpoints = {
+  MOBILE: 300,
+  TABLET: 768,
+};
 
 const initDirectionsSwiper = () => {
   return new Swiper('.directions__swiper', {
@@ -20,6 +24,14 @@ const initDirectionsSwiper = () => {
     autoplay: {
       delay: AUTOPLAY_DELAY,
       disableOnInteraction: false,
+    },
+    breakpoints: {
+      [SwiperBreakpoints.TABLET]: {
+        enabled: true,
+      },
+      [SwiperBreakpoints.MOBILE]: {
+        enabled: false,
+      },
     },
   });
 };

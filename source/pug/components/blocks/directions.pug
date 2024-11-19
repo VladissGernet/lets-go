@@ -14,7 +14,7 @@ mixin directions()
           +img("content/directions/fade", "fade-bottom", "png", "619", "81", "")
         .directions__swiper-wrapper
           //- Минимум 4 слайда
-          .directions__slide
+          .directions__slide.directions__slide--1
             h3 Франция
             p Трэ бьен, манифик!
             .directions__status
@@ -27,7 +27,7 @@ mixin directions()
                 img(src="img/content/directions/countries/france-desktop.png", srcset="img/content/directions/countries/france-desktop@2x.png 2x", width="186", height="140", alt="Улица во Франции.")
             .directions__flag
               +icon("france", 70, 47)
-          .directions__slide
+          .directions__slide.directions__slide--2
             h3 Чехия
             p Закоулки старой Европы
             .directions__status
@@ -40,7 +40,7 @@ mixin directions()
                 img(src="img/content/directions/countries/czech-desktop.png", srcset="img/content/directions/countries/czech-desktop@2x.png 2x", width="201", height="140", alt="Паром на реке на фоне города в Чехии.")
             .directions__flag
               +icon("czech", 70, 47)
-          .directions__slide
+          .directions__slide.directions__slide--3
             h3 Таиланд
             p Джунгли зовут!
             .directions__status

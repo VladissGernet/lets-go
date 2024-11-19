@@ -316,7 +316,13 @@
     }
 
     @include vp-1023 {
-      margin: 0;
+      margin: 95px 41px 0 29px;
+      display: block;
+      width: unset;
+
+      svg {
+        right: 16px;
+      }
     }
   }
 }

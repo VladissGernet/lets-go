@@ -2,6 +2,10 @@
   padding-top: 100px;
   min-height: 400px;
 
+  @include vp-1023 {
+    background-color: $midnight-express;
+  }
+
   // Декоративное разделение секций
   position: relative;
 
@@ -15,6 +19,10 @@
     border-radius: 0 0 58px 58px;
     background-color: $solitude;
     background-color: $blue-zodiac;
+
+    @include vp-1023 {
+      display: none;
+    }
   }
 
   .container {
@@ -27,6 +35,11 @@
     line-height: 45px;
     margin: 0;
     color: $midnight-express;
+    word-break: break-all;
+
+    @include vp-1023 {
+      color: $color-default-white;
+    }
   }
 
   p {
@@ -35,5 +48,9 @@
     font-weight: 500;
     line-height: 33px;
     color: $midnight-express;
+
+    @include vp-1023 {
+      color: $color-default-white;
+    }
   }
 }

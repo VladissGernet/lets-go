@@ -1,7 +1,8 @@
-import {Swiper} from 'swiper';
+import {Swiper} from '../vendor/swiper.min';
 
 const SLIDES_PER_VIEW = 3;
 const SPACE_BETWEEN = 10;
+const AUTOPLAY_DELAY = 3000;
 
 const initDirectionsSwiper = () => {
   return new Swiper('.directions__swiper', {
@@ -16,6 +17,10 @@ const initDirectionsSwiper = () => {
     centeredSlides: true,
     loop: true,
     grabCursor: true,
+    autoplay: {
+      delay: AUTOPLAY_DELAY,
+      disableOnInteraction: false,
+    },
   });
 };
 

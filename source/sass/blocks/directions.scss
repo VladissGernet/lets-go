@@ -63,6 +63,11 @@
       margin-top: 73px;
     }
 
+    @include vp-767 {
+      height: unset;
+      width: unset;
+    }
+
     h3 {
       font-size: 24px;
       font-weight: 700;
@@ -97,7 +102,7 @@
       }
     }
 
-  // Закрашивание сверху и снизу
+    // Закрашивание сверху и снизу
     &::before,
     &::after {
       content: "";
@@ -188,6 +193,11 @@
 
   &__swiper-wrapper {
     margin: 0 auto;
+
+    @include vp-767 {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__slide {
@@ -232,6 +242,10 @@
     @include vp-767 {
       display: block;
       opacity: 1;
+      width: 100%;
+      padding: 0;
+      padding-top: 110px;
+      min-height: 200px;
 
       &--plug {
         display: none;
@@ -258,6 +272,20 @@
       max-width: 192px;
       height: 140px;
       overflow: hidden;
+    }
+
+    @include vp-767 {
+      max-width: unset;
+      height: 110px;
+      left: 0;
+      top: 0;
+      overflow: unset;
+      width: 100%;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
     }
   }
 

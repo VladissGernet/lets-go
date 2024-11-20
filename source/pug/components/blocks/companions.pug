@@ -10,7 +10,6 @@ mixin companions()
         .companions__additional
           p
             | Теперь можно легко найти единомышленников!
-        +btn({text: "Показать всех", href: "#", type: "submit"}).companions__button
       ul.companions__profiles
         li.companions__profile.companions__profile--99
           ul.companions__flags
@@ -72,5 +71,5 @@ mixin companions()
               +icon("bicycle", 35, 24)
             li.companions__style
               +icon("run", 35, 24)
-
+      +btn({text: "Показать всех", href: "#", type: "submit"}).companions__button
 

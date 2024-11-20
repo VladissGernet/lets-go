@@ -3,6 +3,12 @@
   padding-bottom: 128px;
   min-height: 400px;
 
+  @include vp-1023 {
+    padding-top: 79px;
+    padding-bottom: 70px;
+    border-radius: 0 0 58px 58px;
+  }
+
   &__progress {
     padding: 15px 0 5px 0;
     width: 60px;
@@ -100,14 +106,26 @@
   .container {
     position: relative;
     display: grid;
+    grid-template-areas:
+    "content profiles"
+    "button profiles";
     grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    gap: 0 50px;
+
+    @include vp-1023 {
+      display: block;
+    }
   }
 
   &__content {
+    grid-area: content;
     max-width: 84%;
     margin-top: 63px;
     margin-left: 12px;
+
+    @include vp-1023 {
+      margin-left: 0;
+    }
 
     h2 {
       font-size: 81px;
@@ -124,6 +142,8 @@
       }
 
       @include vp-1023 {
+        font-size: 78px;
+        letter-spacing: 2px;
         color: $color-default-white;
       }
     }
@@ -141,7 +161,13 @@
       }
 
       @include vp-1023 {
+        font-size: 24px;
         color: $color-default-white;
+        margin-top: 48px;
+
+        br {
+          display: none;
+        }
       }
     }
   }
@@ -157,20 +183,42 @@
       @include vp-1279 {
         font-size: 20px;
       }
+
+      @include vp-1023 {
+        font-size: 22px;
+        margin-top: 76px;
+      }
     }
   }
 
   &__button {
-    margin-top: 108px;
-    margin-left: 2px;
+    grid-area: button;
+    margin-top: 76px;
+    margin-left: 14px;
     min-width: 293px;
+
+    align-self: self-start;
+    justify-self: start;
 
     @include vp-1279 {
       font-size: 22px;
     }
+
+    @include vp-1023 {
+      display: block;
+      justify-self: unset;
+      margin-left: 33px;
+      margin-right: 38px;
+      letter-spacing: 1px;
+
+      svg {
+        right: 18px;
+      }
+    }
   }
 
   &__profiles {
+    grid-area: profiles;
     margin: 32px 2% 0 0;
     padding: 0;
     list-style-type: none;
@@ -180,6 +228,15 @@
     display: grid;
     gap: 30px;
     grid-template-columns: 1fr 1fr;
+
+    @include vp-1023 {
+      margin-top: 92px;
+      margin-left: auto;
+      margin-right: auto;
+      justify-content: space-between;
+      max-width: unset;
+      gap: 20px 17%;
+    }
   }
 
   &__profile {
@@ -190,6 +247,11 @@
     padding-top: 253px;
     padding-bottom: 20px;
     min-height: 474px;
+
+    @include vp-1023 {
+      min-height: 484px;
+      box-shadow: 0px 0px 10px 0px $color-default-white;
+    }
 
     &::before {
       content: "";
@@ -257,10 +319,18 @@
 
     &:nth-child(2n - 1) {
       margin-bottom: 60px;
+
+      @include vp-1023 {
+        margin: 0;
+      }
     }
 
     &:nth-child(2n) {
       margin-top: 70px;
+
+      @include vp-1023 {
+        margin: 0;
+      }
     }
   }
 

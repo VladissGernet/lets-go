@@ -101,10 +101,11 @@
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 50px;
   }
 
   &__content {
-    max-width: 76%;
+    max-width: 84%;
     margin-top: 63px;
     margin-left: 12px;
 
@@ -118,6 +119,10 @@
       word-break: break-all;
       letter-spacing: 0.5px;
 
+      @include vp-1279 {
+        font-size: 56px;
+      }
+
       @include vp-1023 {
         color: $color-default-white;
       }
@@ -129,6 +134,11 @@
       font-weight: 500;
       line-height: 33px;
       color: $midnight-express;
+
+
+      @include vp-1279 {
+        font-size: 20px;
+      }
 
       @include vp-1023 {
         color: $color-default-white;
@@ -143,6 +153,10 @@
       line-height: 24px;
       margin-top: 54px;
       letter-spacing: -1.4px;
+
+      @include vp-1279 {
+        font-size: 20px;
+      }
     }
   }
 
@@ -150,16 +164,22 @@
     margin-top: 108px;
     margin-left: 2px;
     min-width: 293px;
+
+    @include vp-1279 {
+      font-size: 22px;
+    }
   }
 
   &__profiles {
-    margin: 32px 0 0 7%;
+    margin: 32px 2% 0 0;
     padding: 0;
     list-style-type: none;
+    justify-self: end;
+    max-width: 602px;
 
     display: grid;
     gap: 30px;
-    grid-template-columns: 285px 285px;
+    grid-template-columns: 1fr 1fr;
   }
 
   &__profile {
@@ -187,6 +207,7 @@
       margin: 32px 30px 0;
       position: relative;
       z-index: 1;
+      word-break: break-word;
 
       span {
         font-size: 24px;
@@ -194,6 +215,10 @@
         line-height: 22px;
         color: $catalina-blue;
         position: relative;
+
+        @include vp-1279 {
+          font-size: 20px;
+        }
 
         &::before {
           content: "";
@@ -217,6 +242,11 @@
       margin: 20px 10px 0;
       position: relative;
       z-index: 1;
+      word-break: break-word;
+
+      @include vp-1279 {
+        font-size: 16px;
+      }
     }
 
     &--online {

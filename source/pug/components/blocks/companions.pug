@@ -6,3 +6,32 @@ mixin companions()
         p
           | Все мы&nbsp;индивидуальны и&nbsp;у&nbsp;каждого свой взгляд на&nbsp;идеальный отдых.
           | Одному нужен пляж и&nbsp;коктейль, а&nbsp;другому маршрут для хайкинга.
+        .companions__additional
+          p
+            | Теперь можно легко найти единомышленников!
+        +btn({text: "Показать всех", href: "#", type: "submit"}).companions__button
+      ul.companions__profiles
+        li.companions__profile
+          h3 Таня Фирсова
+          p
+            | #ЗОЖ #ПП #Фитнес #пляж
+            | #авокадо #смузи
+          .companions__avatar
+            +img("content/profiles", "firsova", "jpg", 285, 285, "Таня Фирсова.")
+          ul.companions__flags
+            li.companions__flag
+              +icon("sri-lanka", 35, 24)
+            li.companions__flag
+              +icon("thailand", 35, 24)
+            li.companions__flag
+              +icon("seychelles", 35, 24)
+          ul.companions__styles
+            li.companions__style
+              +icon("aircraft", 35, 24)
+            li.companions__style
+              +icon("bus", 35, 24)
+            li.companions__style
+              +icon("bicycle", 35, 24)
+            li.companions__style
+              +icon("run", 35, 24)
+

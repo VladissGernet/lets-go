@@ -26,6 +26,8 @@
 
   .container {
     position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
   &__content {
@@ -55,5 +57,92 @@
         color: $color-default-white;
       }
     }
+  }
+
+  &__additional {
+    p {
+      font-size: 22px;
+      font-weight: 300;
+      line-height: 24px;
+      margin-top: 54px;
+    }
+  }
+
+  &__button {
+    margin-top: 85px;
+  }
+
+  &__profiles {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &__profile {
+    background-color: $color-default-white;
+    width: 285px;
+    border-radius: 22px;
+    overflow: hidden;
+    position: relative;
+    padding-top: 300px;
+    padding-bottom: 20px;
+  }
+
+  h3 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 22px;
+    color: $catalina-blue;
+    text-align: center;
+    margin: 0;
+  }
+
+  p {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23px;
+    color: $charcoal;
+    text-align: center;
+    margin: 0;
+  }
+
+  &__avatar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 285px;
+
+    img {
+      width: inherit;
+      height: inherit;
+      object-fit: cover;
+    }
+  }
+
+  &__flags {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 150px;
+  }
+
+  &__styles {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 160px;
+  }
+
+  &__style {
+    width: 23px;
+    height: 22px;
   }
 }

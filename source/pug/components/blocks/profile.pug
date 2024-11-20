@@ -2,3 +2,11 @@ mixin profile()
   section.profile
     .container
       h2 Добавьте свой профиль
+      +btn({text: "Показать тарифы для бизнеса"})(data-open-modal="feedback")
+      ol.profile__list
+        li.profile__item
+          span Базовое размещение
+        li.profile__item
+          span Вывод на первых позициях
+        li.profile__item
+          span Кастомный цвет карточки

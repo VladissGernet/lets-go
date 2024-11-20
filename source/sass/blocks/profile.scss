@@ -1,3 +1,61 @@
 .profile {
   min-height: 400px;
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    counter-reset: profile-item;
+  }
+
+  &__item {
+    counter-increment: profile-item;
+    position: relative;
+    padding-left: 80px;
+
+    &::before {
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 28px;
+      color: $color-default-white;
+      content: counter(profile-item);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 71px;
+      height: 71px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    &:nth-child(3n + 1) {
+      &::before {
+        background-color: $picton-blue;
+      }
+    }
+
+    &:nth-child(3n + 2) {
+      &::before {
+        background-color: $jordy-blue;
+      }
+    }
+
+    &:nth-child(3n + 3) {
+      &::before {
+        background-color: $pale-cornflower-blue;
+      }
+    }
+
+    span {
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 28px;
+      display: block;
+      height: 71px;
+      color: $charcoal;
+    }
+  }
 }

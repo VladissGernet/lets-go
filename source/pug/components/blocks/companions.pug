@@ -19,7 +19,8 @@ mixin companions()
               +icon("thailand", 35, 24)
             li.companions__flag
               +icon("seychelles", 35, 24)
-          h3 Таня Фирсова
+          h3
+            span Таня Фирсова
           p
             | #ЗОЖ #ПП #Фитнес #пляж
             | #авокадо #смузи
@@ -42,4 +43,35 @@ mixin companions()
               +icon("bicycle", 35, 24)
             li.companions__style.companions__style--disabled
               +icon("run", 35, 24)
+        li.companions__profile.companions__profile--online
+          ul.companions__flags
+            li.companions__flag
+              +icon("germany", 35, 24)
+            li.companions__flag
+              +icon("czechia", 35, 24)
+          h3
+            span Петя Демин
+          p
+            | #бургер #бар #футбол
+            | #концерт #крафт
+          .companions__progress
+            .companions__progress-value
+              span 80
+            .companions__progress-level
+              span level
+            svg(viewBox="0 0 36 36").companions__progress-icon
+              circle(cx="18", cy="18", r="16", stroke="#000000", opacity="0.6" fill="none", stroke-width="4")
+              circle(cx="18", cy="18", r="16", stroke="#4d99d6", fill="none", stroke-width="4", stroke-dasharray="100", stroke-dashoffset="50").companions__progress-circle
+          .companions__avatar
+            +img("content/profiles", "demin", "jpg", 285, 285, "Таня Фирсова.")
+          ul.companions__styles
+            li.companions__style
+              +icon("aircraft", 35, 24)
+            li.companions__style
+              +icon("bus", 35, 24)
+            li.companions__style.companions__style--disabled
+              +icon("bicycle", 35, 24)
+            li.companions__style
+              +icon("run", 35, 24)
+
 

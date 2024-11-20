@@ -145,23 +145,26 @@
 
 
     h3 {
-      font-size: 24px;
-      font-weight: 700;
-      line-height: 22px;
-      color: $catalina-blue;
       text-align: center;
       margin: 0 30px;
-      position: relative;
 
-      &::before {
-        content: "";
-        position: absolute;
-        top: 2px;
-        left: -2px;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background-color: $salmon;
+      span {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 22px;
+        color: $catalina-blue;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 11px;
+          left: -12px;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background-color: $salmon;
+        }
       }
     }
 
@@ -172,6 +175,12 @@
       color: $charcoal;
       text-align: center;
       margin: 0 10px;
+    }
+
+    &--online {
+      h3 span::before {
+        background-color: $lawn-green;
+      }
     }
   }
 

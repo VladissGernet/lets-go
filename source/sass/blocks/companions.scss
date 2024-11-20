@@ -28,28 +28,32 @@
     position: relative;
   }
 
-  h2 {
-    font-size: 95px;
-    font-weight: 700;
-    line-height: 45px;
-    margin: 0;
-    color: $midnight-express;
-    word-break: break-all;
+  &__content {
+    max-width: 524px;
 
-    @include vp-1023 {
-      color: $color-default-white;
+    h2 {
+      font-size: 95px;
+      font-weight: 700;
+      line-height: 45px;
+      margin: 0;
+      color: $midnight-express;
+      word-break: break-all;
+
+      @include vp-1023 {
+        color: $color-default-white;
+      }
     }
-  }
 
-  p {
-    margin: 40px 0 0;
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 33px;
-    color: $midnight-express;
+    p {
+      margin: 40px 0 0;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 33px;
+      color: $midnight-express;
 
-    @include vp-1023 {
-      color: $color-default-white;
+      @include vp-1023 {
+        color: $color-default-white;
+      }
     }
   }
 }

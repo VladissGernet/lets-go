@@ -1,5 +1,6 @@
 .companions {
   padding-top: 100px;
+  padding-bottom: 200px;
   min-height: 400px;
 
   &__progress {
@@ -87,15 +88,19 @@
   }
 
   &__content {
-    max-width: 524px;
+    max-width: 550px;
+    margin-top: 63px;
+    margin-left: 12px;
 
     h2 {
-      font-size: 95px;
+      font-size: 81px;
       font-weight: 700;
       line-height: 45px;
       margin: 0;
       color: $midnight-express;
+      text-transform: uppercase;
       word-break: break-all;
+      letter-spacing: 0.5px;
 
       @include vp-1023 {
         color: $color-default-white;
@@ -103,7 +108,7 @@
     }
 
     p {
-      margin: 40px 0 0;
+      margin: 38px 0 0;
       font-size: 24px;
       font-weight: 500;
       line-height: 33px;
@@ -121,28 +126,34 @@
       font-weight: 300;
       line-height: 24px;
       margin-top: 54px;
+      letter-spacing: -1.4px;
     }
   }
 
   &__button {
-    margin-top: 85px;
+    margin-top: 108px;
+    margin-left: 2px;
+    min-width: 293px;
   }
 
   &__profiles {
     margin: 0;
     padding: 0;
     list-style-type: none;
+
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr;
   }
 
   &__profile {
     background-color: $color-default-white;
-    width: 285px;
     border-radius: 22px;
     overflow: hidden;
     position: relative;
     padding-top: 300px;
     padding-bottom: 20px;
-
+    min-height: 483px;
 
     h3 {
       text-align: center;
@@ -181,6 +192,14 @@
       h3 span::before {
         background-color: $lawn-green;
       }
+    }
+
+    &:nth-child(2n - 1) {
+      margin-bottom: 60px;
+    }
+
+    &:nth-child(2n) {
+      margin-top: 70px;
     }
   }
 

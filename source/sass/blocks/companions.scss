@@ -248,8 +248,14 @@
     padding-bottom: 20px;
     min-height: 474px;
 
+    transition: all $trans-default;
+
     @include vp-1023 {
       min-height: 484px;
+      box-shadow: 0px 0px 10px 0px $color-default-white;
+    }
+
+    &:hover {
       box-shadow: 0px 0px 10px 0px $color-default-white;
     }
 

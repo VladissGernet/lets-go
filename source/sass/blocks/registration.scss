@@ -1,6 +1,12 @@
 .registration {
-  min-height: 400px;
+  padding-top: 142px;
+  padding-bottom: 104px;
+
+  border-radius: 0 0 58px 58px;
+
   background-color: $blue-zodiac;
+
+  position: relative;
 
   @include vp-1023 {
     padding-top: 100px;
@@ -11,20 +17,28 @@
     margin: 0;
     font-size: 95px;
     font-weight: 700;
-    line-height: 45px;
+    line-height: 110px;
     color: $color-default-white;
     word-break: break-all;
     text-align: center;
+
+    @include vp-1279 {
+      font-size: 80px;
+    }
   }
 
   p {
-    margin: 0;
+    margin: 14px auto 0;
     font-size: 28px;
     font-weight: 300;
     line-height: 31px;
     color: $color-default-white;
-    word-break: break-all;
     text-align: center;
+    max-width: 48%;
+
+    @include vp-1279 {
+      font-size: 24px;
+    }
   }
 
   &__link {
@@ -37,6 +51,10 @@
 
     transition: all $trans-default;
 
+    @include vp-1279 {
+      font-size: 24px;
+    }
+
     @include hover-focus {
       color: $picton-blue;
 
@@ -47,6 +65,9 @@
   }
 
   &__form {
+    margin: 47px auto 0;
+    max-width: 89%;
+
     form {
       display: flex;
     }
@@ -60,6 +81,8 @@
       label {
         display: block;
         width: unset;
+        height: 100%;
+        max-height: unset;
       }
 
       input {
@@ -71,6 +94,12 @@
         min-height: 81px;
         width: 100%;
         max-width: unset;
+        height: 100%;
+        max-height: unset;
+
+        padding-right: 32px;
+        padding-left: 32px;
+
         border-radius: 0;
         border-radius: 20px 0 0 20px;
         border: 4px solid $color-default-white;
@@ -127,6 +156,13 @@
     }
 
     button {
+      text-align: left;
+
+      padding-left: 3.5%;
+
+      min-width: 28%;
+      max-width: 500px;
+
       border-radius: 0;
       border-radius: 0 20px 20px 0;
     }
@@ -136,15 +172,47 @@
     font-size: 28px;
     font-weight: 300;
     line-height: 30px;
-    letter-spacing: 1%;
+    letter-spacing: 0.01em;
     color: $color-default-white;
-    margin: 0;
     text-align: center;
+
+    margin: 70px auto 0;
+
+    max-width: 80%;
+
+    @include vp-1279 {
+      font-size: 24px;
+    }
   }
 
   &__contacts {
-    gap: 30px 105px;
+    margin-top: 42px;
+
+    gap: 20px 13px;
     justify-content: center;
+
+    @include vp-1279 {
+      gap: 20px 6%;
+    }
+
+    .contacts__item {
+      min-width: 462px;
+
+      @include vp-1279 {
+        min-width: unset;
+      }
+    }
+
+    // pixel perfect fix
+    .contacts__item:first-child {
+      .contacts__link {
+        margin-left: 35px;
+
+        @include vp-1279 {
+          margin-left: unset;
+        }
+      }
+    }
 
     .contacts__link {
       display: flex;
@@ -156,6 +224,16 @@
       background-color: $midnight-express-2;
 
       margin-right: 31px;
+
+      width: 90px;
+      height: 90px;
+
+      flex-shrink: 0;
+
+      svg {
+        transform: scale(2);
+      }
+
     }
 
     .contacts__icon--desktop {
@@ -168,8 +246,17 @@
 
     .contacts__text {
       font-size: 28px;
+      font-weight: 700;
+      line-height: 28px;
       color: $pattens-blue;
+      text-transform: uppercase;
+
+      padding-top: 8px;
       display: inline-block;
+
+      @include vp-1279 {
+        font-size: 22px;
+      }
     }
   }
 }

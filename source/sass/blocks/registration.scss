@@ -1,4 +1,13 @@
 .registration {
   min-height: 400px;
   background-color: $blue-zodiac;
+
+  @include vp-1023 {
+    padding-top: 100px;
+    margin-top: -60px;
+  }
+
+  h2 {
+    margin: 0;
+  }
 }

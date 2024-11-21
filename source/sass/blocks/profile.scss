@@ -1,6 +1,14 @@
 .profile {
   padding-top: 126px;
-  padding-bottom: 45px;
+  padding-bottom: 65px;
+
+  @include vp-1023 {
+    padding-top: 43px;
+    padding-bottom: 62px;
+    border-radius: 0 0 58px 58px;
+    background-color: $color-default-white;
+    position: relative;
+  }
 
   .container {
     display: grid;
@@ -10,6 +18,10 @@
       "list price"
       "button price";
     align-items: start;
+
+    @include vp-1023 {
+      grid-template-columns: auto 198px;
+    }
   }
 
   h2 {
@@ -27,6 +39,13 @@
     @include vp-1279 {
       font-size: 50px;
     }
+
+    @include vp-1023 {
+      font-size: 79px;
+      line-height: 90px;
+      margin-right: 0;
+      margin-bottom: 19px;
+    }
   }
 
   &__list {
@@ -35,12 +54,20 @@
     padding: 0;
     list-style-type: none;
     counter-reset: profile-item;
+
+    @include vp-1023 {
+      margin-top: 38px;
+    }
   }
 
   &__item {
     counter-increment: profile-item;
     position: relative;
     margin-left: 112px;
+
+    @include vp-1023 {
+      margin-left: 91px;
+    }
 
     // Верхняя декоративная серая линия.
     &::before,
@@ -74,9 +101,15 @@
       position: relative;
       word-break: break-all;
       margin-right: 30px;
+      padding: 4px 0;
 
       @include vp-1279 {
         font-size: 24px;
+      }
+
+      @include vp-1023 {
+        font-size: 28px;
+        min-height: 71px;
       }
 
       // Номер пункта списка
@@ -99,6 +132,14 @@
 
         @include vp-1279 {
           font-size: 24px;
+        }
+
+        @include vp-1023 {
+          width: 68px;
+          height: 68px;
+          top: 1px;
+          left: -90px;
+          width: 68px;
         }
       }
     }
@@ -130,6 +171,11 @@
     padding: 87px 43% 50px 7%;
     min-height: 333px;
     position: relative;
+
+    @include vp-1023 {
+      padding: 24px 12px 130px;
+      min-height: 285px;
+    }
   }
 
   &__text {
@@ -146,6 +192,12 @@
     @include vp-1279 {
       font-size: 26px;
     }
+
+    @include vp-1023 {
+      font-size: 23px;
+      letter-spacing: 0.9px;
+      margin-bottom: 19px;
+    }
   }
 
   &__price-value {
@@ -160,6 +212,10 @@
     @include vp-1279 {
       font-size: 24px;
     }
+
+    @include vp-1023 {
+      margin-bottom: 10px;
+    }
   }
 
   &__icon {
@@ -169,6 +225,15 @@
     transform: translateY(-50%);
     width: 34%;
     height: 61%;
+
+    @include vp-1023 {
+      bottom: -32px;
+      top: unset;
+      right: 50%;
+      width: 100px;
+      height: 100px;
+      transform: translate(50%, -50%);
+    }
 
     svg {
       width: 100%;
@@ -195,6 +260,11 @@
     position: relative;
 
     transition: all $trans-default;
+
+    @include vp-1023 {
+      margin-left: -2px;
+      margin-top: 20px;
+    }
 
     @include hover-focus {
       opacity: 0.7;

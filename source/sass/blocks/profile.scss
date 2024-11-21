@@ -23,6 +23,10 @@
     word-break: break-word;
     margin: 0 30px 99px 0;
     letter-spacing: 3px;
+
+    @include vp-1279 {
+      font-size: 50px;
+    }
   }
 
   &__list {
@@ -69,6 +73,11 @@
       color: $charcoal;
       position: relative;
       word-break: break-all;
+      margin-right: 30px;
+
+      @include vp-1279 {
+        font-size: 24px;
+      }
 
       // Номер пункта списка
       &::before {
@@ -87,6 +96,10 @@
         justify-content: center;
         align-items: center;
         text-align: center;
+
+        @include vp-1279 {
+          font-size: 24px;
+        }
       }
     }
 
@@ -129,6 +142,10 @@
     text-align: center;
     margin-bottom: 22px;
     word-break: break-all;
+
+    @include vp-1279 {
+      font-size: 26px;
+    }
   }
 
   &__price-value {
@@ -139,6 +156,10 @@
     text-align: center;
     margin-bottom: 13px;
     word-break: break-all;
+
+    @include vp-1279 {
+      font-size: 24px;
+    }
   }
 
   &__icon {

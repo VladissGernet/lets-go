@@ -217,6 +217,16 @@
     .contacts__link {
       display: flex;
       align-items: center;
+
+      @include hover-focus {
+        .contacts__icon {
+          background-color: $midnight-express-2;
+        }
+
+        &:active {
+          opacity: 0.3;
+        }
+      }
     }
 
     .contacts__icon {

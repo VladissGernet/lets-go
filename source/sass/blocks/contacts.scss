@@ -24,7 +24,15 @@
   }
 
   &__link {
+    *, & {
+      transition: all $trans-default;
+    }
+
     @include hover-focus {
+      * {
+        color: $picton-blue;
+      }
+
       .contacts__icon {
         background-color: $curious-blue;
       }

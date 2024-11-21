@@ -143,14 +143,33 @@
   }
 
   &__contacts {
-    outline: 5px solid tomato;
+    gap: 30px 105px;
+    justify-content: center;
+
+    .contacts__link {
+      display: flex;
+      align-items: center;
+    }
+
+    .contacts__icon {
+      color: $pattens-blue;
+      background-color: $midnight-express-2;
+
+      margin-right: 31px;
+    }
 
     .contacts__icon--desktop {
       display: none;
     }
 
     .contacts__icon--mobile {
-      display: block;
+      display: flex;
+    }
+
+    .contacts__text {
+      font-size: 28px;
+      color: $pattens-blue;
+      display: inline-block;
     }
   }
 }

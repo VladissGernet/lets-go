@@ -36,8 +36,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
     initAboutParallax();
     initDirectionsSwiper();
-    document.querySelector('.profile__button').click();
-
   });
 });
 

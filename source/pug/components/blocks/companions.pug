@@ -29,8 +29,8 @@ mixin companions()
               span 99
             .companions__progress-level
               span level
-            svg(viewBox="0 0 36 36").companions__progress-icon
-              circle(cx="18", cy="18", r="17", stroke="#4d99d6", fill="none", stroke-width="3", stroke-dasharray="10", stroke-dashoffset="50").companions__progress-circle
+            svg.companions__progress-icon(viewBox="0 0 36 36")
+              circle.companions__progress-circle(cx="18", cy="18", r="17", stroke="#4d99d6", fill="none", stroke-width="3", stroke-dasharray="10", stroke-dashoffset="50")
           .companions__avatar
             +img("content/profiles", "firsova", "jpg", 285, 285, "Таня Фирсова.")
           ul.companions__styles
@@ -58,8 +58,8 @@ mixin companions()
               span 80
             .companions__progress-level
               span level
-            svg(viewBox="0 0 36 36").companions__progress-icon
-              circle(cx="18", cy="18", r="17", stroke="#4d99d6", fill="none", stroke-width="3", stroke-dasharray="100", stroke-dashoffset="50").companions__progress-circle
+            svg.companions__progress-icon(viewBox="0 0 36 36")
+              circle.companions__progress-circle(cx="18", cy="18", r="17", stroke="#4d99d6", fill="none", stroke-width="3", stroke-dasharray="100", stroke-dashoffset="50")
           .companions__avatar
             +img("content/profiles", "demin", "png", 285, 285, "Таня Фирсова.")
           ul.companions__styles
@@ -72,4 +72,3 @@ mixin companions()
             li.companions__style
               +icon("run", 35, 24)
       +btn({text: "Показать всех", href: "#", type: "button"}).companions__button
-

@@ -1,7 +1,31 @@
 .profile {
-  min-height: 400px;
+  padding-top: 126px;
+  padding-bottom: 100px;
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "title title"
+      "list price"
+      "button price";
+    align-items: start;
+  }
+
+  h2 {
+    grid-area: title;
+    font-size: 79px;
+    font-weight: 700;
+    line-height: 45px;
+    color: $midnight-express;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 30px 99px 0;
+    letter-spacing: 3px;
+  }
 
   &__list {
+    grid-area: list;
     margin: 0;
     padding: 0;
     list-style-type: none;
@@ -57,5 +81,15 @@
       height: 71px;
       color: $charcoal;
     }
+  }
+
+  &__price {
+    grid-area: price;
+    border-radius: 20px;
+    background-color: $blue-zodiac;
+  }
+
+  &__button {
+    grid-area: button;
   }
 }

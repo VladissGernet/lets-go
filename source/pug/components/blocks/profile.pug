@@ -2,7 +2,6 @@ mixin profile()
   section.profile
     .container
       h2 Добавьте свой профиль
-      +btn({text: "Показать тарифы для бизнеса"})(data-open-modal="feedback")
       ol.profile__list
         li.profile__item
           span Базовое размещение
@@ -10,3 +9,12 @@ mixin profile()
           span Вывод на первых позициях
         li.profile__item
           span Кастомный цвет карточки
+      .profile__price
+        .profile__price-value
+          span Бесплатно
+        .profile__price-value
+          span 99 руб./мес
+        .profile__price-value
+          span 59 руб./мес
+        +icon("price", 200, 202)
+      +btn({text: "Показать тарифы для бизнеса"})(data-open-modal="feedback").profile__button

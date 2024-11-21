@@ -10,12 +10,15 @@ mixin profile()
         li.profile__item
           span Кастомный цвет карточки
       .profile__price
-        .profile__price-value
+        .profile__text
           span Бесплатно
         .profile__price-value
           span 99 руб./мес
         .profile__price-value
           span 59 руб./мес
         .profile__icon
-          +icon("price", 200, 202)
-      +btn({text: "Показать тарифы для бизнеса"})(data-open-modal="feedback").profile__button
+          +icon("price", 200, 200)
+      button(type="button", data-open-modal="feedback").profile__button
+        span Показать тарифы для бизнеса
+        .profile__button-icon
+          +icon("businessman", 29, 28)

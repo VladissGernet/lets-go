@@ -16,5 +16,6 @@ mixin profile()
           span 99 руб./мес
         .profile__price-value
           span 59 руб./мес
-        +icon("price", 200, 202)
+        .profile__icon
+          +icon("price", 200, 202)
       +btn({text: "Показать тарифы для бизнеса"})(data-open-modal="feedback").profile__button

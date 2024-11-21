@@ -9,7 +9,7 @@
   position: relative;
 
   @include vp-1023 {
-    padding-top: 100px;
+    padding-top: 138px;
     margin-top: -60px;
   }
 
@@ -25,6 +25,19 @@
     @include vp-1279 {
       font-size: 80px;
     }
+
+    @include vp-1023 {
+      font-size: 60px;
+      text-transform: uppercase;
+      margin: 0 -14px;
+      letter-spacing: 3px;
+      line-height: 62px;
+
+      // pixel perfect fix
+      span {
+        font-size: 75px;
+      }
+    }
   }
 
   p {
@@ -38,6 +51,16 @@
 
     @include vp-1279 {
       font-size: 24px;
+    }
+
+    @include vp-1023 {
+      margin-top: 29px;
+      max-width: unset;
+      letter-spacing: 0.5px;
+
+      br {
+        display: none;
+      }
     }
   }
 
@@ -67,6 +90,10 @@
   &__form {
     margin: 47px auto 0;
     max-width: 89%;
+
+    @include vp-1023 {
+      margin-top: 73px;
+    }
 
     form {
       display: flex;
@@ -165,6 +192,17 @@
 
       border-radius: 0;
       border-radius: 0 20px 20px 0;
+
+      @include vp-1023 {
+        font-size: 0;
+        min-width: 80px;
+        padding: 0;
+
+        svg {
+          right: 29px;
+          top: 35px;
+        }
+      }
     }
   }
 
@@ -182,6 +220,11 @@
 
     @include vp-1279 {
       font-size: 24px;
+    }
+
+    @include vp-1023 {
+      margin-top: 76px;
+      max-width: unset;
     }
   }
 
@@ -244,6 +287,14 @@
         transform: scale(2);
       }
 
+      @include vp-1023 {
+        width: 68px;
+        height: 68px;
+
+        svg {
+          transform: scale(1);
+        }
+      }
     }
 
     .contacts__icon--desktop {
@@ -266,6 +317,10 @@
 
       @include vp-1279 {
         font-size: 22px;
+      }
+
+      @include vp-1023 {
+        max-width: unset;
       }
     }
   }

@@ -8,6 +8,7 @@
     border-radius: 0 0 58px 58px;
     background-color: $color-default-white;
     position: relative;
+    z-index: 1;
   }
 
   @include vp-767 {

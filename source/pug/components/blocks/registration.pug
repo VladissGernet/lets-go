@@ -4,8 +4,9 @@ mixin registration()
       h2 Заинтересовались?
       p
         | Зарегистрируйтесь, это быстро и&nbsp;бесплатно!
-        | Уже зарегистрированы? Тогда скорее
-        a.registration__link(href="#")= " авторизуйтесь."
+        | Уже зарегистрированы? Тогда скорее&nbsp;
+        a.registration__link(href="#")= "авторизуйтесь"
+        |.
       .registration__form(data-form-validate, data-callback="base")
         form(
           method="post",
@@ -18,7 +19,9 @@ mixin registration()
           +custom-input({
             inputType: "email",
             inputName: "user-email",
+            inputPlaceholder: "E-mail"
           })(data-validate-type="email", data-required)
           +btn({text: "Регистрация", type: "submit"})
       .registration__question
         | Остались вопросы? Мы с радостью на них ответим!
+      +contacts("registration__contacts")

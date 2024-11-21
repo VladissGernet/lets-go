@@ -2,9 +2,14 @@
   .modal__content {
     padding: 57px 0 0;
     border-radius: 30px;
-    box-shadow: 0px 4px 22px 0px rgb($catalina-blue, 0.18);
+    box-shadow: 0 4px 22px 0 rgb($catalina-blue, 0.18);
     overflow: hidden;
     width: 55%;
+
+    @include vp-767 {
+      width: 94%;
+      padding-top: 37px;
+    }
   }
 
   h2 {
@@ -25,6 +30,12 @@
     @include vp-1023 {
       font-size: 28px;
     }
+
+    @include vp-767 {
+      font-size: 24px;
+      letter-spacing: 1px;
+      line-height: 20px;
+    }
   }
 
   .modal__close-btn {
@@ -32,7 +43,8 @@
     display: block;
     position: static;
     width: 100%;
-    height: 107px;
+    height: unset;
+    min-height: 107px;
     font-size: 24px;
     font-weight: 700;
     line-height: 26px;
@@ -51,10 +63,21 @@
     @include vp-1279 {
       font-size: 20px;
     }
+
+    @include vp-767 {
+      margin-top: 33px;
+      min-height: 59px;
+    }
   }
 
   &__list {
     margin: 42px 7.5% 0;
+
+    @include vp-767 {
+      margin-top: 6px;
+      margin-left: 9%;
+      margin-right: 9%;
+    }
 
     // Декоративная полоска
     position: relative;
@@ -74,6 +97,10 @@
     display: flex;
     justify-content: space-between;
     padding: 12px 0 12px 0;
+
+    @include vp-767 {
+      display: block;
+    }
 
     // Декоративная полоска
     position: relative;
@@ -100,6 +127,16 @@
       @include vp-1023 {
         font-size: 14px;
       }
+
+      @include vp-767 {
+        dl & {
+          font-size: 16px;
+          font-weight: 300;
+          line-height: 22px;
+          display: block;
+          margin: 0;
+        }
+       }
     }
 
     dt {

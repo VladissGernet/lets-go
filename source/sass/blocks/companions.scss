@@ -13,6 +13,8 @@
     padding-top: 79px;
     padding-bottom: 40px;
     border-radius: 0 0 28px 32px;
+    position: relative;
+    z-index: 1;
   }
 
   &__progress {

@@ -1,10 +1,10 @@
 .profile {
   padding-top: 126px;
-  padding-bottom: 100px;
+  padding-bottom: 45px;
 
   .container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto 44.3%;
     grid-template-areas:
       "title title"
       "list price"
@@ -20,13 +20,14 @@
     color: $midnight-express;
     text-transform: uppercase;
     text-align: center;
+    word-break: break-word;
     margin: 0 30px 99px 0;
     letter-spacing: 3px;
   }
 
   &__list {
     grid-area: list;
-    margin: 0;
+    margin: 62px 0 0;
     padding: 0;
     list-style-type: none;
     counter-reset: profile-item;
@@ -35,7 +36,7 @@
   &__item {
     counter-increment: profile-item;
     position: relative;
-    margin-left: 80px;
+    margin-left: 112px;
 
     // Верхняя декоративная серая линия.
     &::before,
@@ -64,9 +65,10 @@
       line-height: 28px;
       display: flex;
       align-items: center;
-      min-height: 71px;
+      min-height: 77px;
       color: $charcoal;
       position: relative;
+      word-break: break-all;
 
       // Номер пункта списка
       &::before {
@@ -77,7 +79,7 @@
         content: counter(profile-item);
         position: absolute;
         top: 0;
-        left: -70px;
+        left: -97px;
         width: 71px;
         height: 71px;
         border-radius: 50%;
@@ -112,20 +114,21 @@
     grid-area: price;
     border-radius: 20px;
     background-color: $blue-zodiac;
-    padding-top: 84px;
-    padding-left: 40px;
-    padding-bottom: 50px;
-    padding-right: 400px;
+    padding: 87px 43% 50px 7%;
     min-height: 333px;
     position: relative;
   }
 
   &__text {
-    font-size: 41px;
+    font-size: 32px;
     font-weight: 700;
     line-height: 28px;
+    letter-spacing: 3px;
     color: $color-default-white;
+    text-transform: uppercase;
     text-align: center;
+    margin-bottom: 22px;
+    word-break: break-all;
   }
 
   &__price-value {
@@ -134,19 +137,21 @@
     line-height: 28px;
     color: $color-default-white;
     text-align: center;
+    margin-bottom: 13px;
+    word-break: break-all;
   }
 
   &__icon {
     position: absolute;
-    right: 20px;
-    top: 50%;
+    right: 8%;
+    top: 49%;
     transform: translateY(-50%);
-    width: 200px;
-    height: 200px;
+    width: 34%;
+    height: 61%;
 
     svg {
-      width: inherit;
-      height: inherit;
+      width: 100%;
+      height: 100%;
     }
   }
 
@@ -157,11 +162,14 @@
     line-height: 20px;
     text-align: left;
     border: none;
-    padding: 0 0 0 80px;
+    padding: 0 0 0 92px;
     background-color: transparent;
     color: $blue-zodiac;
     cursor: pointer;
     min-height: 71px;
+    margin-top: 32px;
+    margin-left: 15px;
+    justify-self: start;
 
     position: relative;
 

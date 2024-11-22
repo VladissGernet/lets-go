@@ -8,13 +8,12 @@ const initHideButton = () => {
   hideButton.addEventListener('click', () => {
     if (filterContent.classList.contains('js-is-open')) {
       filterContent.classList.remove('js-is-open');
-      filterContent.style.height = 0;
+      filterContent.style.maxHeight = 0;
     } else {
       filterContent.classList.add('js-is-open');
-      filterContent.style.height = `${filterContent.scrollHeight}px`;
+      filterContent.style.maxHeight = `${filterContent.scrollHeight}px`;
     }
   });
-
 };
 
 export {initHideButton};

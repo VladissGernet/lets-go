@@ -38,13 +38,9 @@ const createFilterContinentsButtons = (filter, countriesData, selectedContinent)
 
       // Обновляем высоту контента
       if (filterContent.classList.contains('js-is-open')) {
-        const allElements = filterContent.querySelectorAll('.filter__item');
-        let height = 0;
-        allElements.forEach((element) => {
-          height += element.offsetHeight;
-        });
+        const newHeight = document.querySelector('.filter__content').scrollHeight;
 
-        filterContent.style.height = `${height}px`;
+        filterContent.style.maxHeight = `${newHeight}px`;
       }
     }
   });

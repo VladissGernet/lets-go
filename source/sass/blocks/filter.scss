@@ -1,6 +1,14 @@
 .filter {
-  padding-top: 62px;
+  padding-top: 60px;
   min-height: 500px;
+
+  &__header {
+    margin: 2px 20px 0;
+
+    svg {
+      transform: translateY(-2px);
+    }
+  }
 
   h2 {
     font-size: 20px;
@@ -9,13 +17,13 @@
     text-transform: uppercase;
     color: $midnight-express;
 
-    margin: 0;
+    margin: 0 0 0 18px;
     display: inline;
   }
 
   &__continents {
     list-style-type: none;
-    margin: 0;
+    margin: 0 0 0 1px;
     padding: 0;
 
     display: inline;
@@ -23,7 +31,7 @@
 
   &__continent {
     display: inline;
-    margin: 0 20px;
+    margin: 0 20px 0 0;
     opacity: 0.3;
     transition: all $trans-default;
 
@@ -45,9 +53,46 @@
   }
 
   &__content {
-    margin: 0;
+    margin: 70px 37px 0;
+    padding: 0;
+
+    list-style-type: none;
     overflow: hidden;
     transition: all $trans-default;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 70px 20px;
+  }
+
+  &__item {
+    min-width: 184px;
+  }
+
+  &__letter {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 60px;
+    text-transform: uppercase;
+    color: $midnight-express;
+  }
+
+  &__countries {
+    list-style-type: none;
+    margin: 30px 0 0;
+    padding: 0;
+  }
+
+  &__country-button {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    color: $charcoal;
+
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
   }
 
   &__hide-button {

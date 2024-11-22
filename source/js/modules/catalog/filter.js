@@ -20,7 +20,7 @@ const initCountriesFilter = () => {
   const sortedCountries = sortCountriesInSelectedContinent(selectedContinent);
 
   // Устанавливаю высоту контента фильтра для скрытия.
-  filterContent.style.height = 0;
+  filterContent.style.maxHeight = 0;
 
   // Создаем алфавитный список
   createAlphabetList(filterContent, sortedCountries);

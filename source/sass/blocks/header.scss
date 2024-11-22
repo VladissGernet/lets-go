@@ -232,4 +232,12 @@
       }
     }
   }
+
+  &--catalog {
+    background-color: $midnight-express;
+
+    @include vp-767 {
+      padding-top: 7px;
+    }
+  }
 }

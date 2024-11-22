@@ -1,7 +1,7 @@
 extends ../components/base/layout
 
 block variables
-  - const title = "Каталог" //- на страницах кроме главной используйте О нас — ProjectName
+  - const title = "Попутчики - Погнали?" //- на страницах кроме главной используйте О нас — ProjectName
   - const wrapperMods = ""
   - const hasHeader = true
   - const headerMods = "header--catalog"
@@ -11,6 +11,7 @@ block variables
 
 block main
   main
+    +catalogTitle()
     //- на странице запрещен "голый" код
     //- все блоки вставляются из папки pug/components/blocks
 

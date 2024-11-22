@@ -197,12 +197,9 @@ const createAlphabetList = (filterContent, sortedCountries) => {
   });
 
   filterContent.appendChild(filterContentFragment);
-
-  // Обновляем высоту контента
-  filterContent.dataset.height = filterContent.offsetHeight;
 };
 
-const initCountriesFiler = () => {
+const initCountriesFilter = () => {
   const filter = document.querySelector('.filter');
   if (!filter) {
     return;
@@ -216,7 +213,7 @@ const initCountriesFiler = () => {
   const sortedCountries = sortCountriesInSelectedContinent(selectedContinent);
 
   // Устанавливаю высоту контента фильтра для скрытия.
-  filterContent.dataset.height = filterContent.offsetHeight;
+  filterContent.style.height = 0;
 
   // Создаем алфавитный список
   createAlphabetList(filterContent, sortedCountries);
@@ -228,4 +225,4 @@ const initCountriesFiler = () => {
 
 };
 
-export {initCountriesFiler};
+export {initCountriesFilter};

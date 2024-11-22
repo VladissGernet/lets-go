@@ -6,7 +6,9 @@ import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
 import {Burger} from './vendor/burger';
 import {initAboutParallax} from './modules/about-parallax';
 import {initDirectionsSwiper} from './modules/directions-swiper';
-import {initCountriesFiler} from './modules/catalog/filter';
+
+import {initCountriesFilter} from './modules/catalog/filter';
+import {initHideButton} from './modules/catalog/hide-button';
 
 // ---------------------------------
 
@@ -37,7 +39,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
     initAboutParallax();
     initDirectionsSwiper();
-    initCountriesFiler();
+
+    initCountriesFilter();
+    initHideButton();
   });
 });
 

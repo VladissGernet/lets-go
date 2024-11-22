@@ -16,6 +16,9 @@
 
   @include vp-767 {
     padding-top: 83px;
+    padding-bottom: 47px;
+
+    border-radius: 0 0 28px 28px;
   }
 
   .container {
@@ -143,7 +146,8 @@
     }
 
     @include vp-767 {
-      margin: 29px 0 0;
+      margin: 29px 6px 0 0;
+      max-width: unset;
     }
 
     form {
@@ -184,6 +188,17 @@
         background-color: transparent;
 
         transition: all $trans-default;
+
+        @include vp-767 {
+          font-size: 18px;
+          line-height: 18px;
+
+          padding-left: 21px;
+          padding-right: 16px;
+
+          min-height: 62px;
+          border-radius: 10px 0 0 10px;
+        }
 
         &::placeholder {
           color: rgb($charcoal, 0.3);
@@ -252,6 +267,17 @@
           top: 35px;
         }
       }
+
+      @include vp-767 {
+        min-width: 60px;
+        border-radius: 10px;
+        margin-left: -10px;
+
+        svg {
+          right: 20px;
+          top: 25px;
+        }
+      }
     }
   }
 
@@ -275,6 +301,15 @@
       margin-top: 76px;
       max-width: unset;
     }
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 22px;
+
+      margin-top: 30px;
+      padding-right: 9px;
+      max-width: 80%;
+    }
   }
 
   &__contacts {
@@ -292,6 +327,11 @@
       margin-left: 34px;
     }
 
+    @include vp-767 {
+      margin-top: 17px;
+      margin-left: 0;
+    }
+
     .contacts__item {
       min-width: 462px;
 
@@ -301,6 +341,12 @@
 
       @include vp-1023 {
         margin-bottom: 0;
+      }
+
+      @include vp-767 {
+        &:not(:last-child) {
+          margin-bottom: 2px;
+        }
       }
     }
 
@@ -358,6 +404,16 @@
           transform: scale(1.5);
         }
       }
+
+      @include vp-767 {
+        width: 45px;
+        height: 45px;
+        margin-right: 16px;
+
+        svg {
+          transform: scale(1);
+        }
+      }
     }
 
     .contacts__icon--desktop {
@@ -385,6 +441,13 @@
       @include vp-1023 {
         font-size: 28px;
         max-width: unset;
+      }
+
+      @include vp-767 {
+        font-size: 16px;
+        line-height: 22px;
+
+        padding-top: 0;
       }
     }
   }

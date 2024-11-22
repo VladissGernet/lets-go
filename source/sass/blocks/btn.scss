@@ -48,4 +48,22 @@
     pointer-events: none;
     cursor: not-allowed;
   }
+
+  &--secondary {
+    background-color: transparent;
+    border: 3px solid $midnight-express;
+
+    @include hover-focus {
+      color: $color-default-white;
+      background-color: $midnight-express;
+
+      svg {
+        transform: rotate(0);
+      }
+
+      &:active {
+        color: rgb($color-default-white, 0.3);
+      }
+    }
+  }
 }

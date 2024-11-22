@@ -1,4 +1,9 @@
 mixin map()
-  section.map
-    .container
-      h2 Карта
+  div.map
+    .map__content
+      .container
+        address.map__address
+          .map__icon
+            +icon("map-pin", 42, 42)
+          span ул. Большая Конюшенная, 19/8
+        +btn({text: "Проложить маршрут", type: "button"}).btn--secondary.map__button

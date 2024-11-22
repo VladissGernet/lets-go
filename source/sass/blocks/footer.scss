@@ -1,4 +1,10 @@
 .footer {
-  background-color: $chambray;
-  height: 40px;
+  padding-top: 100px;
+  border-radius: 58px 58px 0 0;
+  position: relative;
+
+  min-height: 200px;
+
+  background-color: $color-default-white;
+  box-shadow: 0 -5px 20px 0 rgb($color-default-black, 0.25);
 }

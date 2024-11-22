@@ -7,6 +7,7 @@
   background-color: $blue-zodiac;
 
   position: relative;
+  z-index: 2;
 
   @include vp-1023 {
     padding-top: 138px;

@@ -1,5 +1,5 @@
 mixin map()
-  div.map
+  .map
     .map__content
       .container
         address.map__address
@@ -7,5 +7,5 @@ mixin map()
             +icon("map-pin", 42, 42)
           span ул. Большая Конюшенная, 19/8
         +btn({text: "Проложить маршрут", type: "button"}).btn--secondary.map__button
-  .map__wrapper
-    iframe(src="https://yandex.ru/map-widget/v1/?ll=30.323037%2C59.938631&mode=whatshere&whatshere%5Bpoint%5D=30.323037%2C59.938631&whatshere%5Bzoom%5D=17&z=16", width="560", height="400", frameborder="1", allowfullscreen="true", style="position:relative;")
+    .map__wrapper
+      iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5930184071713!2d30.320592712712962!3d59.93889516197496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fceae1c83%3A0xe98045a979b09260!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE3LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1732257911036!5m2!1sru!2sru", width="600", height="450", style="border:0;", allowfullscreen, loading="lazy", referrerpolicy="no-referrer-when-downgrade")

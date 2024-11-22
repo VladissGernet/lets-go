@@ -24,18 +24,26 @@
   &__continent {
     display: inline;
     margin: 0 20px;
+  }
 
-    button {
-      font-size: 20px;
-      font-weight: 700;
-      line-height: 20px;
-      text-transform: uppercase;
-      color: $midnight-express;
-      background-color: transparent;
-      padding: 0;
-      border: none;
-      cursor: pointer;
+  &__continent {
+    opacity: 0.3;
+
+    &--active {
+      opacity: 1;
     }
+  }
+
+  &__continent-button {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: $midnight-express;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
   }
 
   &__hide-button {

@@ -1,5 +1,5 @@
 const countriesByContinent = {
-  Europe: [
+  'Европа': [
     'Австрия',
     'Албания',
     'Андорра',
@@ -34,7 +34,7 @@ const countriesByContinent = {
     'Босния и Герцеговина',
     'Норвегия'
   ],
-  Asia: [
+  'Азия': [
     'Бруней',
     'Камбоджа',
     'Катар',
@@ -67,7 +67,7 @@ const countriesByContinent = {
     'Таиланд',
     'Турция'
   ],
-  America: [
+  'Америка': [
     'Антигуа и Барбуда',
     'Гаити',
     'Гренада',
@@ -91,7 +91,7 @@ const countriesByContinent = {
     'Сальвадор',
     'США'
   ],
-  Islands: [
+  'Острова': [
     'Австралия',
     'Вануату',
     'Маврикий',
@@ -118,6 +118,19 @@ const initCountriesFiler = () => {
   const filterContent = filter.querySelector('.filter__content');
   console.log(filterContent);
 
+  // Создать список из континентов
+  const continents = Object.keys(countriesByContinent);
+  console.log(continents);
+
+
+  // Первому континенту добавить класс active
+
+  // Создать алфавитный список из страны состоящий из буквы сверху и
+  // список стран по букве
+
+  // Обновить высоту получившегося списка для кнопки "Свернуть фильтр"
+
+  // Активировать кнопку "Свернуть фильтр" с помощью определения высоты.
 
 
 };

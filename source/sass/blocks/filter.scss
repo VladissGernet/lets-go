@@ -37,4 +37,9 @@
       cursor: pointer;
     }
   }
+
+  &__hide-button {
+    display: block;
+    width: 100%;
+  }
 }

@@ -25,6 +25,7 @@
     display: inline;
     margin: 0 20px;
     opacity: 0.3;
+    transition: all $trans-default;
 
     &--active {
       opacity: 1;

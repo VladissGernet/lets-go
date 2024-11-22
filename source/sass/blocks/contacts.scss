@@ -24,7 +24,8 @@
   }
 
   &__link {
-    *, & {
+    *,
+    & {
       transition: all $trans-default;
     }
 

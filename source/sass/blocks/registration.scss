@@ -10,6 +10,7 @@
 
   @include vp-1023 {
     padding-top: 138px;
+    padding-bottom: 61px;
     margin-top: -60px;
   }
 
@@ -127,7 +128,6 @@
         padding-right: 32px;
         padding-left: 32px;
 
-        border-radius: 0;
         border-radius: 20px 0 0 20px;
         border: 4px solid $color-default-white;
 
@@ -190,7 +190,6 @@
       min-width: 28%;
       max-width: 500px;
 
-      border-radius: 0;
       border-radius: 0 20px 20px 0;
 
       @include vp-1023 {
@@ -238,11 +237,20 @@
       gap: 20px 6%;
     }
 
+    @include vp-1023 {
+      margin-top: 22px;
+      margin-left: 34px;
+    }
+
     .contacts__item {
       min-width: 462px;
 
       @include vp-1279 {
         min-width: unset;
+      }
+
+      @include vp-1023 {
+        margin-bottom: 0;
       }
     }
 
@@ -260,6 +268,10 @@
     .contacts__link {
       display: flex;
       align-items: center;
+
+      @include vp-1023 {
+        display: inline-flex;
+      }
 
       @include hover-focus {
         .contacts__icon {
@@ -290,9 +302,10 @@
       @include vp-1023 {
         width: 68px;
         height: 68px;
+        margin-right: 24px;
 
         svg {
-          transform: scale(1);
+          transform: scale(1.5);
         }
       }
     }
@@ -320,6 +333,7 @@
       }
 
       @include vp-1023 {
+        font-size: 28px;
         max-width: unset;
       }
     }

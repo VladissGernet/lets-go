@@ -10,14 +10,7 @@ mixin registration()
         a.registration__link(href="#")= "авторизуйтесь"
         |.
       .registration__form(data-form-validate, data-callback="base")
-        form(
-          method="post",
-          enctype="multipart/form-data",
-          action="#",
-          autocomplete="off",
-          data-form-validate,
-          data-callback="base"
-          )
+        form(method="post", enctype="multipart/form-data", action="#", autocomplete="off", data-form-validate, data-callback="base")
           +custom-input({
             inputType: "email",
             inputName: "user-email",

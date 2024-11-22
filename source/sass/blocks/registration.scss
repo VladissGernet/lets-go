@@ -14,6 +14,16 @@
     margin-top: -60px;
   }
 
+  @include vp-767 {
+    padding-top: 83px;
+  }
+
+  .container {
+    @include vp-767 {
+      padding: 0 22px;
+    }
+  }
+
   h2 {
     margin: 0;
     font-size: 95px;
@@ -39,6 +49,19 @@
         font-size: 75px;
       }
     }
+
+    @include vp-767 {
+      font-size: 24px;
+      line-height: 24px;
+      text-transform: none;
+      letter-spacing: 0;
+
+      margin: 0 0 0 7px;
+
+      span {
+        font-size: inherit;
+      }
+    }
   }
 
   p {
@@ -50,6 +73,10 @@
     text-align: center;
     max-width: 48%;
 
+    br:first-of-type {
+      display: none;
+    }
+
     @include vp-1279 {
       font-size: 24px;
     }
@@ -59,8 +86,23 @@
       max-width: unset;
       letter-spacing: 0.5px;
 
-      br {
+      br:first-of-type,
+      br:last-of-type {
         display: none;
+      }
+    }
+
+    @include vp-767 {
+      font-size: 13px;
+      line-height: 22px;
+      letter-spacing: 0;
+
+      margin-top: 19px;
+      margin-left: 19px;
+      max-width: 83%;
+
+      br:first-of-type {
+        display: inline;
       }
     }
   }
@@ -79,6 +121,10 @@
       font-size: 24px;
     }
 
+    @include vp-767 {
+      font-size: inherit;
+    }
+
     @include hover-focus {
       color: $picton-blue;
 
@@ -94,6 +140,10 @@
 
     @include vp-1023 {
       margin-top: 73px;
+    }
+
+    @include vp-767 {
+      margin: 29px 0 0;
     }
 
     form {

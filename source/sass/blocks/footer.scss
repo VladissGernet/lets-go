@@ -8,6 +8,11 @@
   background-color: $color-default-white;
   box-shadow: 0 -5px 20px 0 rgb($color-default-black, 0.25);
 
+  @include vp-1023 {
+    padding-top: 46px;
+    min-height: 140px;
+  }
+
   .container {
     display: flex;
     align-items: flex-start;
@@ -25,6 +30,10 @@
 
     transition: all $trans-default;
 
+    @include vp-1023 {
+      margin-top: 10px;
+    }
+
     @include hover-focus {
       opacity: 0.6;
 
@@ -38,18 +47,36 @@
     width: 200px;
     height: 50px;
 
+    @include vp-1023 {
+      width: 166px;
+      height: 42px;
+    }
+
     &--tablet,
     &--mobile {
       display: none;
     }
 
+    @include vp-1023 {
+      &--desktop {
+        display: none;
+      }
+
+      &--tablet {
+        display: block;
+      }
+    }
   }
 
   &__social {
     display: flex;
     flex-grow: 1;
-    margin: 0 240px 0 40px;
+    margin: 0 18% 0 40px;
     gap: 6px 0px;
+
+    @include vp-1023 {
+      margin: 0 27% 0 21px;
+    }
 
     .social__link {
       width: 62px;

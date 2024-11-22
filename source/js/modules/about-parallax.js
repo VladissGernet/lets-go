@@ -1,4 +1,8 @@
 const initAboutParallax = () => {
+  if (!document.querySelector('.about')) {
+    return;
+  }
+
   const wrapper = document.querySelector('.about');
   const layer = wrapper.querySelector('.about__background');
   const MATH_VALUE_TO_FIND_CENTER = 0.5;

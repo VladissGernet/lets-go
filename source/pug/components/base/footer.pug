@@ -1,3 +1,14 @@
+mixin logoFooterContent()
+  span.footer__logo-icon.footer__logo-icon--desktop
+    +icon("logo-tablet", 200, 50)(aria-label="Логотип проекта Пакет X5.")
+  span.footer__logo-icon.footer__logo-icon--tablet
+    img(src="img/svg/logo.svg", width="200", height="50", alt="Логотип проекта Пакет X5.")
+  span.footer__logo-icon.footer__logo-icon--mobile
+    +icon("logo-mobile", 96, 15)(aria-label="Логотип проекта Пакет X5.")
+
 mixin footer(footerMods)
   footer.footer(class=footerMods)
     .container
+      a.footer__link(href="index.html", aria-label="Переход на главную")
+        +logoFooterContent()
+      +social("footer__social")

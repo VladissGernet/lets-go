@@ -1,36 +1,37 @@
 .social {
   display: none;
 
-  @include vp-1023 {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  gap: 1px;
+  justify-content: center;
+
+  &__link,
+  &__link svg {
+    transition: all $trans-default;
+  }
+
+  &__link {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1px;
+    width: 44px;
+    height: 44px;
+    background-color: transparent;
     justify-content: center;
+    align-items: center;
+    border-radius: 50%;
 
-    &__link,
-    &__link svg {
-      transition: all $trans-default;
-    }
+    @include hover-focus {
+      background-color: $picton-blue;
 
-    &__link {
-      display: flex;
-      width: 44px;
-      height: 44px;
-      background-color: transparent;
-      justify-content: center;
-      align-items: center;
-      border-radius: 50%;
-
-      @include hover-focus {
-        background-color: $picton-blue;
-
-        &:active svg {
-          opacity: 0.3;
-        }
+      &:active svg {
+        opacity: 0.3;
       }
     }
+  }
+
+  @include vp-1023 {
+    display: flex;
   }
 }

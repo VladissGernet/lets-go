@@ -1,5 +1,5 @@
-mixin social()
-  ul.social
+mixin social(socialMods)
+  ul.social(class=socialMods)
     li.social__item
       a.social__link(href="#", aria-label="Telegram")
         +icon("telegram", 25, 25)

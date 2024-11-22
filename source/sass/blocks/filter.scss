@@ -1,3 +1,40 @@
 .filter {
+  padding-top: 62px;
   min-height: 500px;
+
+  h2 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: $midnight-express;
+
+    margin: 0;
+    display: inline;
+  }
+
+  &__continents {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    display: inline;
+  }
+
+  &__continent {
+    display: inline;
+    margin: 0 20px;
+
+    button {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 20px;
+      text-transform: uppercase;
+      color: $midnight-express;
+      background-color: transparent;
+      padding: 0;
+      border: none;
+      cursor: pointer;
+    }
+  }
 }

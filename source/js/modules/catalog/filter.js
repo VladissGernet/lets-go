@@ -115,6 +115,11 @@ const initCountriesFiler = () => {
   if (!filter) {
     return;
   }
+  const filterContent = filter.querySelector('.filter__content');
+  console.log(filterContent);
+
+
+
 };
 
 export {initCountriesFiler};

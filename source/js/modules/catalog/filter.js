@@ -137,25 +137,89 @@ const createFilterContinentsButtons = (filter) => {
   filterContinents.appendChild(continentsDocumentFragment);
 };
 
+const sortCountriesInSelectedContinent = (selectedContinent) => {
+  // Сортируем массив стран
+  selectedContinent.sort((a, b) => a.localeCompare(b));
+
+  // Создаем массив для группировки
+  const groupedCountries = [];
+  let previousLetter = '';
+  let currentIndex = -1;
+
+  // Группируем страны по первой букве
+  selectedContinent.forEach((country) => {
+    // Получаем первую букву
+    const firstLetter = country[0];
+
+    // Инициализируем массив для соответствующей буквы, если его нет
+    if (firstLetter !== previousLetter) {
+      previousLetter = firstLetter;
+      const newSubArray = [];
+      const newArrayOfCountriesInSubArray = [];
+      newSubArray.push(firstLetter);
+      newSubArray.push(newArrayOfCountriesInSubArray);
+      groupedCountries.push(newSubArray);
+      currentIndex++;
+    }
+
+    // Добавляем страну в соответствующий букве массив
+    groupedCountries[currentIndex][1].push(country);
+  });
+
+  return groupedCountries;
+};
+
+const createAlphabetList = (filterContent, sortedCountries) => {
+  const filterContentFragment = document.createDocumentFragment();
+  filterContent.innerHTML = '';
+
+  sortedCountries.forEach((letterItem) => {
+    const [letter, countriesArray] = letterItem;
+    const newItem = document.createElement('li');
+
+    // Добавляем букву
+    const newItemLetter = document.createElement('span');
+    newItemLetter.textContent = letter;
+    newItem.appendChild(newItemLetter);
+
+    // Добавляем список стран
+    const countriesList = document.createElement('ul');
+    countriesArray.forEach((country) => {
+      const newCountryItem = document.createElement('li');
+      const newCountryButton = document.createElement('button');
+      newCountryButton.type = 'button';
+      newCountryButton.textContent = country;
+      newCountryItem.appendChild(newCountryButton);
+      countriesList.appendChild(newCountryItem);
+    });
+    newItem.appendChild(countriesList);
+    filterContentFragment.appendChild(newItem);
+  });
+
+  filterContent.appendChild(filterContentFragment);
+
+  // Обновляем высоту контента
+  filterContent.dataset.height = filterContent.offsetHeight;
+};
+
 const initCountriesFiler = () => {
   const filter = document.querySelector('.filter');
   if (!filter) {
     return;
   }
+  // Добавляем кнопки континентов
   createFilterContinentsButtons(filter);
 
+  // Получаем страны из выбранного континента и создаем объект с буквой и списком стран
+  const filterContent = filter.querySelector('.filter__content');
+  const selectedContinent = countriesByContinent[INITIAL_ACTIVATED_CONTINENT];
+  const sortedCountries = sortCountriesInSelectedContinent(selectedContinent);
 
+  // Устанавливаю высоту контента фильтра для скрытия.
+  filterContent.dataset.height = filterContent.offsetHeight;
 
-  // Создать список из кнопок с континентами
-  const continents = Object.keys(countriesByContinent);
-  console.log(continents);
-
-
-
-  // Первому континенту добавить класс active
-
-  // Создать алфавитный список из страны состоящий из буквы сверху и
-  // список стран по букве
+  // Создаем алфавитный список
+  createAlphabetList(filterContent, sortedCountries);
 
   // Обновить высоту получившегося списка для кнопки "Свернуть фильтр"
 

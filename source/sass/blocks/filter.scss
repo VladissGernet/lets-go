@@ -1,5 +1,6 @@
 .filter {
   padding-top: 60px;
+  padding-bottom: 150px;
   min-height: 500px;
 
   &__header {
@@ -96,7 +97,31 @@
   }
 
   &__hide-button {
+    margin-top: 50px;
     display: block;
     width: 100%;
+    background-color: $hawkes-blue;
+
+    @include hover-focus {
+      background-color: $periwinkle;
+
+      &:active {
+        span {
+          opacity: 0.3;
+        }
+
+      }
+    }
+  }
+
+  &__hide-button-inner {
+    position: relative;
+    margin: 0 40px;
+    transition: all $trans-default;
+
+    svg {
+      left: -30px;
+      top: 2px;
+    }
   }
 }

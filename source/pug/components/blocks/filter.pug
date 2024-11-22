@@ -9,5 +9,6 @@ mixin filter()
             button.filter__continent-button(type="button") Шаблон для JS
       ul.filter__content
       button.btn.filter__hide-button(type="button")
-        +icon("close-filter", 22, 24)
-        span Свернуть
+        span.filter__hide-button-inner
+          +icon("close-filter", 22, 24)
+          span Свернуть

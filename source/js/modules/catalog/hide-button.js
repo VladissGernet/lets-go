@@ -4,7 +4,7 @@ const FilterHideButtonText = {
 };
 
 const initHideButton = () => {
-  const hideButton = document.querySelector('.filter__hide-button');
+  const hideButton = document.querySelector('.filter__hide-button--outer');
   if (!hideButton) {
     return;
   }

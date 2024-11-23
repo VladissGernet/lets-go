@@ -3,11 +3,24 @@
   padding-bottom: 150px;
   min-height: 500px;
 
+  @include vp-1023 {
+    padding-top: 61px;
+  }
+
   &__header {
     margin: 2px 20px 30px;
 
+    @include vp-1023 {
+      margin-left: 31px;
+      margin-right: 31px;
+    }
+
     svg {
       transform: translateY(-2px);
+
+      @include vp-1023 {
+        display: none;
+      }
     }
   }
 
@@ -20,6 +33,10 @@
 
     margin: 0 0 0 18px;
     display: inline;
+
+    @include vp-1023 {
+      @include visually-hidden;
+    }
   }
 
   &__continents {
@@ -33,6 +50,10 @@
   &__continent {
     display: inline;
     margin: 0 20px 0 0;
+
+    @include vp-1023 {
+      margin-right: 17px;
+    }
 
     &--active .filter__continent-button {
       opacity: 1;
@@ -155,5 +176,9 @@
     &--open {
       opacity: 1;
     }
+  }
+
+  &__tablet-content {
+    display: none;
   }
 }

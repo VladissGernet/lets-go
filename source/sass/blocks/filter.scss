@@ -7,12 +7,20 @@
     padding-top: 61px;
   }
 
+  .container {
+    @include vp-1023 {
+      display: flex;
+      justify-content: space-between;
+      gap: 0 10px;
+    }
+  }
+
   &__header {
     margin: 2px 20px 30px;
 
     @include vp-1023 {
       margin-left: 31px;
-      margin-right: 31px;
+      min-width: 400px;
     }
 
     svg {
@@ -96,6 +104,10 @@
 
     gap: 70px 20px;
 
+    @include vp-1023 {
+      display: none;
+    }
+
     &.js-is-open {
       margin-top: 70px;
     }
@@ -136,6 +148,7 @@
     display: block;
     width: 100%;
     background-color: $hawkes-blue;
+    text-transform: uppercase;
 
     &.js-is-open {
       margin-top: 50px;
@@ -145,7 +158,7 @@
       background-color: $periwinkle;
 
       &:active {
-        .filter__hide-button-inner {
+        .filter__hide-button-inner-content {
           opacity: 0.3;
         }
       }
@@ -156,12 +169,44 @@
       top: unset;
       right: unset;
     }
+
+    &.js-is-open {
+      .filter__hide-button-icon--open {
+        opacity: 0;
+      }
+
+      .filter__hide-button-icon--close {
+        opacity: 1;
+      }
+    }
+
+    @include vp-1023 {
+      &--outer {
+        font-size: 20px;
+        padding: 0 64px 0 0;
+        background-color: transparent;
+        height: 100%;
+
+        .filter__hide-button-icon {
+          left: unset;
+          right: 0;
+          top: 3px;
+        }
+      }
+    }
   }
 
-  &__hide-button-inner {
+  // Контент внутри кнопки
+
+  &__hide-button-inner-content {
     position: relative;
     margin: 0 40px;
     transition: all $trans-default;
+
+    @include vp-1023 {
+      position: unset;
+      margin: 0;
+    }
   }
 
   &__hide-button-icon {

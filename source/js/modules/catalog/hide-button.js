@@ -16,12 +16,12 @@ const initHideButton = () => {
     if (filterContent.classList.contains('js-is-open')) {
       filterContent.classList.remove('js-is-open');
       hideButton.classList.remove('js-is-open');
-      buttonText.textContent = FilterHideButtonText.OPEN;
+      buttonText.textContent = FilterHideButtonText.CLOSE;
       filterContent.style.maxHeight = 0;
     } else {
       filterContent.classList.add('js-is-open');
       hideButton.classList.add('js-is-open');
-      buttonText.textContent = FilterHideButtonText.CLOSE;
+      buttonText.textContent = FilterHideButtonText.OPEN;
       filterContent.style.maxHeight = `${filterContent.scrollHeight}px`;
     }
   });

@@ -1,13 +1,14 @@
 const createTabletAlphabetLetterElements = (sortedCountries) => {
   const alphabetListFragment = document.createDocumentFragment();
 
-  sortedCountries.forEach((letterArray) => {
+  sortedCountries.forEach((letterArray, index) => {
     const [letter] = letterArray;
     const newLetterItem = document.createElement('li');
     const newLetterButton = document.createElement('button');
     newLetterButton.classList.add('filter__tablet-letter-button');
     newLetterButton.type = 'button';
     newLetterButton.textContent = letter;
+    newLetterButton.dataset.letterIndex = index;
 
     newLetterItem.appendChild(newLetterButton);
     alphabetListFragment.appendChild(newLetterItem);

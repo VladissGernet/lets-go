@@ -6,6 +6,7 @@ import {createAlphabetList} from './create-alphabet';
 import {createFilterContinentsButtons} from './create-filter-continents-buttons';
 import {initHideButton} from './init-hide-button';
 import {createTabletAlphabet} from './create-tablet-alphabet';
+import {initTabletAlphabetLetters} from './init-tablet-alphabet-letters';
 
 const INITIAL_ACTIVATED_CONTINENT = 'Европа';
 
@@ -34,6 +35,9 @@ const initCountriesFilter = () => {
 
   // Создаем алфавит на планшете из букв на основании стран
   createTabletAlphabet(sortedCountries);
+
+  // Активирую кнопки букв алфавита для планшета
+  initTabletAlphabetLetters(sortedCountries);
 };
 
 export {initCountriesFilter};

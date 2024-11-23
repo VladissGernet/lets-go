@@ -1,6 +1,7 @@
 import {createTabletListOfCountries} from './create-tablet-list-of-countries';
+import {createListOfCountriesArray} from './create-list-of-countries-array';
 
-const initTabletAlphabetLetters = (sortedCountries) => {
+const initTabletAlphabetLetters = () => {
   const tabletAlphabet = document.querySelector('.filter__tablet-alphabet');
 
   tabletAlphabet.addEventListener('click', (evt) => {
@@ -14,8 +15,10 @@ const initTabletAlphabetLetters = (sortedCountries) => {
       item.classList.remove('js-letter-active');
     });
     selectedLetter.classList.add('js-letter-active');
+    // Создаю массив списка стран
+    const listOfCountriesArray = createListOfCountriesArray();
     // Создаю новый фрагмент списка стран
-    const newFragment = createTabletListOfCountries(sortedCountries[selectedLetter.dataset.letterIndex][1]);
+    const newFragment = createTabletListOfCountries(listOfCountriesArray[selectedLetter.dataset.letterIndex][1]);
     // Обновляю список стран
     const selectedLetterContent = document.querySelector('.filter__selected-letter-content');
     selectedLetterContent.innerHTML = '';

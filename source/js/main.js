@@ -8,6 +8,7 @@ import {initAboutParallax} from './modules/about-parallax';
 import {initDirectionsSwiper} from './modules/directions-swiper';
 
 import {initCountriesFilter} from './modules/catalog/filter';
+import {initAccordions} from './vendor/accordion/init-accordion';
 
 // ---------------------------------
 
@@ -40,6 +41,8 @@ window.addEventListener('DOMContentLoaded', () => {
     initDirectionsSwiper();
 
     initCountriesFilter();
+
+    initAccordions();
   });
 });
 

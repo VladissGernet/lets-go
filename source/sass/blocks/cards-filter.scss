@@ -21,19 +21,6 @@
     margin-top: 10px;
   }
 
-  &__element {
-    margin: 0;
-    padding: 0;
-
-    &.is-active > .cards-filter__accordion-button {
-      opacity: 1;
-
-      & .cards-filter__accordion-button-icon {
-        transform: rotate(180deg);
-      }
-    }
-  }
-
   &__accordion-button {
     font-size: 20px;
     font-weight: 500;
@@ -71,6 +58,54 @@
 
     svg {
       display: block;
+    }
+  }
+
+  &__slider-inputs {
+    display: flex;
+    border: 1px solid rgb(203, 206, 217);
+    border-radius: 4px;
+    overflow: hidden;
+
+    margin-bottom: 30px;
+
+    .custom-input::before,
+    .custom-input::after {
+      position: absolute;
+      content: "";
+    }
+
+    .custom-input:first-child {
+      &::before {
+        width: 1px;
+        height: 100%;
+        top: 0;
+        right: -1px;
+        z-index: 1;
+        background-color:  rgb(203, 206, 217);
+      }
+
+      &::after {
+        width: 14px;
+        height: 14px;
+        right: 0;
+        top: 50%;
+        transform: translate(50%, -50%);
+        background-color: $color-default-white;
+        z-index: 1;
+      }
+    }
+
+    .custom-input:last-child {
+      &::before {
+        width: 20px;
+        height: 1px;
+        top: 50%;
+        left: -20px;
+        transform: translate(50%, -50%);
+        background-color:  rgb(203, 206, 217);
+        z-index: 1;
+      }
     }
   }
 }

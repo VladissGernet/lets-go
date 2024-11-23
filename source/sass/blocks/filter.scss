@@ -157,6 +157,14 @@
     @include hover-focus {
       background-color: $periwinkle;
 
+      @include vp-1023 {
+        background-color: transparent;
+
+        .filter__hide-button-inner-content {
+          opacity: 0.6;
+        }
+      }
+
       &:active {
         .filter__hide-button-inner-content {
           opacity: 0.3;
@@ -181,16 +189,41 @@
     }
 
     @include vp-1023 {
+      // Кнопка вне контейнера алфавита
       &--outer {
         font-size: 20px;
-        padding: 0 64px 0 0;
+        padding: 0 72px 0 0;
         background-color: transparent;
         height: 100%;
+        width: unset;
 
         .filter__hide-button-icon {
           left: unset;
-          right: 0;
-          top: 3px;
+          right: 12px;
+          top: -5px;
+
+          transition: all $trans-default;
+          opacity: 0;
+
+          &--open {
+            width: 33px;
+            height: 6px;
+            opacity: 1;
+
+            svg {
+              width: 33px;
+              height: 6px;
+            }
+          }
+
+          &--close {
+            top: 0px;
+            right: 34px;
+          }
+        }
+
+        &.js-is-open {
+          margin: 0;
         }
       }
     }

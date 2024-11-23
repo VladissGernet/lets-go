@@ -10,17 +10,17 @@ mixin filter()
       //- Сюда добавляется контент с помощью JS.
       ul.filter__content
       //- Контент для мобильной версии
-      .filter__tablet-content
-        ul.filter__tablet-alphabet
-        ul.filter__selected-letter-content
-        button.btn.filter__hide-button.filter__hide-button--inner(type="button")
-          span.filter__hide-button-inner-content
-            span.filter__hide-button-icon.filter__hide-button-icon--close
-              +icon("close-filter", 22, 24)
-            span.filter__hide-button-icon.filter__hide-button-icon--open
-              +icon("open-filter", 22, 24)
-            span.filter__hide-button-text Показать все
-
+      .filter__tablet-content-wrapper
+        .filter__tablet-content
+          ul.filter__tablet-alphabet
+          ul.filter__selected-letter-content
+          button.btn.filter__hide-button.filter__hide-button--inner(type="button")
+            span.filter__hide-button-inner-content
+              span.filter__hide-button-icon.filter__hide-button-icon--close
+                +icon("close-filter", 22, 24)
+              span.filter__hide-button-icon.filter__hide-button-icon--open
+                +icon("open-filter", 22, 24)
+              span.filter__hide-button-text Показать все
       button.btn.filter__hide-button.filter__hide-button--outer(type="button")
         span.filter__hide-button-inner-content
           span.filter__hide-button-icon.filter__hide-button-icon--close

@@ -1,10 +1,12 @@
 .filter {
   padding-top: 60px;
   padding-bottom: 150px;
-  min-height: 500px;
 
   @include vp-1023 {
     padding-top: 61px;
+    padding-bottom: 0;
+
+    position: relative;
   }
 
   .container {
@@ -157,10 +159,6 @@
     background-color: $hawkes-blue;
     text-transform: uppercase;
 
-    &.js-is-open {
-      margin-top: 50px;
-    }
-
     @include hover-focus {
       background-color: $periwinkle;
 
@@ -186,6 +184,8 @@
     }
 
     &.js-is-open {
+      margin-top: 50px;
+
       .filter__hide-button-icon--open {
         opacity: 0;
       }
@@ -226,7 +226,7 @@
           }
 
           &--close {
-            top: 0px;
+            top: 0;
             right: 34px;
           }
         }
@@ -267,14 +267,35 @@
     }
   }
 
-  &__tablet-content {
+  &__tablet-content-wrapper {
     display: none;
 
     @include vp-1023 {
+      margin: 0 70px;
+
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: block;
       grid-area: alphabet;
-      display: grid;
-      grid-template-columns: 3fr 1fr;
+
+      overflow: hidden;
+      transform: translateY(100%);
+
+      &.js-is-open {
+        .filter__tablet-content {
+          transform: translateY(0);
+        }
+      }
     }
+  }
+
+  &__tablet-content {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    transition: all $trans-default;
+    transform: translateY(-100%);
   }
 
   &__tablet-alphabet {

@@ -1,3 +1,5 @@
+import {updateFilterContentList} from './update-filter-content-list';
+
 const FilterHideButtonText = {
   OPEN: 'Свернуть',
   CLOSE: 'Показать все',
@@ -19,6 +21,9 @@ const initHideButton = () => {
       buttonText.textContent = FilterHideButtonText.CLOSE;
       filterContent.style.maxHeight = 0;
     } else {
+      // Обновляем список на основе выбранных фильтров
+      updateFilterContentList(filterContent);
+
       filterContent.classList.add('js-is-open');
       hideButton.classList.add('js-is-open');
       buttonText.textContent = FilterHideButtonText.OPEN;

@@ -2,7 +2,8 @@ import {countriesByContinent} from './catalog-mock';
 import {createAlphabetList} from './create-alphabet';
 import {sortCountriesInSelectedContinent} from './sort-countries';
 
-const updateFilterContentList = (filterContent, filterContinents) => {
+const updateFilterContentList = (filterContent) => {
+  const filterContinents = document.querySelector('.filter__continents');
   // Создаю массив из выбранных континентов
   const selectedContinentArray = createArrayOfSelectedContinents(filterContinents);
 

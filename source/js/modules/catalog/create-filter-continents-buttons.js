@@ -48,7 +48,7 @@ const createFilterContinentsButtons = (filter, countriesData, selectedContinent)
     }
 
     // Обновляем контент
-    updateFilterContentList(filterContent, filterContinents);
+    updateFilterContentList(filterContent);
   });
 };
 

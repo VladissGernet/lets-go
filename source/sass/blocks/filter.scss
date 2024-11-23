@@ -314,10 +314,6 @@
     text-transform: uppercase;
     color: $midnight-express;
 
-    // padding: 0;
-    // border: none;
-    // background-color: transparent;
-
     user-select: none;
     cursor: pointer;
 
@@ -336,10 +332,6 @@
     line-height: 30px;
     color: $midnight-express;
 
-    // padding: 0;
-    // border: none;
-    // background-color: transparent;
-
     user-select: none;
     cursor: pointer;
 
@@ -357,6 +349,15 @@
     .filter__hide-button-icon {
       left: 10px;
       top: 4px;
+
+      &--close {
+        left: 2px;
+        top: 3px;
+
+        @include vp-1023 {
+          opacity: 1;
+        }
+      }
     }
 
     .filter__hide-button-text {

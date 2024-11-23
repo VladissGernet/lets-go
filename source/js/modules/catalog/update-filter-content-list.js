@@ -1,5 +1,6 @@
 import {createAlphabetList} from './create-alphabet';
 import {createListOfCountriesArray} from './create-list-of-countries-array';
+import {createTabletAlphabet} from './create-tablet-alphabet';
 
 const updateFilterContentHeight = (filterContent) => {
   if (filterContent.classList.contains('js-is-open')) {
@@ -10,8 +11,14 @@ const updateFilterContentHeight = (filterContent) => {
 };
 
 const updateFilterContentList = (filterContent) => {
-  // Создаю список стран
-  createAlphabetList(filterContent, createListOfCountriesArray());
+  // Создаю массив списка стран
+  const listOfCountriesArray = createListOfCountriesArray();
+
+  // Создаю список стран Desktop
+  createAlphabetList(filterContent, listOfCountriesArray);
+
+  // Создаю список стран Tablet
+  createTabletAlphabet(listOfCountriesArray);
 
   // Обновляем высоту контента
   updateFilterContentHeight(filterContent);

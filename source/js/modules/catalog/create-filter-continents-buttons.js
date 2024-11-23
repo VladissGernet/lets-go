@@ -52,7 +52,6 @@ const createFilterContinentsButtons = (filter, countriesData, selectedContinent)
     updateFilterContentList(filterContent);
 
     // Обновляем контент tablet
-    // createTabletAlphabet();
   });
 };
 

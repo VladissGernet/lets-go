@@ -47,10 +47,8 @@ const createFilterContinentsButtons = (filter, countriesData, selectedContinent)
       return;
     }
 
-    // Обновляем контент desktop
+    // Обновляем контент
     updateFilterContentList(filterContent);
-
-    // Обновляем контент tablet
   });
 };
 

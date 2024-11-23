@@ -1,4 +1,4 @@
-import {createAlphabetList} from './create-alphabet';
+import {createAlphabetList} from './create-alphabet-list';
 import {createListOfCountriesArray} from './create-list-of-countries-array';
 import {createTabletAlphabet} from './create-tablet-alphabet';
 

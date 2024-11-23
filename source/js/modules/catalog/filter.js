@@ -2,7 +2,7 @@
 import {countriesByContinent} from './catalog-mock';
 
 import {sortCountriesInSelectedContinent} from './sort-countries';
-import {createAlphabetList} from './create-alphabet';
+import {createAlphabetList} from './create-alphabet-list';
 import {createFilterContinentsButtons} from './create-filter-continents-buttons';
 import {initHideButton} from './init-hide-button';
 import {createTabletAlphabet} from './create-tablet-alphabet';

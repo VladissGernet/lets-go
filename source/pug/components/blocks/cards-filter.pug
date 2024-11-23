@@ -1,25 +1,30 @@
 mixin cards-filter()
   section.cards-filter(data-tabs='element')
-    h2.subtitle Пример аккордеона без вложенности
-      form(method="post" enctype="multipart/form-data" action="#" autocomplete="off")
-        .accordion(data-accordion="parent")
-          .accordion__element.is-active(data-accordion="element")
-            button.accordion__button.btn.btn--aquamarine(type="button", data-accordion="button") Открыть
-            .accordion__content(data-accordion="content")
-              .accordion__wrapper
-                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, eaque consequatur perspiciatis impedit ab aperiam neque corrupti nisi deleniti optio enim provident molestiae, quidem sint laboriosam reiciendis accusantium iusto distinctio!
-          .accordion__element(data-accordion="element")
-            button.accordion__button.accordion__button.btn.btn--aquamarine(type="button", data-accordion="button") Открыть
-            .accordion__content(data-accordion="content")
-              .accordion__wrapper
-                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, eaque consequatur perspiciatis impedit ab aperiam neque corrupti nisi deleniti optio enim provident molestiae, quidem sint laboriosam reiciendis accusantium iusto distinctio!
-          .accordion__element(data-accordion="element")
-            button.accordion__button.btn.btn--aquamarine(type="button", data-accordion="button") Открыть
-            .accordion__content(data-accordion="content")
-              .accordion__wrapper
-                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, eaque consequatur perspiciatis impedit ab aperiam neque corrupti nisi deleniti optio enim provident molestiae, quidem sint laboriosam reiciendis accusantium iusto distinctio!
-          .accordion__element(data-accordion="element")
-            button.accordion__button.btn.btn--aquamarine(type="button", data-accordion="button") Открыть
-            .accordion__content(data-accordion="content")
-              .accordion__wrapper
-                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, eaque consequatur perspiciatis impedit ab aperiam neque corrupti nisi deleniti optio enim provident molestiae, quidem sint laboriosam reiciendis accusantium iusto distinctio!
+    form(method="post" enctype="multipart/form-data" action="#" autocomplete="off")
+      .accordion(data-accordion="parent")
+        .accordion__element(data-accordion="element")
+          button.accordion__button(type="button", data-accordion="button") Хобби
+          .accordion__content(data-accordion="content")
+            .accordion__wrapper
+              p Lorem ipsum dolor sit a
+        .accordion__element.is-active(data-accordion="element")
+          button.accordion__button.accordion__button(type="button", data-accordion="button") Музыка
+          .accordion__content(data-accordion="content")
+            .accordion__wrapper
+              p Lorem ipsum dolor sit a
+        .accordion__element(data-accordion="element")
+          button.accordion__button(type="button", data-accordion="button") Еда
+          .accordion__content(data-accordion="content")
+            .accordion__wrapper
+              p Lorem ipsum dolor sit a
+        .accordion__element.is-active(data-accordion="element")
+          button.accordion__button(type="button", data-accordion="button") Транспорт
+          .accordion__content(data-accordion="content")
+            .accordion__wrapper
+              p Lorem ipsum dolor sit a
+        .accordion__element.is-active(data-accordion="element")
+          button.accordion__button(type="button", data-accordion="button") Левел
+          .accordion__content(data-accordion="content")
+            .accordion__wrapper
+              .slider(id="slider")
+

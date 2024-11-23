@@ -10,6 +10,8 @@ import {initDirectionsSwiper} from './modules/directions-swiper';
 import {initCountriesFilter} from './modules/catalog/filter';
 import {initAccordions} from './vendor/accordion/init-accordion';
 
+import {initFilterSlider} from './modules/init-filter-slider';
+
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -43,6 +45,8 @@ window.addEventListener('DOMContentLoaded', () => {
     initCountriesFilter();
 
     initAccordions();
+
+    initFilterSlider();
   });
 });
 

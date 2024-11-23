@@ -52,6 +52,8 @@
       ". list";
 
       min-width: unset;
+
+      z-index: 1;
     }
 
     svg {
@@ -118,6 +120,15 @@
     @include vp-767 {
       display: block;
       grid-area: list;
+
+      margin-top: 12px;
+      margin-left: -2px;
+
+      display: none;
+
+      .filter__header.js-is-open & {
+        display: block;
+      }
     }
   }
 
@@ -131,6 +142,10 @@
 
     @include vp-767 {
       display: block;
+
+      &:not(:last-child) {
+        margin-bottom: 3px;
+      }
     }
 
     &--active .filter__continent-button {
@@ -160,6 +175,11 @@
       &:active {
         opacity: 1;
       }
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 18px;
     }
   }
 
@@ -412,6 +432,10 @@
     transition: all $trans-default;
     transform: translateY(-100%);
     opacity: 0;
+
+    @include vp-767 {
+      display: block;
+    }
   }
 
   &__tablet-alphabet {
@@ -422,6 +446,10 @@
     grid-template-columns: repeat(5, 17.3%);
     gap: 23px 0;
     align-content: start;
+
+    @include vp-767 {
+      gap: 0;
+    }
   }
 
   &__tablet-letter-button {
@@ -440,6 +468,16 @@
     cursor: pointer;
 
     display: block;
+
+    @include vp-767 {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 14px;
+      background-color: $color-default-white;
+
+      width: 43px;
+      height: 40px;
+    }
   }
 
   &__selected-letter-content {

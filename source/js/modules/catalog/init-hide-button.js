@@ -15,12 +15,14 @@ const initHideButton = () => {
   const filterContent = document.querySelector('.filter__content');
   const buttonText = hideButton.querySelector('.filter__hide-button-text');
   const tabletContentWrapper = document.querySelector('.filter__tablet-content-wrapper');
+  const filterHeader = document.querySelector('.filter__header');
 
   const onHideButtonClick = () => {
     if (filterContent.classList.contains('js-is-open')) {
       filterContent.classList.remove('js-is-open');
       hideButton.classList.remove('js-is-open');
       tabletContentWrapper.classList.remove('js-is-open');
+      filterHeader.classList.remove('js-is-open');
       buttonText.textContent = FilterHideButtonText.CLOSE;
       filterContent.style.maxHeight = 0;
     } else {
@@ -30,6 +32,7 @@ const initHideButton = () => {
       filterContent.classList.add('js-is-open');
       hideButton.classList.add('js-is-open');
       tabletContentWrapper.classList.add('js-is-open');
+      filterHeader.classList.add('js-is-open');
       buttonText.textContent = FilterHideButtonText.OPEN;
       filterContent.style.maxHeight = `${filterContent.scrollHeight}px`;
     }

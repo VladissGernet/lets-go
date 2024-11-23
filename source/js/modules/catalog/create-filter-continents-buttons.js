@@ -1,5 +1,4 @@
 import {updateFilterContentList} from './update-filter-content-list';
-import {createTabletAlphabet} from './create-tablet-alphabet';
 
 const createContinentsButtons = (countriesData, selectedContinent, filterContinentButtonClone) => {
   const continentsDocumentFragment = document.createDocumentFragment();

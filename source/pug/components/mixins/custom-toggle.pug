@@ -10,5 +10,6 @@ mixin custom-toggle(options = {})
     label
       input(type=inputType, value=inputValue, id=inputId, name=inputName, checked=inputChecked)
       span.custom-toggle__icon
+        +icon("checkbox-checked", 12, 12)
       if inputLabel
         span.custom-toggle__label!= inputLabel

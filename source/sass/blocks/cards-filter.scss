@@ -1,3 +1,76 @@
 .cards-filter {
-  outline: 5px solid tomato;
+  margin: 0 auto;
+  padding: 46px;
+
+  border-radius: 20px;
+  width: 285px;
+
+  background-color: $pattens-blue;
+
+  h2 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 30px;
+    color: $catalina-blue;
+    text-align: center;
+
+    margin: 0;
+  }
+
+  form {
+    margin-top: 10px;
+  }
+
+  &__element {
+    margin: 0;
+    padding: 0;
+
+    &.is-active > .cards-filter__accordion-button {
+      opacity: 1;
+
+      & .cards-filter__accordion-button-icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__accordion-button {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: $catalina-blue;
+    text-align: left;
+
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+    padding: 0 20px 0 0;
+    word-break: break-all;
+
+    display: block;
+
+    position: relative;
+
+    span {
+      display: block;
+    }
+  }
+
+  &__accordion-button-icon {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 10px;
+    height: 6px;
+
+    display: block;
+
+    transition: all $trans-default;
+
+    svg {
+      display: block;
+    }
+  }
 }

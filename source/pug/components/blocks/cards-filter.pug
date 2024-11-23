@@ -1,10 +1,13 @@
 mixin cards-filter()
-  section.cards-filter(data-tabs='element')
+  section.cards-filter(data-tabs="element")
     h2 Подберите идеального  попутчика
-    form(method="post" enctype="multipart/form-data" action="#" autocomplete="off")
+    form(method="post", enctype="multipart/form-data", action="#", autocomplete="off")
       .accordion(data-accordion="parent")
-        .accordion__element(data-accordion="element")
-          button.accordion__button(type="button", data-accordion="button") Хобби
+        .accordion__element.cards-filter__element(data-accordion="element")
+          button.accordion__button.cards-filter__accordion-button(type="button", data-accordion="button")
+            span Хобби
+            span.cards-filter__accordion-button-icon
+              +icon("accordion-arrow", 10, 6)
           .accordion__content(data-accordion="content")
             .accordion__wrapper
               +custom-toggle({
@@ -25,8 +28,11 @@ mixin cards-filter()
                 inputValue: "filter-hobby-3",
                 inputChecked: false
               }).custom-toggle--checkbox
-        .accordion__element.is-active(data-accordion="element")
-          button.accordion__button.accordion__button(type="button", data-accordion="button") Музыка
+        .accordion__element.cards-filter__element.is-active(data-accordion="element")
+          button.accordion__button.cards-filter__accordion-button(type="button", data-accordion="button")
+            span Музыка
+            span.cards-filter__accordion-button-icon
+              +icon("accordion-arrow", 10, 6)
           .accordion__content(data-accordion="content")
             .accordion__wrapper
               +custom-toggle({
@@ -47,8 +53,11 @@ mixin cards-filter()
                 inputValue: "filter-music-3",
                 inputChecked: false
               }).custom-toggle--checkbox
-        .accordion__element(data-accordion="element")
-          button.accordion__button(type="button", data-accordion="button") Еда
+        .accordion__element.cards-filter__element(data-accordion="element")
+          button.accordion__button.cards-filter__accordion-button(type="button", data-accordion="button")
+            span Еда
+            span.cards-filter__accordion-button-icon
+              +icon("accordion-arrow", 10, 6)
           .accordion__content(data-accordion="content")
             .accordion__wrapper
               +custom-toggle({
@@ -69,8 +78,11 @@ mixin cards-filter()
                 inputValue: "filter-food-3",
                 inputChecked: false
               }).custom-toggle--checkbox
-        .accordion__element.is-active(data-accordion="element")
-          button.accordion__button(type="button", data-accordion="button") Транспорт
+        .accordion__element.cards-filter__element.is-active(data-accordion="element")
+          button.accordion__button.cards-filter__accordion-button(type="button", data-accordion="button")
+            span Транспорт
+            span.cards-filter__accordion-button-icon
+              +icon("accordion-arrow", 10, 6)
           .accordion__content(data-accordion="content")
             .accordion__wrapper
               +custom-toggle({
@@ -97,8 +109,11 @@ mixin cards-filter()
                 inputValue: "filter-transport-4",
                 inputChecked: true
               }).custom-toggle--checkbox
-        .accordion__element.is-active(data-accordion="element")
-          button.accordion__button(type="button", data-accordion="button") Левел
+        .accordion__element.cards-filter__element.is-active(data-accordion="element")
+          button.accordion__button.cards-filter__accordion-button(type="button", data-accordion="button")
+            span Левел
+            span.cards-filter__accordion-button-icon
+              +icon("accordion-arrow", 10, 6)
           .accordion__content(data-accordion="content")
             .accordion__wrapper
               +custom-input({
@@ -108,4 +123,3 @@ mixin cards-filter()
                 inputName: "user-level-to",
               })
               .slider(id="slider")
-

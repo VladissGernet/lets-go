@@ -1,7 +1,8 @@
 import {createTabletListOfCountries} from './create-tablet-list-of-countries';
 import {createTabletAlphabetLetterElements} from './create-tablet-alphabet-letter-elements';
 
-const createTabletAlphabet = (tabletContent, sortedCountries) => {
+const createTabletAlphabet = (sortedCountries) => {
+  const tabletContent = document.querySelector('.filter__tablet-content');
   const alphabetList = tabletContent.querySelector('.filter__tablet-alphabet');
   const selectedLetterContentList = tabletContent.querySelector('.filter__selected-letter-content');
 

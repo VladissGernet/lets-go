@@ -1,4 +1,5 @@
 import {updateFilterContentList} from './update-filter-content-list';
+import {createTabletAlphabet} from './create-tablet-alphabet';
 
 const createContinentsButtons = (countriesData, selectedContinent, filterContinentButtonClone) => {
   const continentsDocumentFragment = document.createDocumentFragment();
@@ -47,8 +48,11 @@ const createFilterContinentsButtons = (filter, countriesData, selectedContinent)
       return;
     }
 
-    // Обновляем контент
+    // Обновляем контент desktop
     updateFilterContentList(filterContent);
+
+    // Обновляем контент tablet
+    // createTabletAlphabet();
   });
 };
 

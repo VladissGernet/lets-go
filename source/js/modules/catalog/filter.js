@@ -33,8 +33,7 @@ const initCountriesFilter = () => {
   initHideButton();
 
   // Создаем алфавит на планшете из букв на основании стран
-  const tabletContent = filter.querySelector('.filter__tablet-content');
-  createTabletAlphabet(tabletContent, sortedCountries);
+  createTabletAlphabet(sortedCountries);
 };
 
 export {initCountriesFilter};

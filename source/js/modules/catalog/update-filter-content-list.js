@@ -2,24 +2,6 @@ import {countriesByContinent} from './catalog-mock';
 import {createAlphabetList} from './create-alphabet';
 import {sortCountriesInSelectedContinent} from './sort-countries';
 
-const updateFilterContentList = (filterContent) => {
-  const filterContinents = document.querySelector('.filter__continents');
-  // Создаю массив из выбранных континентов
-  const selectedContinentArray = createArrayOfSelectedContinents(filterContinents);
-
-  // Создаю массив из стран выбранных континентов
-  const countriesArrayOfSelectedContinent = createCountriesArrayOfSelectedContinent(selectedContinentArray);
-
-  // Создаю список стран
-  const alphabetArray = sortCountriesInSelectedContinent(countriesArrayOfSelectedContinent);
-
-  // Создаю список стран
-  createAlphabetList(filterContent, alphabetArray);
-
-  // Обновляем высоту контента
-  updateFilterContentHeight(filterContent);
-};
-
 const updateFilterContentHeight = (filterContent) => {
   if (filterContent.classList.contains('js-is-open')) {
     const newHeight = document.querySelector('.filter__content').scrollHeight;
@@ -52,6 +34,24 @@ const createArrayOfSelectedContinents = (filterContinents) => {
     selectedContinentArray.push(item.querySelector('button').textContent);
   });
   return selectedContinentArray;
+};
+
+const updateFilterContentList = (filterContent) => {
+  const filterContinents = document.querySelector('.filter__continents');
+  // Создаю массив из выбранных континентов
+  const selectedContinentArray = createArrayOfSelectedContinents(filterContinents);
+
+  // Создаю массив из стран выбранных континентов
+  const countriesArrayOfSelectedContinent = createCountriesArrayOfSelectedContinent(selectedContinentArray);
+
+  // Создаю список стран
+  const alphabetArray = sortCountriesInSelectedContinent(countriesArrayOfSelectedContinent);
+
+  // Создаю список стран
+  createAlphabetList(filterContent, alphabetArray);
+
+  // Обновляем высоту контента
+  updateFilterContentHeight(filterContent);
 };
 
 export {updateFilterContentList};

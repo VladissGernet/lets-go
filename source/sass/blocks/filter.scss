@@ -49,6 +49,7 @@
     padding: 0;
     border: none;
     cursor: pointer;
+    user-select: none;
 
     transition: all $trans-default;
     opacity: 0.3;
@@ -107,6 +108,7 @@
     border: none;
     background-color: transparent;
     cursor: pointer;
+    user-select: none;
   }
 
   &__hide-button {

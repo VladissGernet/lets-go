@@ -23,18 +23,18 @@ const initCountriesFilter = () => {
   const selectedContinent = countriesByContinent[INITIAL_ACTIVATED_CONTINENT];
   const sortedCountries = sortCountriesInSelectedContinent(selectedContinent);
 
-  // Создаем алфавит из букв на основании стран
-  const tabletContent = filter.querySelector('.filter__tablet-content');
-  createTabletAlphabet(tabletContent, sortedCountries);
-
   // Устанавливаю высоту контента фильтра для скрытия.
   filterContent.style.maxHeight = 0;
 
-  // Создаем алфавитный список
+  // Создаем алфавитный список Desktop
   createAlphabetList(filterContent, sortedCountries);
 
   // Активирую кнопку раскрытия/скрытия списка.
   initHideButton();
+
+  // Создаем алфавит на планшете из букв на основании стран
+  const tabletContent = filter.querySelector('.filter__tablet-content');
+  createTabletAlphabet(tabletContent, sortedCountries);
 };
 
 export {initCountriesFilter};

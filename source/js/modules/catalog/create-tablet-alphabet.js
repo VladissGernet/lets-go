@@ -1,43 +1,19 @@
-const createTabletListOfCountries = (countriesArray) => {
-  const listFragment = document.createDocumentFragment();
-
-  countriesArray.forEach((country) => {
-    const newCountryItem = document.createElement('li');
-    const newCountryButton = document.createElement('button');
-    newCountryButton.classList.add('filter__tablet-country-button');
-    newCountryButton.type = 'button';
-    newCountryButton.textContent = country;
-    newCountryItem.appendChild(newCountryButton);
-    listFragment.appendChild(newCountryItem);
-  });
-
-  return listFragment;
-};
+import {createTabletListOfCountries} from './create-tablet-list-of-countries';
+import {createTabletAlphabetLetterElements} from './create-tablet-alphabet-letter-elements';
 
 const createTabletAlphabet = (tabletContent, sortedCountries) => {
   const alphabetList = tabletContent.querySelector('.filter__tablet-alphabet');
   const selectedLetterContentList = tabletContent.querySelector('.filter__selected-letter-content');
 
-  // Создаем список букв из алфавита и список стран по первой букве.
-
-  const alphabetListFragment = document.createDocumentFragment();
-  let selectedLetterContentListFragment;
+  // Очищаю списки
+  alphabetList.innerHTML = '';
+  selectedLetterContentList.innerHTML = '';
 
   // Создаем элементы букв
-  sortedCountries.forEach((letterArray) => {
-    const [letter] = letterArray;
-    const newLetterItem = document.createElement('li');
-    const newLetterButton = document.createElement('button');
-    newLetterButton.classList.add('filter__tablet-letter-button');
-    newLetterButton.type = 'button';
-    newLetterButton.textContent = letter;
-
-    newLetterItem.appendChild(newLetterButton);
-    alphabetListFragment.appendChild(newLetterItem);
-  });
+  const alphabetListFragment = createTabletAlphabetLetterElements(sortedCountries);
 
   // Создаем элементы списка стран по первой букве
-  selectedLetterContentListFragment = createTabletListOfCountries(sortedCountries[0][1]);
+  const selectedLetterContentListFragment = createTabletListOfCountries(sortedCountries[0][1]);
 
   alphabetList.appendChild(alphabetListFragment);
   selectedLetterContentList.appendChild(selectedLetterContentListFragment);

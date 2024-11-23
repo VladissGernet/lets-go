@@ -48,8 +48,8 @@
       display: grid;
       grid-template-columns: 27px 1fr;
       grid-template-areas:
-      "icon title"
-      ". list";
+        "icon title"
+        ". list";
 
       min-width: unset;
 
@@ -118,7 +118,6 @@
     display: inline;
 
     @include vp-767 {
-      display: block;
       grid-area: list;
 
       margin-top: 12px;
@@ -265,6 +264,11 @@
       position: unset;
       top: unset;
       right: unset;
+
+      @include vp-767 {
+        width: 11px;
+        height: 11px;
+      }
     }
 
     &.js-is-open {
@@ -422,6 +426,11 @@
         }
       }
     }
+
+    @include vp-767 {
+      padding-top: 49px;
+      padding-bottom: 50px;
+    }
   }
 
   &__tablet-content {
@@ -434,6 +443,7 @@
     opacity: 0;
 
     @include vp-767 {
+      margin: 0 53px;
       display: block;
     }
   }
@@ -448,6 +458,7 @@
     align-content: start;
 
     @include vp-767 {
+      grid-template-columns: repeat(5, 43px);
       gap: 0;
     }
   }
@@ -477,6 +488,14 @@
 
       width: 43px;
       height: 40px;
+
+      outline: 1px solid $link-water;
+
+      &.js-letter-active {
+        background-color: $catalina-blue;
+        outline-color: $catalina-blue;
+        color: $color-default-white;
+      }
     }
   }
 
@@ -484,6 +503,10 @@
     list-style-type: none;
     margin: -4px 0 0;
     padding: 0;
+
+    @include vp-767 {
+      margin-top: 14px;
+    }
   }
 
   &__tablet-country-button {
@@ -501,6 +524,12 @@
     background-color: transparent;
 
     display: block;
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 22px;
+      color: $charcoal;
+    }
   }
 
   &__hide-button--inner {
@@ -530,11 +559,33 @@
           left: -1px;
           top: -2px;
         }
+
+        @include vp-767 {
+          left: -19px;
+          top: 0;
+        }
       }
     }
 
     .filter__hide-button-text {
       margin: 0 40px;
+
+      @include vp-767 {
+        margin: 0;
+      }
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 20px;
+
+      margin-top: 8px;
+      padding: 0;
+
+      min-height: 40px;
+
+      border-radius: 20px;
     }
   }
 }

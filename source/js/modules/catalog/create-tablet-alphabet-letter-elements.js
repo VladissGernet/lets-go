@@ -10,6 +10,11 @@ const createTabletAlphabetLetterElements = (sortedCountries) => {
     newLetterButton.textContent = letter;
     newLetterButton.dataset.letterIndex = index;
 
+    // Первой букве всегда вешаю класс
+    if (index === 0) {
+      newLetterButton.classList.add('js-letter-active');
+    }
+
     newLetterItem.appendChild(newLetterButton);
     alphabetListFragment.appendChild(newLetterItem);
   });

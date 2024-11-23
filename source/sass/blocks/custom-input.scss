@@ -5,6 +5,9 @@
   padding: 0;
 
   label {
+    height: 100%;
+    display: block;
+
     input,
     textarea {
       font-size: 20px;
@@ -19,6 +22,8 @@
 
       outline: none;
       border: none;
+
+      transition: all 0.3s ease;
     }
   }
 

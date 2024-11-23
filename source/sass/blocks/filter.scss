@@ -162,6 +162,7 @@
     width: 100%;
     background-color: $hawkes-blue;
     text-transform: uppercase;
+    word-break: break-word;
 
     @include hover-focus {
       background-color: $periwinkle;
@@ -344,6 +345,7 @@
     line-height: 60px;
     text-transform: uppercase;
     color: $midnight-express;
+    word-break: break-all;
 
     border: none;
     padding: 0;
@@ -366,6 +368,7 @@
     font-weight: 400;
     line-height: 30px;
     color: $midnight-express;
+    word-break: break-all;
 
     user-select: none;
     cursor: pointer;

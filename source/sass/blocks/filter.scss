@@ -9,7 +9,10 @@
 
   .container {
     @include vp-1023 {
-      display: flex;
+      display: grid;
+      grid-template-areas:
+        "header hide-button"
+        "alphabet alphabet";
       justify-content: space-between;
       gap: 0 10px;
     }
@@ -19,6 +22,7 @@
     margin: 2px 20px 30px;
 
     @include vp-1023 {
+      grid-area: header;
       margin-left: 31px;
       min-width: 400px;
     }
@@ -192,11 +196,13 @@
     @include vp-1023 {
       // Кнопка вне контейнера алфавита
       &--outer {
+        grid-area: hide-button;
         font-size: 20px;
         padding: 0 72px 0 0;
         background-color: transparent;
-        height: 100%;
         width: unset;
+
+        align-self: start;
 
         .filter__hide-button-icon {
           left: unset;
@@ -259,5 +265,14 @@
 
   &__tablet-content {
     display: none;
+
+    @include vp-1023 {
+      grid-area: alphabet;
+      display: block;
+      // position: absolute;
+      // top: 0;
+      // left: 0;
+      // right: 0;
+    }
   }
 }

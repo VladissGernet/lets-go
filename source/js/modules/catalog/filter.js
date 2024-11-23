@@ -1,8 +1,11 @@
+// Mock данные из макета.
+import {countriesByContinent} from './catalog-mock';
+
 import {sortCountriesInSelectedContinent} from './sort-countries';
 import {createAlphabetList} from './create-alphabet';
 import {createFilterContinentsButtons} from './create-filter-continents-buttons';
-import {countriesByContinent} from './catalog-mock';
 import {initHideButton} from './init-hide-button';
+import {createTabletAlphabet} from './create-tablet-alphabet';
 
 const INITIAL_ACTIVATED_CONTINENT = 'Европа';
 
@@ -14,11 +17,15 @@ const initCountriesFilter = () => {
   // Добавляем кнопки континентов
   createFilterContinentsButtons(filter, countriesByContinent, INITIAL_ACTIVATED_CONTINENT);
 
-  // Получаем страны из выбранного континента и создаем объект с буквой и списком стран
+  // Получаем страны из выбранного континента и создаем элементы с буквой и списком стран
   const filterContent = filter.querySelector('.filter__content');
 
   const selectedContinent = countriesByContinent[INITIAL_ACTIVATED_CONTINENT];
   const sortedCountries = sortCountriesInSelectedContinent(selectedContinent);
+
+  // Создаем алфавит из букв на основании стран
+  const tabletContent = filter.querySelector('.filter__tablet-content');
+  createTabletAlphabet(tabletContent, sortedCountries);
 
   // Устанавливаю высоту контента фильтра для скрытия.
   filterContent.style.maxHeight = 0;

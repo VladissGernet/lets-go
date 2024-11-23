@@ -1,16 +1,8 @@
-import {countriesByContinent} from './catalog-mock';
-import {createAlphabetList} from './create-alphabet';
-import {sortCountriesInSelectedContinent} from './sort-countries';
+import {updateFilterContentList} from './update-filter-content-list';
 
-const createFilterContinentsButtons = (filter, countriesData, selectedContinent) => {
-  const filterContent = filter.querySelector('.filter__content');
-  const filterContinents = filter.querySelector('.filter__continents');
-  const filterContinentButtonCover = filterContinents.querySelector('.filter__continent');
-  const filterContinentButtonClone = filterContinentButtonCover.cloneNode(true);
-
+const createContinentsButtons = (countriesData, selectedContinent, filterContinentButtonClone) => {
   const continentsDocumentFragment = document.createDocumentFragment();
 
-  // Добавляем кнопки континентов
   Object.keys(countriesData).forEach((continent) => {
     const newItem = filterContinentButtonClone.cloneNode(true);
     newItem.querySelector('button').textContent = continent;
@@ -20,29 +12,43 @@ const createFilterContinentsButtons = (filter, countriesData, selectedContinent)
     }
     continentsDocumentFragment.appendChild(newItem);
   });
-  filterContinents.innerHTML = '';
 
-  filterContinents.appendChild(continentsDocumentFragment);
+  return continentsDocumentFragment;
+};
+
+const createFilterContinentsButtons = (filter, countriesData, selectedContinent) => {
+  const filterContent = filter.querySelector('.filter__content');
+  const filterContinents = filter.querySelector('.filter__continents');
+  const filterContinentButtonCover = filterContinents.querySelector('.filter__continent');
+  const filterContinentButtonClone = filterContinentButtonCover.cloneNode(true);
+
+  // Добавляем кнопки континентов
+  filterContinents.innerHTML = '';
+  filterContinents.appendChild(createContinentsButtons(countriesData, selectedContinent, filterContinentButtonClone));
 
   // Добавляем обработчик клика
   filterContinents.addEventListener('click', (evt) => {
     const target = evt.target;
-    if (target.tagName === 'BUTTON' && !target.closest('li').classList.contains('filter__continent--active')) {
-      // Обновляем активный континент
-      filterContinents.querySelector('.filter__continent--active').classList.remove('filter__continent--active');
-      target.parentNode.classList.add('filter__continent--active');
-
-      // Сортируем страны
-      const sortedCountries = sortCountriesInSelectedContinent(countriesByContinent[target.textContent]);
-      createAlphabetList(filterContent, sortedCountries);
-
-      // Обновляем высоту контента
-      if (filterContent.classList.contains('js-is-open')) {
-        const newHeight = document.querySelector('.filter__content').scrollHeight;
-
-        filterContent.style.maxHeight = `${newHeight}px`;
-      }
+    if (target.tagName !== 'BUTTON') {
+      return;
     }
+    const buttonItem = target.closest('li');
+
+    // Обновляем активный континент
+    if (buttonItem.classList.contains('filter__continent--active')) {
+      buttonItem.classList.remove('filter__continent--active');
+    } else {
+      buttonItem.classList.add('filter__continent--active');
+    }
+
+    // Проверяем, открыт ли контент
+    const isContendShown = filterContent.classList.contains('js-is-open');
+    if (!isContendShown) {
+      return;
+    }
+
+    // Обновляем контент
+    updateFilterContentList(filterContent, filterContinents);
   });
 };
 

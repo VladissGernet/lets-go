@@ -4,7 +4,7 @@
   min-height: 500px;
 
   &__header {
-    margin: 2px 20px 70px;
+    margin: 2px 20px 30px;
 
     svg {
       transform: translateY(-2px);
@@ -73,6 +73,10 @@
     grid-template-columns: repeat(5, 1fr);
 
     gap: 70px 20px;
+
+    &.js-is-open {
+      margin-top: 70px;
+    }
   }
 
   &__item {
@@ -106,20 +110,28 @@
   }
 
   &__hide-button {
-    margin-top: 50px;
     display: block;
     width: 100%;
     background-color: $hawkes-blue;
+
+    &.js-is-open {
+      margin-top: 50px;
+    }
 
     @include hover-focus {
       background-color: $periwinkle;
 
       &:active {
-        span {
+        .filter__hide-button-inner {
           opacity: 0.3;
         }
-
       }
+    }
+
+    svg {
+      position: unset;
+      top: unset;
+      right: unset;
     }
   }
 
@@ -127,10 +139,19 @@
     position: relative;
     margin: 0 40px;
     transition: all $trans-default;
+  }
 
-    svg {
-      left: -30px;
-      top: 2px;
+  &__hide-button-icon {
+    position: absolute;
+    left: -32px;
+    top: 3px;
+
+    &--close {
+      opacity: 0;
+    }
+
+    &--open {
+      opacity: 1;
     }
   }
 }

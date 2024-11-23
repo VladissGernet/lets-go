@@ -10,5 +10,8 @@ mixin filter()
       ul.filter__content
       button.btn.filter__hide-button(type="button")
         span.filter__hide-button-inner
-          +icon("close-filter", 22, 24)
-          span Свернуть
+          span.filter__hide-button-icon.filter__hide-button-icon--close
+            +icon("close-filter", 22, 24)
+          span.filter__hide-button-icon.filter__hide-button-icon--open
+            +icon("open-filter", 22, 24)
+          span.filter__hide-button-text Показать все

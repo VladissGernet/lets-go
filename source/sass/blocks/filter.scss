@@ -278,12 +278,12 @@
       position: absolute;
       left: 0;
       right: 0;
-      bottom: 44px;
+      bottom: 50px;
       display: block;
       grid-area: alphabet;
 
       padding-top: 60px;
-      padding-bottom: 100px;
+      padding-bottom: 79px;
       border-radius: 0 0 58px 58px;
 
       overflow: hidden;
@@ -319,10 +319,10 @@
   }
 
   &__tablet-content {
-    margin: 0 70px;
+    margin: 0 74px;
 
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 3fr 28.5%;
     transition: all $trans-default;
     transform: translateY(-100%);
     opacity: 0;
@@ -333,8 +333,9 @@
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(5, 17.3%);
+    gap: 23px 0;
+    align-content: start;
   }
 
   &__tablet-letter-button {
@@ -344,6 +345,10 @@
     text-transform: uppercase;
     color: $midnight-express;
 
+    border: none;
+    padding: 0;
+    background-color: transparent;
+
     user-select: none;
     cursor: pointer;
 
@@ -352,7 +357,7 @@
 
   &__selected-letter-content {
     list-style-type: none;
-    margin: 0;
+    margin: -4px 0 0;
     padding: 0;
   }
 
@@ -365,11 +370,21 @@
     user-select: none;
     cursor: pointer;
 
+    border: none;
+    padding: 0;
+    background-color: transparent;
+
     display: block;
   }
 
   &__hide-button--inner {
-    margin-top: 70px;
+    margin-top: 95px;
+    padding-top: 42px;
+    padding-left: 100px;
+    padding-bottom: 38px;
+    font-size: 20px;
+    line-height: 20px;
+
     grid-column: span 2;
 
     .filter__hide-button-inner-content {
@@ -386,6 +401,8 @@
 
         @include vp-1023 {
           opacity: 1;
+          left: -1px;
+          top: -2px;
         }
       }
     }

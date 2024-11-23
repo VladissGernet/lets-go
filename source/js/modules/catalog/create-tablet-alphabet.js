@@ -1,9 +1,10 @@
-const createListOfCountries = (countriesArray) => {
+const createTabletListOfCountries = (countriesArray) => {
   const listFragment = document.createDocumentFragment();
 
   countriesArray.forEach((country) => {
     const newCountryItem = document.createElement('li');
     const newCountryButton = document.createElement('button');
+    newCountryButton.classList.add('filter__tablet-country-button');
     newCountryButton.type = 'button';
     newCountryButton.textContent = country;
     newCountryItem.appendChild(newCountryButton);
@@ -27,6 +28,7 @@ const createTabletAlphabet = (tabletContent, sortedCountries) => {
     const [letter] = letterArray;
     const newLetterItem = document.createElement('li');
     const newLetterButton = document.createElement('button');
+    newLetterButton.classList.add('filter__tablet-letter-button');
     newLetterButton.type = 'button';
     newLetterButton.textContent = letter;
 
@@ -35,7 +37,7 @@ const createTabletAlphabet = (tabletContent, sortedCountries) => {
   });
 
   // Создаем элементы списка стран по первой букве
-  selectedLetterContentListFragment = createListOfCountries(sortedCountries[0][1]);
+  selectedLetterContentListFragment = createTabletListOfCountries(sortedCountries[0][1]);
 
   alphabetList.appendChild(alphabetListFragment);
   selectedLetterContentList.appendChild(selectedLetterContentListFragment);

@@ -98,6 +98,7 @@
     }
   }
 
+  // Контент на desktop начало
   &__content {
     margin: 0 37px 0;
     padding: 0;
@@ -237,6 +238,8 @@
     }
   }
 
+  // Контент на desktop конец
+
   // Контент внутри кнопки
 
   &__hide-button-inner-content {
@@ -269,11 +272,74 @@
 
     @include vp-1023 {
       grid-area: alphabet;
-      display: block;
-      // position: absolute;
-      // top: 0;
-      // left: 0;
-      // right: 0;
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+    }
+  }
+
+  &__tablet-alphabet {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+  }
+
+  &__tablet-letter-button {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 60px;
+    text-transform: uppercase;
+    color: $midnight-express;
+
+    // padding: 0;
+    // border: none;
+    // background-color: transparent;
+
+    user-select: none;
+    cursor: pointer;
+
+    display: block;
+  }
+
+  &__selected-letter-content {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__tablet-country-button {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    color: $midnight-express;
+
+    // padding: 0;
+    // border: none;
+    // background-color: transparent;
+
+    user-select: none;
+    cursor: pointer;
+
+    display: block;
+  }
+
+  &__hide-button--inner {
+    margin-top: 70px;
+    grid-column: span 2;
+
+    .filter__hide-button-inner-content {
+      position: relative;
+    }
+
+    .filter__hide-button-icon {
+      left: 10px;
+      top: 4px;
+    }
+
+    .filter__hide-button-text {
+      margin: 0 40px;
     }
   }
 }

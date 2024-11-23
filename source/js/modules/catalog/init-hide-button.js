@@ -7,6 +7,7 @@ const FilterHideButtonText = {
 
 const initHideButton = () => {
   const hideButton = document.querySelector('.filter__hide-button--outer');
+  const hideButtonInner = document.querySelector('.filter__hide-button--inner');
   if (!hideButton) {
     return;
   }
@@ -15,7 +16,7 @@ const initHideButton = () => {
   const buttonText = hideButton.querySelector('.filter__hide-button-text');
   const tabletContentWrapper = document.querySelector('.filter__tablet-content-wrapper');
 
-  hideButton.addEventListener('click', () => {
+  const onHideButtonClick = () => {
     if (filterContent.classList.contains('js-is-open')) {
       filterContent.classList.remove('js-is-open');
       hideButton.classList.remove('js-is-open');
@@ -32,7 +33,10 @@ const initHideButton = () => {
       buttonText.textContent = FilterHideButtonText.OPEN;
       filterContent.style.maxHeight = `${filterContent.scrollHeight}px`;
     }
-  });
+  };
+
+  hideButton.addEventListener('click', onHideButtonClick);
+  hideButtonInner.addEventListener('click', onHideButtonClick);
 };
 
 export {initHideButton};

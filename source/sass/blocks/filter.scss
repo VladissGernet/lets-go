@@ -79,6 +79,7 @@
     border: none;
     cursor: pointer;
     user-select: none;
+    word-break: break-all;
 
     transition: all $trans-default;
     opacity: 0.3;

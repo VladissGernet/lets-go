@@ -8,7 +8,6 @@ import {initAboutParallax} from './modules/about-parallax';
 import {initDirectionsSwiper} from './modules/directions-swiper';
 
 import {initCountriesFilter} from './modules/catalog/filter';
-import {initHideButton} from './modules/catalog/hide-button';
 
 // ---------------------------------
 
@@ -41,7 +40,6 @@ window.addEventListener('DOMContentLoaded', () => {
     initDirectionsSwiper();
 
     initCountriesFilter();
-    initHideButton();
   });
 });
 

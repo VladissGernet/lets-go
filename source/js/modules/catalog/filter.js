@@ -2,6 +2,7 @@ import {sortCountriesInSelectedContinent} from './sort-countries';
 import {createAlphabetList} from './create-alphabet';
 import {createFilterContinentsButtons} from './create-filter-continents-buttons';
 import {countriesByContinent} from './catalog-mock';
+import {initHideButton} from './init-hide-button';
 
 const INITIAL_ACTIVATED_CONTINENT = 'Европа';
 
@@ -24,6 +25,9 @@ const initCountriesFilter = () => {
 
   // Создаем алфавитный список
   createAlphabetList(filterContent, sortedCountries);
+
+  // Активирую кнопку раскрытия/скрытия списка.
+  initHideButton();
 };
 
 export {initCountriesFilter};

@@ -63,6 +63,13 @@
     }
   }
 
+  &__special-checkboxes {
+    padding: 10px 6px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px;
+  }
+
   &__slider-inputs {
     display: flex;
     overflow: hidden;

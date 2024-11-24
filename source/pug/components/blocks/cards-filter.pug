@@ -84,31 +84,31 @@ mixin cards-filter(cardsFilterMods)
             span.cards-filter__accordion-button-icon
               +icon("accordion-arrow", 10, 6)
           .accordion__content(data-accordion="content")
-            .accordion__wrapper
-              +custom-toggle({
-                inputLabel: "Самолет",
-                inputName: "filter-transport",
-                inputValue: "filter-transport-1",
-                inputChecked: true
-              }).custom-toggle--checkbox
-              +custom-toggle({
-                inputLabel: "Автобус",
-                inputName: "filter-transport",
-                inputValue: "filter-transport-2",
-                inputChecked: true
-              }).custom-toggle--checkbox
-              +custom-toggle({
-                inputLabel: "Велосипед",
-                inputName: "filter-transport",
-                inputValue: "filter-transport-3",
-                inputChecked: false
-              }).custom-toggle--checkbox
-              +custom-toggle({
-                inputLabel: "Бег",
-                inputName: "filter-transport",
-                inputValue: "filter-transport-4",
-                inputChecked: true
-              }).custom-toggle--checkbox
+            .accordion__wrapper.cards-filter__special-checkboxes
+              .custom-toggle.custom-toggle--special-checkbox
+                label
+                  input(type="checkbox", value="filter-transport-1", name="filter-transport", checked="checked")
+                  span.custom-toggle__icon
+                    +icon("aircraft", 23, 22)
+                  span.custom-toggle__label.visually-hidden Самолет
+              .custom-toggle.custom-toggle--special-checkbox
+                label
+                  input(type="checkbox", value="filter-transport-2", name="filter-transport", checked="checked")
+                  span.custom-toggle__icon
+                    +icon("bus", 23, 22)
+                  span.custom-toggle__label.visually-hidden Автобус
+              .custom-toggle.custom-toggle--special-checkbox
+                label
+                  input(type="checkbox", value="filter-transport-3", name="filter-transport")
+                  span.custom-toggle__icon
+                    +icon("bicycle", 23, 22)
+                  span.custom-toggle__label.visually-hidden Велосипед
+              .custom-toggle.custom-toggle--special-checkbox
+                label
+                  input(type="checkbox", value="filter-transport-4", name="filter-transport", checked="checked")
+                  span.custom-toggle__icon
+                    +icon("run", 23, 22)
+                  span.custom-toggle__label.visually-hidden Бегун
         .accordion__element.is-active(data-accordion="element")
           button.accordion__button.cards-filter__accordion-button(type="button", data-accordion="button")
             span Левел

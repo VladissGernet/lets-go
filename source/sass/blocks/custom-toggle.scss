@@ -143,3 +143,43 @@
     }
   }
 }
+
+.custom-toggle--special-checkbox {
+  &:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  label {
+    display: block;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+
+    background-color: $color-default-white;
+    border-radius: 50%;
+  }
+
+  .custom-toggle__icon {
+    width: 23px;
+    display: block;
+    height: 23px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: $catalina-blue;
+
+    svg {
+      display: block;
+      width: 23px;
+      height: 23px;
+      position: relative;
+    }
+  }
+
+  input + .custom-toggle__icon svg {
+    opacity: 0.15;
+  }
+}

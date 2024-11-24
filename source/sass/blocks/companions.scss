@@ -484,9 +484,8 @@
   }
 
   &--cards &__profile {
-    padding: 46px 43px 42px 310px;
-
-    min-height: unset;
+    padding: 0;
+    min-height: 285px;
 
     display: grid;
     justify-content: start;
@@ -494,9 +493,10 @@
     align-items: start;
     align-content: start;
     grid-template-areas:
-      "title       flags flags"
-      "description flags flags"
-      ".           styles progress";
+      "avatar title flags flags"
+      "avatar description flags flags"
+      "avatar . styles progress";
+    grid-template-columns: 285px 230px 1fr 1fr;
       box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
 
     &::before {
@@ -506,23 +506,58 @@
 
   &--cards &__flags {
     grid-area: flags;
+
+    display: block;
+    padding: 0;
+  }
+
+  &--cards &__flag {
+    position: relative;
+    padding: 0 0 0 50px;
+
+    &:not(:last-child) {
+      margin-bottom: 14px;
+    }
+
+    span {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 20px;
+      text-transform: uppercase;
+      color: $catalina-blue;
+    }
+
+    svg {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
   }
 
   &--cards h3 {
     grid-area: title;
+
+    text-align: left;
   }
 
   &--cards p {
     grid-area: description;
+
+    text-align: left;
   }
 
   &--cards &__progress {
     grid-area: progress;
+
+    position: relative;
+    top: unset;
+    left: unset;
+    z-index: unset;
   }
   &--cards &__avatar {
-    top: 0;
-    left: 0;
-    right: unset;
+    grid-area: avatar;
+
+    display: block;
     width: 285px;
     height: 285px;
   }

@@ -1,3 +1,14 @@
 .cards {
-  display: none;
+  display: grid;
+  grid-template-columns: 1fr 285px;
+  grid-template-areas: "list filter";
+  gap: 5%;
+
+  &__list {
+    grid-area: list;
+  }
+
+  &__filter {
+    grid-area: filter;
+  }
 }

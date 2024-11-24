@@ -1,5 +1,5 @@
-mixin cards-filter()
-  section.cards-filter(data-tabs="element")
+mixin cards-filter(cardsFilterMods)
+  section.cards-filter(data-tabs="element", class=cardsFilterMods)
     h2 Подберите идеального  попутчика
     form(method="post", enctype="multipart/form-data", action="#", autocomplete="off")
       .accordion(data-accordion="parent")

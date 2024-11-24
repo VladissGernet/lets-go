@@ -68,7 +68,15 @@
   }
 
   &--tertiary {
-    background-color: tomato;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    text-transform: uppercase;
+
+    display: block;
+    padding: 18px;
+    background-color: $color-default-white;
+    border-radius: 25px;
 
     svg {
       display: none;

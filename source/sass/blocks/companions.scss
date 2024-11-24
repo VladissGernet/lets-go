@@ -307,6 +307,9 @@
 
     transition: all $trans-default;
 
+    user-select: none;
+    cursor: pointer;
+
     @include vp-1023 {
       min-height: 484px;
       box-shadow: 0 0 10px 0 $color-default-white;
@@ -496,7 +499,8 @@
       "avatar title flags flags"
       "avatar description flags flags"
       "avatar . styles progress";
-    grid-template-columns: 285px 230px 1fr 1fr;
+    grid-template-columns: 285px 285px 1fr 104px;
+    grid-template-rows: auto 1fr auto auto;
       box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
 
     &::before {
@@ -508,6 +512,8 @@
     grid-area: flags;
 
     display: block;
+    margin-top: 50px;
+    margin-left: 20px;
     padding: 0;
   }
 
@@ -538,12 +544,18 @@
     grid-area: title;
 
     text-align: left;
+
+    margin-top: 50px;
+    margin-left: 62px;
   }
 
   &--cards p {
     grid-area: description;
 
     text-align: left;
+
+    margin-left: 62px;
+    margin-top: 20px;
   }
 
   &--cards &__progress {
@@ -553,10 +565,13 @@
     top: unset;
     left: unset;
     z-index: unset;
+
+    margin-bottom: 42px;
   }
   &--cards &__avatar {
     grid-area: avatar;
 
+    position: relative;
     display: block;
     width: 285px;
     height: 285px;
@@ -564,5 +579,7 @@
 
   &--cards &__styles {
     grid-area: styles;
+
+    margin-bottom: 42px;
   }
 }

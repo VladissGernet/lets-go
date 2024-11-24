@@ -34,3 +34,34 @@ mixin cards-list(cardsListMods)
           +icon("bicycle", 35, 24)
         li.companions__style.companions__style--disabled
           +icon("run", 35, 24)
+    li.companions__profile.companions__profile--80
+      ul.companions__flags
+        li.companions__flag
+          +icon("germany", 35, 24)
+          span Германия
+        li.companions__flag
+          +icon("czechia", 35, 24)
+          span Чехия
+      h3
+        span Петя Демин
+      p
+          | #бургер #бар #футбол
+          | #концерт #крафт
+      .companions__progress
+        .companions__progress-value
+          span 80
+        .companions__progress-level
+          span level
+        svg.companions__progress-icon(viewBox="0 0 36 36")
+          circle.companions__progress-circle(cx="18", cy="18", r="17", stroke="#4d99d6", fill="none", stroke-width="3", stroke-dasharray="10", stroke-dashoffset="50")
+      .companions__avatar
+        +img("content/profiles", "demin", "png", 285, 285, "Петя Демин.")
+      ul.companions__styles
+        li.companions__style
+          +icon("aircraft", 35, 24)
+        li.companions__style
+          +icon("bus", 35, 24)
+        li.companions__style.companions__style--disabled
+          +icon("bicycle", 35, 24)
+        li.companions__style
+          +icon("run", 35, 24)

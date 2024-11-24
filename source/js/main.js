@@ -10,7 +10,8 @@ import {initDirectionsSwiper} from './modules/directions-swiper';
 import {initCountriesFilter} from './modules/catalog/filter';
 import {initAccordions} from './vendor/accordion/init-accordion';
 
-import {initFilterSlider} from './modules/init-filter-slider';
+import {initFilterSlider} from './modules/card-filter/init-filter-slider.js';
+import {initCardsFilter} from './modules/card-filter/init-card-filter.js';
 
 // ---------------------------------
 
@@ -47,6 +48,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initAccordions();
 
     initFilterSlider();
+    initCardsFilter();
   });
 });
 

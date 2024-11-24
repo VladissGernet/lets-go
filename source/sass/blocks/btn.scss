@@ -66,4 +66,12 @@
       }
     }
   }
+
+  &--tertiary {
+    background-color: tomato;
+
+    svg {
+      display: none;
+    }
+  }
 }

@@ -70,3 +70,6 @@ mixin cards-list(cardsListMods)
           +icon("bicycle", 35, 24)
         li.companions__style
           +icon("run", 35, 24)
+      .companions__buttons-wrapper
+        +btn({text: "Позвать!", type: "button"}).btn--quaternary.companions__call-button
+        +like-btn("1500").companions__like-button

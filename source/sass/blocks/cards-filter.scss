@@ -158,17 +158,17 @@
         top: 50%;
         left: -20px;
         transform: translate(50%, -50%);
-        background-color:  rgb(203, 206, 217);
+        background-color: rgb(203, 206, 217);
         z-index: 2;
       }
 
-     &::after {
+      &::after {
         width: 1px;
         height: 100%;
         top: 0;
         left: -1px;
         z-index: 1;
-        background-color:  rgb(203, 206, 217);
+        background-color: rgb(203, 206, 217);
       }
     }
   }

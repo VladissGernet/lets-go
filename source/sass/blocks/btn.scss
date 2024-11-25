@@ -32,7 +32,7 @@
     background-color: $picton-blue;
 
     svg {
-      transform: rotate(-180deg);
+      transform: rotate(150deg);
     }
 
     &:active {
@@ -86,12 +86,26 @@
 
     @include hover-focus {
       background-color: $color-default-white;
-      box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.14);
+      box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.14);
 
       &:active {
         color: rgb($midnight-express-3, 0.3);
         background-color: $picton-blue;
       }
+    }
+  }
+
+  &--quaternary {
+    text-transform: uppercase;
+
+    padding: 10px 20px;
+    border-radius: 25px;
+
+    min-height: 50px;
+    min-width: 170px;
+
+    svg {
+      display: none;
     }
   }
 }

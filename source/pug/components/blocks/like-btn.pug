@@ -1,0 +1,7 @@
+mixin like-btn(likeValue)
+  button.like-btn(type="button")&attributes(attributes)
+    span.like-btn__icon-wrapper
+      +icon("like-empty", 20, 18).like-btn__icon.like-btn__icon--empty
+      +icon("like-active", 20, 18).like-btn__icon.like-btn__icon--active
+    span.visually-hidden Кнопка лайка.
+    span.like-btn__value= likeValue

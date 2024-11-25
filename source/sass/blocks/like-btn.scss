@@ -1,0 +1,103 @@
+.like-btn {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: left;
+  text-transform: uppercase;
+  word-break: break-word;
+
+  color: $midnight-express-3;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  user-select: none;
+
+  padding: 0;
+
+  border: none;
+  cursor: pointer;
+  transition: all $trans-default;
+
+  &__icon-wrapper {
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+    background-color: $lavender;
+
+    transition: all $trans-default;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    transition: all $trans-default;
+
+    &--active {
+      opacity: 0;
+    }
+  }
+
+  @include hover-focus {
+    .like-btn__icon-wrapper {
+      background-color: $color-default-white;
+    }
+
+    .like-btn__icon--empty {
+      opacity: 0.3;
+    }
+
+    &:active {
+      .like-btn__icon-wrapper {
+        background-color: $lavender;
+      }
+
+      .like-btn__icon--empty {
+        opacity: 0.1;
+      }
+    }
+  }
+
+  &--active {
+    .like-btn__icon-wrapper {
+      background-color: $tutu;
+    }
+
+    .like-btn__icon--empty {
+      opacity: 0;
+    }
+
+    .like-btn__icon--active {
+      opacity: 1;
+    }
+
+    @include hover-focus {
+      .like-btn__icon-wrapper {
+        background-color: $remy;
+      }
+
+      .like-btn__icon--empty {
+        opacity: 0;
+      }
+
+      &:active {
+        .like-btn__icon-wrapper {
+          background-color: $remy;
+        }
+
+        .like-btn__icon--empty {
+          opacity: 0;
+        }
+
+        .like-btn__icon--active {
+          opacity: 0.3;
+        }
+      }
+    }
+  }
+}

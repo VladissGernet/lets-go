@@ -1,6 +1,20 @@
 .accordion {
   margin: 0 auto 50px auto;
 
+  &__button {
+    transition: all 0.3s ease;
+
+    @media (hover: hover) {
+      &:hover:not(.focus-visible) {
+        opacity: 0.6;
+
+        &:active {
+          opacity: 0.3;
+        }
+      }
+    }
+  }
+
   & & {
     width: 90%;
     margin: 0 auto;

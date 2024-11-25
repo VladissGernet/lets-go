@@ -83,5 +83,15 @@
     svg {
       display: none;
     }
+
+    @include hover-focus {
+      background-color: $color-default-white;
+      box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.14);
+
+      &:active {
+        color: rgb($midnight-express-3, 0.3);
+        background-color: $picton-blue;
+      }
+    }
   }
 }

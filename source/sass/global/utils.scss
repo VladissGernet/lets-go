@@ -20,6 +20,10 @@
   main {
     flex-grow: 1;
   }
+
+  &--catalog {
+    background-color: $solitude;
+  }
 }
 
 .rouble {

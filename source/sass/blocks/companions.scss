@@ -586,4 +586,24 @@
 
     margin-bottom: 42px;
   }
+
+  &--cards &__progress {
+    background-color: transparent;
+
+    .companions__progress-circle {
+      stroke: rgb(255, 141, 48);
+    }
+
+    .companions__progress-value span {
+      color: $catalina-blue;
+
+      &::before {
+        background-color: rgb($color-default-black, 0.1);
+      }
+    }
+
+    .companions__progress-level span {
+      color: rgb($color-default-black, 0.4);
+    }
+  }
 }

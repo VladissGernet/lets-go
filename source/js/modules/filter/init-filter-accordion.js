@@ -40,8 +40,10 @@ const initFilterAccordion = () => {
     const newPageWidthType = defineTypeOfWindow(window.innerWidth);
     if (newPageWidthType !== initialPageWidthType) {
       if (newPageWidthType === 'desktop' || newPageWidthType === 'mobile') {
+        initialPageWidthType = newPageWidthType;
         hideAccordionElements(accordion);
       } else if (newPageWidthType === 'tablet') {
+        initialPageWidthType = newPageWidthType;
         activeAccordionElements(accordion);
       }
     }

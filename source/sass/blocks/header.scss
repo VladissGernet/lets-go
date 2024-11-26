@@ -12,7 +12,7 @@
     padding-top: 25px;
 
     &.is-open {
-      z-index: 2;
+      z-index: 5;
 
       .container {
         transform: translateY(-10px);

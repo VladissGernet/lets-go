@@ -265,6 +265,8 @@
       top: unset;
       right: unset;
 
+      display: block;
+
       @include vp-767 {
         width: 11px;
         height: 11px;
@@ -301,8 +303,8 @@
 
         .filter__hide-button-icon {
           left: unset;
-          right: 12px;
-          top: -5px;
+          right: 15px;
+          top: 8px;
 
           transition: all $trans-default;
           opacity: 0;
@@ -398,6 +400,7 @@
 
       overflow: hidden;
       transform: translateY(100%);
+      z-index: 4;
 
       &::before {
         content: "";

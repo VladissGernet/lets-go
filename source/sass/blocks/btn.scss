@@ -31,10 +31,6 @@
   @include hover-focus {
     background-color: $picton-blue;
 
-    svg {
-      transform: rotate(150deg);
-    }
-
     &:active {
       color: rgb($catalina-blue, 0.3);
     }

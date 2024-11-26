@@ -1,6 +1,10 @@
 .cards {
   padding-bottom: 62px;
 
+  @include vp-1023 {
+    margin-top: 42px;
+  }
+
   .container {
     display: grid;
     grid-template-columns: 1fr 285px;
@@ -9,10 +13,18 @@
     "controls filter";
     align-items: start;
     gap: 5%;
+
+    @include vp-1023 {
+      display: block;
+    }
   }
 
   &__list {
     grid-area: list;
+
+    @include vp-1023 {
+      margin-top: 40px;
+    }
   }
 
   &__filter {

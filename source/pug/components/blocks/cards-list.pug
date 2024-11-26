@@ -40,8 +40,8 @@ mixin cards-list(cardsListMods)
     li.companions__profile.companions__profile--80
       ul.companions__flags
         li.companions__flag
-          +icon("germany", 35, 24)
-          span Германия
+          +icon("belgium", 35, 24)
+          span Бельгия
         li.companions__flag
           +icon("czechia", 35, 24)
           span Чехия
@@ -73,14 +73,17 @@ mixin cards-list(cardsListMods)
       .companions__buttons-wrapper
         +btn({text: "Позвать!", type: "button"}).btn--quaternary.companions__call-button
         +like-btn("1500").companions__like-button
-    li.companions__profile.companions__profile--80
+    li.companions__profile.companions__profile--25
       ul.companions__flags
         li.companions__flag
-          +icon("germany", 35, 24)
-          span Германия
+          +icon("usa", 35, 24)
+          span США
         li.companions__flag
-          +icon("czechia", 35, 24)
-          span Чехия
+          +icon("australia", 35, 24)
+          span Австралия
+        li.companions__flag
+          +icon("dominicana", 35, 24)
+          span Доминикана
       h3
         span Марк Смолов
       p
@@ -109,14 +112,14 @@ mixin cards-list(cardsListMods)
       .companions__buttons-wrapper
         +btn({text: "Позвать!", type: "button"}).btn--quaternary.companions__call-button
         +like-btn("170").companions__like-button
-    li.companions__profile.companions__profile--online.companions__profile--80
+    li.companions__profile.companions__profile--online.companions__profile--50
       ul.companions__flags
+        li.companions__flag
+          +icon("great-britan", 35, 24)
+          span Великобритания
         li.companions__flag
           +icon("germany", 35, 24)
           span Германия
-        li.companions__flag
-          +icon("czechia", 35, 24)
-          span Чехия
       h3
         span Лариса Роговая
       p
@@ -124,7 +127,7 @@ mixin cards-list(cardsListMods)
         | #учеба #линкедин
       .companions__progress
         .companions__progress-value
-          span 80
+          span 50
         .companions__progress-level
           span level
         svg.companions__progress-icon(viewBox="0 0 36 36")

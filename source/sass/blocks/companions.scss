@@ -87,6 +87,16 @@
       stroke-dashoffset: 0;
       stroke-dasharray: 89px;
     }
+
+    .companions__profile--25 & {
+      stroke-dashoffset: 104;
+      stroke-dasharray: 130px;
+    }
+
+    .companions__profile--50 & {
+      stroke-dashoffset: 36;
+      stroke-dasharray: 89px;
+    }
   }
 
   @include vp-1023 {

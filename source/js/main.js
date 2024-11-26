@@ -13,6 +13,8 @@ import {initAccordions} from './vendor/accordion/init-accordion';
 import {initFilterSlider} from './modules/card-filter/init-filter-slider.js';
 import {initCardsFilter} from './modules/card-filter/init-card-filter.js';
 
+import {initFilterAccordion} from './modules/filter/init-filter-accordion.js';
+
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -49,6 +51,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     initFilterSlider();
     initCardsFilter();
+
+    initFilterAccordion();
   });
 });
 

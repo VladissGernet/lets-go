@@ -3,9 +3,9 @@
   padding: 0;
   list-style-type: none;
 
-  @media (min-width: 768px) and (max-width: 1023px) {
-    &.companions--cards {
-      .companions__profile {
+  @include vp-1023 {
+    .companions {
+      &__profile {
         grid-template-areas:
           "avatar title styles"
           "avatar description styles"
@@ -26,7 +26,7 @@
         }
       }
 
-      .companions__avatar {
+      &__avatar {
         margin-top: 35px;
         margin-left: 35px;
 
@@ -34,17 +34,17 @@
         height: 190px;
       }
 
-      .companions__styles {
+      &__styles {
         margin: 35px 0 0;
 
         display: block;
       }
 
-      .companions__style:not(:last-child) {
+      &__style:not(:last-child) {
         margin-bottom: 10px;
       }
 
-      .companions__flags {
+      &__flags {
         margin: 0 0 35px;
         padding: 40px 35px 0;
 
@@ -79,9 +79,20 @@
         }
       }
 
-      .companions__buttons-wrapper {
+      &__buttons-wrapper {
         justify-self: unset;
       }
+    }
+  }
+
+  @include vp-767 {
+    .companions__profile {
+      grid-template-areas:
+        "avatar title"
+        "description description"
+        "flags flags"
+        "style progress";
+      grid-template-columns: 1fr 1fr;
     }
   }
 }

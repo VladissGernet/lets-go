@@ -86,13 +86,37 @@
   }
 
   @include vp-767 {
-    .companions__profile {
-      grid-template-areas:
-        "avatar title"
-        "description description"
-        "flags flags"
-        "style progress";
-      grid-template-columns: 1fr 1fr;
+    .companions {
+      &__profile {
+        grid-template-areas:
+          "avatar title title"
+          "description description description"
+          "flags flags flags"
+          "styles styles progress"
+          "buttons-wrapper buttons-wrapper buttons-wrapper";
+        grid-template-columns: 110px 1fr 65px;
+
+        h3 {
+          margin: 15px 15px 0;
+        }
+      }
+
+      &__avatar {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+
+      &__flags {
+        display: block;
+      }
+
+      &__styles {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+      }
     }
   }
 }

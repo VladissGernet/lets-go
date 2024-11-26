@@ -24,6 +24,10 @@
 
     display: flex;
     flex-wrap: wrap;
+
+    @include vp-767 {
+      display: none;
+    }
   }
 
   &__page-button {

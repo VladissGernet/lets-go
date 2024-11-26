@@ -2,4 +2,86 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    &.companions--cards {
+      .companions__profile {
+        grid-template-areas:
+          "avatar title styles"
+          "avatar description styles"
+          "avatar buttons-wrapper progress"
+          "flags flags flags";
+        grid-template-columns: 240px 1fr 90px;
+        grid-template-rows: auto 1fr auto;
+
+        h3 {
+          margin-top: 33px;
+          margin-left: 40px;
+          margin-right: 40px;
+
+          span::before {
+            left: unset;
+            right: -20px;
+          }
+        }
+      }
+
+      .companions__avatar {
+        margin-top: 35px;
+        margin-left: 35px;
+
+        width: 190px;
+        height: 190px;
+      }
+
+      .companions__styles {
+        margin: 35px 0 0;
+
+        display: block;
+      }
+
+      .companions__style:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
+      .companions__flags {
+        margin: 0 0 35px;
+        padding: 40px 35px 0;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+
+        position: relative;
+
+        &::before {
+          content: "хочет посетить:";
+          position: absolute;
+          top: 0;
+          left: 35px;
+
+          font-size: 15px;
+          font-weight: 400;
+          line-height: 16px;
+          color: $charcoal;
+          background-color: $color-default-white;
+          z-index: 1;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 8px;
+          left: 0;
+          right: 0;
+          height: 1px;
+          background-color: rgb(237, 239, 246);
+        }
+      }
+
+      .companions__buttons-wrapper {
+        justify-self: unset;
+      }
+    }
+  }
 }

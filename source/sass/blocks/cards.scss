@@ -1,11 +1,15 @@
 .cards {
-  display: grid;
-  grid-template-columns: 1fr 285px;
-  grid-template-areas:
-  "list filter"
-  "controls filter";
-  align-items: start;
-  gap: 5%;
+  padding-bottom: 62px;
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 285px;
+    grid-template-areas:
+    "list filter"
+    "controls filter";
+    align-items: start;
+    gap: 5%;
+  }
 
   &__list {
     grid-area: list;

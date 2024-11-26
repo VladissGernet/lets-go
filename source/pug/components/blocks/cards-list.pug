@@ -73,3 +73,75 @@ mixin cards-list(cardsListMods)
       .companions__buttons-wrapper
         +btn({text: "Позвать!", type: "button"}).btn--quaternary.companions__call-button
         +like-btn("1500").companions__like-button
+    li.companions__profile.companions__profile--80
+      ul.companions__flags
+        li.companions__flag
+          +icon("germany", 35, 24)
+          span Германия
+        li.companions__flag
+          +icon("czechia", 35, 24)
+          span Чехия
+      h3
+        span Марк Смолов
+      p
+        | #рэп #тату #хайпбист
+        | #кроссовки #суприм
+      .companions__progress
+        .companions__progress-value
+          span 25
+        .companions__progress-level
+          span level
+        svg.companions__progress-icon(viewBox="0 0 36 36")
+          circle.companions__progress-circle(cx="18", cy="18", r="17", stroke="#4d99d6", fill="none", stroke-width="3", stroke-dasharray="10", stroke-dashoffset="50")
+      .companions__avatar
+        picture
+          source(media="(max-width: 1023px)", srcset="img/content/filter-cards/smolov-tablet.png 1x, img/content/filter-cards/smolov-tablet@2x.png 2x", type="image/png")
+          img(src="img/content/filter-cards/smolov-desktop.png", srcset="img/content/filter-cards/smolov-desktop@2x.png 2x", width="285", height="285", alt="Петя Демин.")
+      ul.companions__styles
+        li.companions__style
+          +icon("aircraft", 35, 24)
+        li.companions__style.companions__style--disabled
+          +icon("bus", 35, 24)
+        li.companions__style
+          +icon("bicycle", 35, 24)
+        li.companions__style.companions__style--disabled
+          +icon("run", 35, 24)
+      .companions__buttons-wrapper
+        +btn({text: "Позвать!", type: "button"}).btn--quaternary.companions__call-button
+        +like-btn("170").companions__like-button
+    li.companions__profile.companions__profile--online.companions__profile--80
+      ul.companions__flags
+        li.companions__flag
+          +icon("germany", 35, 24)
+          span Германия
+        li.companions__flag
+          +icon("czechia", 35, 24)
+          span Чехия
+      h3
+        span Лариса Роговая
+      p
+        | #образование #карьера
+        | #учеба #линкедин
+      .companions__progress
+        .companions__progress-value
+          span 80
+        .companions__progress-level
+          span level
+        svg.companions__progress-icon(viewBox="0 0 36 36")
+          circle.companions__progress-circle(cx="18", cy="18", r="17", stroke="#4d99d6", fill="none", stroke-width="3", stroke-dasharray="10", stroke-dashoffset="50")
+      .companions__avatar
+        picture
+          source(media="(max-width: 1023px)", srcset="img/content/filter-cards/rogovaya-tablet.png 1x, img/content/filter-cards/rogovaya-tablet@2x.png 2x", type="image/png")
+          img(src="img/content/filter-cards/rogovaya-desktop.png", srcset="img/content/filter-cards/rogovaya-desktop@2x.png 2x", width="285", height="285", alt="Петя Демин.")
+      ul.companions__styles
+        li.companions__style
+          +icon("aircraft", 35, 24)
+        li.companions__style
+          +icon("bus", 35, 24)
+        li.companions__style.companions__style--disabled
+          +icon("bicycle", 35, 24)
+        li.companions__style.companions__style--disabled
+          +icon("run", 35, 24)
+      .companions__buttons-wrapper
+        +btn({text: "Позвать!", type: "button"}).btn--quaternary.companions__call-button
+        +like-btn("23").companions__like-button

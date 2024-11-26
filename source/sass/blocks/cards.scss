@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 285px;
   grid-template-areas: "list filter";
+  align-items: start;
   gap: 5%;
 
   &__list {

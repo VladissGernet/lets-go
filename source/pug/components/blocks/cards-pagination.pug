@@ -1,0 +1,21 @@
+mixin cards-pagination(cardsControlsMods)
+  .cards-pagination
+    button.btn.btn--show-more.cards-pagination__show-more(type="button")
+      span Показать еще
+      +icon("show-more", 26, 26)
+    .cards-pagination__page-controls
+      ol.cards-pagination__page-list
+        li.cards-pagination__page-item
+          button.cards-pagination__page-button(type="button") 1
+        li.cards-pagination__page-item
+          button.cards-pagination__page-button(type="button") 2
+        li.cards-pagination__page-item
+          button.cards-pagination__page-button(type="button") 3
+        li.cards-pagination__page-item
+          button.cards-pagination__page-button(type="button") 4
+      .cards-pagination__control-buttons-wrapper
+        button.cards-pagination__control-button.cards-pagination__control-button--prev(type="button")
+          +icon("control-button-arrow", 14, 20)
+        button.cards-pagination__control-button.cards-pagination__control-button--next(type="button")
+          +icon("control-button-arrow", 14, 20)
+

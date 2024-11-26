@@ -1,0 +1,33 @@
+.cards-pagination {
+
+  &__show-more {
+    margin: 0 auto;
+  }
+
+  &__page-controls {
+    background-color: $color-default-white;
+    border-radius: 20px;
+    padding: 26px;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__page-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__control-buttons-wrapper {
+    display: flex;
+  }
+
+  &__control-button {
+    display: block;
+  }
+}

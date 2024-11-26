@@ -180,9 +180,50 @@
 
   // Разрешение планшета.
 
-  @include vp-1023 {
-    .accordion__element {
-      // max
+  @media (min-width: 768px) and (max-width: 1023px) {
+    form {
+      margin-top: 70px;
+    }
+
+    .accordion {
+      &__element {
+        margin-bottom: 20px;
+
+        display: grid;
+        grid-template-columns: 140px 1fr;
+      }
+
+      &__button {
+        pointer-events: none;
+
+        svg {
+          display: none;
+        }
+      }
+
+      &__content {
+        overflow: unset;
+      }
+
+      &__wrapper {
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    & &__special-checkboxes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2px;
+    }
+
+    .custom-toggle {
+      min-height: 24px;
+
+      &:not(:last-child) {
+        margin-bottom: unset;
+      }
     }
   }
 }

@@ -115,7 +115,7 @@ mixin cards-filter(cardsFilterMods)
             span.cards-filter__accordion-button-icon
               +icon("accordion-arrow", 10, 6)
           .accordion__content(data-accordion="content")
-            .accordion__wrapper
+            .accordion__wrapper.accordion__wrapper--slider
               .cards-filter__slider-inputs
                 +custom-input({
                   inputName: "user-level-from",

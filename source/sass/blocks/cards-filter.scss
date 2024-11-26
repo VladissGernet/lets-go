@@ -209,6 +209,13 @@
         padding: 0;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+
+        &--slider {
+          display: flex;
+          flex-direction: row-reverse;
+          align-items: center;
+          gap: 60px;
+        }
       }
     }
 
@@ -224,6 +231,16 @@
       &:not(:last-child) {
         margin-bottom: unset;
       }
+    }
+
+    .cards-filter__slider-wrapper {
+      flex-grow: 1;
+    }
+
+    .cards-filter__slider-inputs {
+      width: 148px;
+      margin-bottom: unset;
+      flex-shrink: 0;
     }
   }
 }

@@ -108,4 +108,32 @@
       display: none;
     }
   }
+
+  &--show-more {
+    display: block;
+    background-color: transparent;
+
+    svg {
+      left: 0px;
+      right: unset;
+      top: 27px;
+    }
+
+    @include hover-focus {
+      background-color: transparent;
+
+      svg {
+        transform: none;
+        opacity: 0.6;
+      }
+
+      &:active {
+        color: $catalina-blue;
+
+        svg {
+          opacity: 0.3;
+        }
+      }
+    }
+  }
 }

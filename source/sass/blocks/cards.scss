@@ -1,7 +1,9 @@
 .cards {
   display: grid;
   grid-template-columns: 1fr 285px;
-  grid-template-areas: "list filter";
+  grid-template-areas:
+  "list filter"
+  "controls filter";
   align-items: start;
   gap: 5%;
 
@@ -11,5 +13,9 @@
 
   &__filter {
     grid-area: filter;
+  }
+
+  &__controls {
+    grid-area: controls;
   }
 }

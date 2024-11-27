@@ -1,8 +1,9 @@
 .cards {
-  padding-bottom: 76px;
+  margin-bottom: 76px;
 
   @include vp-1023 {
     margin-top: 42px;
+    margin-bottom: 60px;
   }
 
   .container {

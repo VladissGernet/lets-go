@@ -15,6 +15,7 @@
 
   @include vp-767 {
     padding-top: 82px;
+    border-radius: 0 0 26px 26px;
   }
 
   .container {
@@ -53,7 +54,7 @@
 
       min-width: unset;
 
-      z-index: 1;
+      z-index: 5;
     }
 
     svg {
@@ -276,8 +277,8 @@
       display: block;
 
       @include vp-767 {
-        width: 11px;
-        height: 11px;
+        width: 22px;
+        height: 22px;
       }
     }
 
@@ -292,8 +293,10 @@
         opacity: 1;
 
         @include vp-767 {
-          top: -6px;
-          right: -25px;
+          top: 50%;
+          right: 50%;
+
+          transform: translate(50%, -50%);
         }
       }
     }
@@ -341,8 +344,9 @@
               width: 17px;
               height: 3px;
 
-              top: -2px;
-              right: -26px;
+              top: 50%;
+              right: 50%;
+              transform: translate(50%, -50%);
 
               svg {
                 width: 17px;
@@ -366,8 +370,10 @@
         font-size: 0;
         padding: 0;
 
-        width: 17px;
-        height: 3px;
+        width: 44px;
+        height: 44px;
+        top: -14px;
+        right: -12px;
       }
     }
   }
@@ -384,6 +390,10 @@
     @include vp-1023 {
       position: unset;
       margin: 0;
+    }
+
+    @include vp-767 {
+      display: block;
     }
   }
 
@@ -451,7 +461,8 @@
 
     @include vp-767 {
       padding-top: 49px;
-      padding-bottom: 50px;
+      padding-bottom: 27px;
+      border-radius: 0 0 26px 26px;
     }
   }
 
@@ -583,8 +594,15 @@
         }
 
         @include vp-767 {
-          left: -19px;
-          top: 0;
+          left: 28px;
+          top: 0px;
+          width: 16px;
+          height: 16px;
+
+          svg {
+            width: inherit;
+            height: inherit;
+          }
         }
       }
     }
@@ -594,6 +612,9 @@
 
       @include vp-767 {
         margin: 0;
+
+        max-width: 82px;
+        letter-spacing: 1px;
       }
     }
 
@@ -603,11 +624,14 @@
       line-height: 20px;
 
       margin-top: 8px;
-      padding: 0;
+      padding: 9px 20px 6px 53px;
 
       min-height: 40px;
 
       border-radius: 20px;
+
+      width: 126%;
+      transform: translateX(-11%);
     }
   }
 }

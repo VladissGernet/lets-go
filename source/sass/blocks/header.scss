@@ -12,7 +12,7 @@
     padding-top: 25px;
 
     &.is-open {
-      z-index: 5;
+      z-index: 6;
 
       .container {
         transform: translateY(-10px);
@@ -241,6 +241,7 @@
     }
 
     @include vp-767 {
+      z-index: 6;
       padding-top: 7px;
     }
   }

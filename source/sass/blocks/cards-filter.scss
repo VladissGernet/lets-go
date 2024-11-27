@@ -10,6 +10,10 @@
   @include vp-1023 {
     width: 100%;
     min-height: unset;
+
+    margin-top: 45px;
+    padding-top: 37px;
+    padding-bottom: 39px;
   }
 
   h2 {
@@ -22,6 +26,12 @@
 
     @include vp-1279 {
       font-size: 26px;
+    }
+
+    @include vp-1023 {
+      font-size: 30px;
+
+      margin: 0 34px;
     }
   }
 
@@ -50,6 +60,11 @@
 
     @include vp-1279 {
       font-size: 18px;
+    }
+
+    @include vp-1023 {
+      font-size: 20px;
+      line-height: 20px;
     }
 
     span {
@@ -187,6 +202,10 @@
 
   &__slider-wrapper {
     margin: 0 17%;
+
+    @include vp-1023 {
+      margin: 0;
+    }
   }
 
   &__button {
@@ -196,21 +215,38 @@
     @include vp-1279 {
       font-size: 16px;
     }
+
+    @include vp-1023 {
+      font-size: 20px;
+      padding-right: 24px;
+      margin: 0 auto;
+      width: 90%;
+    }
   }
 
   // Разрешение планшета.
 
   @media (min-width: 768px) and (max-width: 1023px) {
     form {
-      margin-top: 70px;
+      margin-top: 74px;
     }
 
     .accordion {
       &__element {
-        margin-bottom: 19px;
+        margin-bottom: 26px;
 
         display: grid;
-        grid-template-columns: 140px 1fr;
+        grid-template-columns: 126px 1fr;
+
+        &--special-checkboxes {
+          margin-top: -5px;
+          margin-bottom: 16px;
+
+          button {
+            margin-top: 7px;
+            padding-right: 8px;
+          }
+        }
       }
 
       &__button {
@@ -261,6 +297,10 @@
       width: 148px;
       margin-bottom: unset;
       flex-shrink: 0;
+
+      @include vp-1023 {
+        margin: -2px 22px 0 0;
+      }
     }
   }
 }

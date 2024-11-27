@@ -1,6 +1,12 @@
 .accordion {
   margin: 0 auto 31px;
 
+  @media (max-width: 1023px) {
+    margin-left: 5%;
+    margin-right: 2%;
+    margin-bottom: 72px;
+  }
+
   &__button {
     transition: all 0.3s ease;
 
@@ -25,6 +31,11 @@
     margin-left: 17%;
     margin-right: 17%;
 
+    @media (max-width: 1023px) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
     &--slider {
       margin-left: 0;
       margin-right: 0;
@@ -32,6 +43,10 @@
       & .accordion__button {
         margin: 0 48px;
         width: 68%;
+
+        @media (max-width: 1023px) {
+          margin: 0;
+        }
       }
     }
 

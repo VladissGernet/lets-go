@@ -13,6 +13,10 @@
     font-size: 16px;
   }
 
+  @include vp-1023 {
+    font-size: 20px;
+  }
+
   &:not(:last-child) {
     margin-bottom: 20px;
   }
@@ -67,6 +71,10 @@
     span {
       margin-bottom: 0;
       margin-left: 0;
+
+      @include vp-1023 {
+        margin-top: 3px;
+      }
     }
   }
 
@@ -99,6 +107,10 @@
       left: 0;
 
       transition: all $trans-default;
+
+      @include vp-1023 {
+        top: -4px;
+      }
     }
   }
 
@@ -214,6 +226,10 @@
     transition: all $trans-default;
 
     color: $gainsboro;
+
+    @include vp-1023 {
+      margin-top: 0;
+    }
 
     svg {
       display: block;

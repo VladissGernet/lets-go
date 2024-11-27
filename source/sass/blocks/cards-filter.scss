@@ -192,6 +192,10 @@
   &__button {
     margin: 0 auto;
     width: 68%;
+
+    @include vp-1279 {
+      font-size: 16px;
+    }
   }
 
   // Разрешение планшета.

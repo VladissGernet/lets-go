@@ -548,6 +548,7 @@
       padding: 0;
 
       width: unset;
+      max-width: 175px;
     }
 
     .companions__flag {
@@ -568,6 +569,10 @@
         line-height: 20px;
         text-transform: uppercase;
         color: $catalina-blue;
+
+        @include vp-1279 {
+          font-size: 16px;
+        }
       }
 
       svg {
@@ -590,6 +595,10 @@
         font-size: 30px;
         line-height: 30px;
 
+        @include vp-1279 {
+          font-size: 26px;
+        }
+
         &::before {
           top: 15px;
           left: -26px;
@@ -608,6 +617,10 @@
       margin-right: 0;
 
       max-width: 60%;
+
+      @include vp-1279 {
+        font-size: 14px;
+      }
     }
 
     .companions__avatar {
@@ -701,17 +714,21 @@
 
     display: flex;
     gap: 4px;
+
+    justify-self: stretch;
   }
 
   &__call-button {
     font-size: 20px;
-    padding-left: 21px;
+    padding-left: 28px;
     padding-top: 13px;
-    padding-right: 21px;
-    min-width: 10%;
+    padding-right: 29px;
+    min-width: unset;
 
     @include vp-1279 {
-      font-size: 16px;
+      font-size: 14px;
+      padding-left: 10px;
+      padding-right: 10px;
     }
   }
 }

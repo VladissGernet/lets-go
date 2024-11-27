@@ -519,11 +519,19 @@
 
       &:nth-child(2n-1) {
         margin-bottom: 30px;
+
+        @include vp-1023 {
+          margin-bottom: 40px;
+        }
       }
 
       &:nth-child(2n) {
         margin-top: unset;
         margin-bottom: 30px;
+
+        @include vp-1023 {
+          margin-bottom: 40px;
+        }
       }
 
       &:last-child {
@@ -549,6 +557,11 @@
 
       width: unset;
       max-width: 175px;
+
+      @include vp-1023 {
+        max-width: unset;
+        width: 100%;
+      }
     }
 
     .companions__flag {
@@ -561,6 +574,10 @@
 
       &:not(:last-child) {
         margin-bottom: 8px;
+
+        @include vp-1023 {
+          margin-bottom: 0;
+        }
       }
 
       span {
@@ -573,12 +590,21 @@
         @include vp-1279 {
           font-size: 16px;
         }
+
+        @include vp-1023 {
+          font-size: 20px;
+        }
       }
 
       svg {
         position: absolute;
         left: 0;
         top: 0;
+
+        @include vp-1023 {
+          width: 49.5px;
+          height: 27px;
+        }
       }
     }
 
@@ -597,6 +623,10 @@
 
         @include vp-1279 {
           font-size: 26px;
+        }
+
+        @include vp-1023 {
+          font-size: 30px;
         }
 
         &::before {
@@ -621,6 +651,12 @@
       @include vp-1279 {
         font-size: 14px;
       }
+
+      @include vp-1023 {
+        font-size: 20px;
+        margin-left: 6%;
+        margin-top: 18px;
+      }
     }
 
     .companions__avatar {
@@ -634,6 +670,11 @@
       img {
         width: 285px;
         height: 285px;
+
+        @include vp-1023 {
+          width: 100%;
+          height: 100%;
+        }
       }
     }
 
@@ -664,6 +705,12 @@
       z-index: unset;
 
       background-color: transparent;
+
+      @include vp-1023 {
+        margin-left: 4px;
+        margin-top: 14px;
+        margin-bottom: 0;
+      }
 
       .companions__progress-circle {
         stroke: rgb(255, 141, 48);
@@ -729,6 +776,14 @@
       font-size: 14px;
       padding-left: 10px;
       padding-right: 10px;
+    }
+
+    @include vp-1023 {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 20px;
+      padding-left: 37px;
+      padding-right: 37px;
     }
   }
 }

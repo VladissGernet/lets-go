@@ -23,6 +23,16 @@
     font-size: 16px;
   }
 
+  @include vp-1023 {
+    font-size: 20px;
+
+    gap: 7px;
+
+    .like-btn__value {
+      transform: translateY(2px);
+    }
+  }
+
   &__icon-wrapper {
     display: inline-block;
     position: relative;

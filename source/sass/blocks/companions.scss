@@ -514,7 +514,7 @@
         "avatar title flags flags"
         "avatar description flags flags"
         "avatar buttons-wrapper styles progress";
-      grid-template-columns: 285px 39% 20% 104px;
+      grid-template-columns: 30% 39% 20% 104px;
       grid-template-rows: auto 1fr auto auto;
 
       &:nth-child(2n-1) {
@@ -615,8 +615,13 @@
 
       position: relative;
       display: block;
-      width: 285px;
-      height: 285px;
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 285px;
+        height: 285px;
+      }
     }
 
     .companions__styles {

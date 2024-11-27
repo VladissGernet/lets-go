@@ -29,6 +29,8 @@
     background-color: $lavender;
 
     transition: all $trans-default;
+
+    flex-shrink: 0;
   }
 
   &__icon {

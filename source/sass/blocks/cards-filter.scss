@@ -19,6 +19,10 @@
     color: $catalina-blue;
 
     margin: 0 17%;
+
+    @include vp-1279 {
+      font-size: 26px;
+    }
   }
 
   form {
@@ -43,6 +47,10 @@
     display: block;
 
     position: relative;
+
+    @include vp-1279 {
+      font-size: 18px;
+    }
 
     span {
       display: block;

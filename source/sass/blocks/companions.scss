@@ -326,7 +326,7 @@
     }
 
     @include vp-767 {
-      border-radius: 10px;
+      border-radius: 20px;
       min-height: unset;
 
       .companions__profiles &:not(:last-child) {
@@ -478,13 +478,41 @@
     width: 23px;
     height: 22px;
 
+    @include vp-767 {
+      width: 32px;
+      height: 32px;
+
+      border-radius: 50%;
+      background-color: $solitude;
+      position: relative;
+    }
+
     svg {
       width: 27px;
       height: 22px;
+
+      @include vp-767 {
+        color: $catalina-blue;
+        width: 16px;
+        height: 20px;
+
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
     }
 
     &--disabled {
       opacity: 0.15;
+
+      @include vp-767 {
+        opacity: 1;
+
+        svg {
+          opacity: 0.15;
+        }
+      }
     }
   }
 
@@ -499,6 +527,29 @@
 
     &::before {
       display: none;
+    }
+
+    .companions__like-button {
+      @include vp-767 {
+        position: absolute;
+        top: 56px;
+        left: 67px;
+
+        .like-btn__icon-wrapper {
+          width: 30px;
+          height: 30px;
+
+          svg {
+            transform: translate(-50%, -50%) scale(0.6);
+          }
+        }
+
+        .like-btn__value {
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 16px;
+        }
+      }
     }
 
     .companions__profile {
@@ -523,6 +574,11 @@
         @include vp-1023 {
           margin-bottom: 40px;
         }
+
+        @include vp-767 {
+          padding-bottom: 26px;
+          margin-bottom: 9px;
+        }
       }
 
       &:nth-child(2n) {
@@ -531,6 +587,11 @@
 
         @include vp-1023 {
           margin-bottom: 40px;
+        }
+
+        @include vp-767 {
+          padding-bottom: 26px;
+          margin-bottom: 9px;
         }
       }
 
@@ -566,7 +627,7 @@
 
     .companions__flag {
       position: relative;
-      padding: 0 0 0 54px;
+      padding: 0 0 0 40px;
 
       display: flex;
       align-items: center;
@@ -594,6 +655,11 @@
         @include vp-1023 {
           font-size: 20px;
         }
+
+        @include vp-767 {
+          font-size: 15px;
+          line-height: 16px;
+        }
       }
 
       svg {
@@ -604,6 +670,12 @@
         @include vp-1023 {
           width: 49.5px;
           height: 27px;
+        }
+
+        @include vp-767 {
+          width: 26px;
+          height: 18px;
+          top: 3px;
         }
       }
     }
@@ -627,6 +699,11 @@
 
         @include vp-1023 {
           font-size: 30px;
+        }
+
+        @include vp-767 {
+          font-size: 20px;
+          line-height: 20px;
         }
 
         &::before {
@@ -656,6 +733,16 @@
         font-size: 20px;
         margin-left: 6%;
         margin-top: 18px;
+      }
+
+      @include vp-767 {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 18px;
+
+        margin-left: 10%;
+        margin-top: 13px;
+        max-width: 196px;
       }
     }
 
@@ -721,6 +808,11 @@
         max-width: 27px;
         margin: 0 auto;
         overflow: hidden;
+
+        @include vp-767 {
+          right: 10px;
+          top: 50px;
+        }
       }
 
       .companions__progress-value span {
@@ -784,6 +876,17 @@
       line-height: 20px;
       padding-left: 37px;
       padding-right: 37px;
+    }
+
+    @include vp-767 {
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 17px;
+
+      width: 100%;
+      padding-top: 5px;
+      padding-bottom: 0;
+      min-height: 40px;
     }
   }
 }

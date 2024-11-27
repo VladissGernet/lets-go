@@ -6,7 +6,16 @@
   }
 
   &__show-more {
+    font-size: 20px;
+    text-transform: uppercase;
+
     margin: 0 auto;
+    padding: 22px 55px 21px 47px;
+
+    svg {
+      top: 20px;
+      left: -2px;
+    }
   }
 
   &__page-controls {

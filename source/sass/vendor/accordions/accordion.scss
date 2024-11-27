@@ -7,6 +7,12 @@
     margin-bottom: 72px;
   }
 
+  @media (max-width: 767px) {
+    margin-left: 10%;
+    margin-right: 9%;
+    margin-bottom: 17px;
+  }
+
   &__button {
     transition: all 0.3s ease;
 
@@ -36,6 +42,10 @@
       margin-right: 0;
     }
 
+    @media (max-width: 767px) {
+      margin-bottom: 22px;
+    }
+
     &--slider {
       margin-left: 0;
       margin-right: 0;
@@ -46,6 +56,10 @@
 
         @media (max-width: 1023px) {
           margin: 0;
+        }
+
+        @media (max-width: 767px) {
+          width: 100%;
         }
       }
     }
@@ -74,8 +88,16 @@
   &__wrapper {
     padding: 25px 0 15px;
 
+    @media (max-width: 767px) {
+      padding: 10px 0 10px;
+    }
+
     &--slider {
       padding-top: 17px;
+
+      @media (max-width: 767px) {
+        padding-top: 11px;
+      }
     }
   }
 }

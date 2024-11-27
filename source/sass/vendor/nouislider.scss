@@ -93,6 +93,12 @@
 
   transition: all 0.3s ease;
 
+  @media (max-width: 767px) {
+    width: 10px;
+    height: 10px;
+    top: -4px;
+  }
+
   @media (hover: hover) {
     &:hover:not(.focus-visible) {
       transform: scale(1.2);

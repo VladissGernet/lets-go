@@ -17,8 +17,17 @@
     font-size: 20px;
   }
 
+  @include vp-767 {
+    font-size: 15px;
+    line-height: 20px;
+  }
+
   &:not(:last-child) {
     margin-bottom: 20px;
+
+    @include vp-767 {
+      margin-bottom: 7px;
+    }
   }
 
   &__icon svg {
@@ -68,6 +77,10 @@
 
     display: flex;
 
+    @include vp-767 {
+      padding-left: 25px;
+    }
+
     span {
       margin-bottom: 0;
       margin-left: 0;
@@ -110,6 +123,14 @@
 
       @include vp-1023 {
         top: -4px;
+      }
+
+      @include vp-767 {
+        width: 18px;
+        height: 18px;
+
+        top: 0;
+        left: 0;
       }
     }
   }
@@ -184,6 +205,11 @@
 
     transition: all $trans-default;
 
+    @include vp-767 {
+      width: 32px;
+      height: 32px;
+    }
+
     input:checked + .custom-toggle__icon svg {
       color: $catalina-blue;
     }
@@ -237,6 +263,11 @@
       height: 23px;
       position: relative;
       opacity: 1;
+
+      @include vp-767 {
+        width: 15px;
+        height: 15px;
+      }
     }
   }
 }

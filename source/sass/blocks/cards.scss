@@ -6,6 +6,10 @@
     margin-bottom: 60px;
   }
 
+  @include vp-767 {
+    margin-top: 21px;
+  }
+
   .container {
     display: grid;
     grid-template-columns: 1fr 21.5%;

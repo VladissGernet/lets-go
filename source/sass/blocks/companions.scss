@@ -514,7 +514,7 @@
         "avatar title flags flags"
         "avatar description flags flags"
         "avatar buttons-wrapper styles progress";
-      grid-template-columns: 285px 306px 1fr 104px;
+      grid-template-columns: 285px 39% 20% 104px;
       grid-template-rows: auto 1fr auto auto;
 
       &:nth-child(2n-1) {
@@ -544,16 +544,22 @@
 
       display: block;
       margin-top: 50px;
-      margin-left: 20px;
+      margin-left: 6%;
       padding: 0;
+
+      width: unset;
     }
 
     .companions__flag {
       position: relative;
-      padding: 0 0 0 50px;
+      padding: 0 0 0 54px;
+
+      display: flex;
+      align-items: center;
+      min-height: 29px;
 
       &:not(:last-child) {
-        margin-bottom: 14px;
+        margin-bottom: 8px;
       }
 
       span {
@@ -576,8 +582,20 @@
 
       text-align: left;
 
-      margin-top: 50px;
-      margin-left: 62px;
+      margin-top: 47px;
+      margin-left: 17%;
+      margin-right: 0;
+
+      span {
+        font-size: 30px;
+        line-height: 30px;
+
+        &::before {
+          top: 15px;
+          left: -26px;
+          width: 8px;
+        }
+      }
     }
 
     p {
@@ -585,8 +603,11 @@
 
       text-align: left;
 
-      margin-left: 62px;
+      margin-left: 17%;
       margin-top: 20px;
+      margin-right: 0;
+
+      max-width: 60%;
     }
 
     .companions__avatar {
@@ -601,22 +622,40 @@
     .companions__styles {
       grid-area: styles;
 
-      margin-bottom: 42px;
+      justify-content: start;
+      margin-left: 9%;
+      margin-top: 18px;
+      margin-bottom: unset;
+
+      width: unset;
     }
 
     .companions__progress {
       grid-area: progress;
+
+      width: 63px;
+      height: 63px;
+      padding-top: 12px;
+      padding-left: 0;
+      overflow: visible;
+      margin-bottom: 37px;
 
       position: relative;
       top: unset;
       left: unset;
       z-index: unset;
 
-      margin-bottom: 42px;
       background-color: transparent;
 
       .companions__progress-circle {
         stroke: rgb(255, 141, 48);
+        stroke-width: 2px;
+      }
+
+      .companions__progress-value {
+        max-width: 27px;
+        margin: 0 auto;
+        overflow: hidden;
       }
 
       .companions__progress-value span {
@@ -627,18 +666,43 @@
         }
       }
 
+      .companions__progress-level {
+        margin: 2px auto 0;
+
+        max-width: 27px;
+        overflow: hidden;
+      }
+
       .companions__progress-level span {
         color: rgb($color-default-black, 0.4);
       }
+    }
+
+
+    .companions__progress-icon {
+      overflow: visible;
+      width: 61px;
+      height: 61px;
+      top: -2px;
+      left: 1px;
     }
   }
 
   &__buttons-wrapper {
     grid-area: buttons-wrapper;
-    justify-self: end;
-    margin-left: 30px;
+
+    margin-top: 6px;
+    margin-left: 14%;
 
     display: flex;
     gap: 4px;
+  }
+
+  &__call-button {
+    font-size: 20px;
+    padding-left: 21px;
+    padding-top: 13px;
+    padding-right: 21px;
+    min-width: 152px;
   }
 }

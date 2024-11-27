@@ -1,5 +1,9 @@
 .cards-pagination {
-  padding-top: 46px;
+  margin-top: 46px;
+
+  @include vp-767 {
+    margin-top: 22px;
+  }
 
   &__show-more {
     margin: 0 auto;
@@ -15,6 +19,11 @@
     gap: 20px;
 
     margin-top: 50px;
+
+    @include vp-767 {
+      margin-top: 10px;
+      padding: 0;
+    }
   }
 
   &__page-list {
@@ -71,6 +80,20 @@
 
   &__control-buttons-wrapper {
     display: flex;
+
+    @include vp-767 {
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 1px;
+        height: 100%;
+        background-color: rgb(237, 239, 246);
+        position: absolute;
+        top: 0;
+        left: 50%;
+      }
+    }
   }
 
   &__control-button {
@@ -90,6 +113,11 @@
     position: relative;
 
     transition: all $trans-default;
+
+    @include vp-767 {
+      width: 135px;
+      height: 51px;
+    }
 
     @include hover-focus {
       opacity: 0.6;

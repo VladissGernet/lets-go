@@ -1,9 +1,9 @@
 .cards-filter {
   margin: 0 auto;
-  padding: 46px 46px 46px 48px;
+  padding-top: 46px;
+  padding-bottom: 47px;
 
   border-radius: 20px;
-  width: 285px;
 
   background-color: $pattens-blue;
 
@@ -18,7 +18,7 @@
     line-height: 30px;
     color: $catalina-blue;
 
-    margin: 0;
+    margin: 0 17%;
   }
 
   form {
@@ -77,6 +77,8 @@
     overflow: hidden;
 
     margin-bottom: 36px;
+    margin-left: 17%;
+    margin-right: 16%;
 
     .custom-input::before,
     .custom-input::after {
@@ -173,6 +175,11 @@
         background-color: rgb(203, 206, 217);
       }
     }
+  }
+
+  &__button {
+    margin: 0 auto;
+    width: 68%;
   }
 
   // Разрешение планшета.

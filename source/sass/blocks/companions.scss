@@ -1,6 +1,6 @@
 .companions {
   padding-top: 100px;
-  padding-bottom: 128px;
+  padding-bottom: 122px;
   min-height: 400px;
 
   @include vp-1023 {
@@ -11,7 +11,7 @@
   }
 
   @include vp-767 {
-    padding-top: 79px;
+    padding-top: 78px;
     padding-bottom: 40px;
     border-radius: 0 0 28px 32px;
     position: relative;
@@ -29,6 +29,11 @@
     top: 20px;
     left: 22px;
     z-index: 1;
+
+    @include vp-767 {
+      top: 18px;
+      left: 17px;
+    }
   }
 
   &__progress-value {
@@ -138,7 +143,7 @@
   &__content {
     grid-area: content;
     max-width: 84%;
-    margin-top: 63px;
+    margin-top: 50px;
     margin-left: 12px;
 
     @include vp-1023 {
@@ -153,7 +158,7 @@
     h2 {
       font-size: 81px;
       font-weight: 700;
-      line-height: 45px;
+      line-height: 70px;
       margin: 0;
       color: $midnight-express;
       text-transform: uppercase;
@@ -172,12 +177,13 @@
 
       @include vp-767 {
         font-size: 40px;
+        line-height: 44px;
         margin-left: 4px;
       }
     }
 
     p {
-      margin: 38px 0 0;
+      margin: 27px 0 0;
       font-size: 24px;
       font-weight: 500;
       line-height: 33px;
@@ -191,7 +197,7 @@
       @include vp-1023 {
         font-size: 24px;
         color: $color-default-white;
-        margin-top: 48px;
+        margin-top: 38px;
 
         br {
           display: none;
@@ -204,10 +210,10 @@
         line-height: 22px;
         margin-top: 6px;
         margin-left: 3px;
-      }
 
-      br {
-        display: inline;
+        br {
+          display: inline;
+        }
       }
     }
   }
@@ -226,7 +232,7 @@
 
       @include vp-1023 {
         font-size: 22px;
-        margin-top: 44px;
+        margin-top: 77px;
       }
 
       @include vp-767 {
@@ -241,10 +247,10 @@
 
   &__button {
     grid-area: button;
-    margin-top: 76px;
+    margin-top: 68px;
     margin-left: 14px;
     min-width: 293px;
-    max-width: 600px;
+    max-width: 82%;
 
     align-self: self-start;
     justify-self: start;
@@ -256,6 +262,7 @@
     @include vp-1023 {
       display: block;
       justify-self: unset;
+      margin-top: 75px;
       margin-left: 33px;
       margin-right: 38px;
       letter-spacing: 1px;
@@ -267,7 +274,7 @@
     }
 
     @include vp-767 {
-      margin: 62px 0 0;
+      margin: 59px 0 0;
       font-size: 20px;
       letter-spacing: -1px;
       padding: 19px 52px 18px 22px;
@@ -288,6 +295,7 @@
     max-width: 602px;
 
     display: grid;
+    align-items: start;
     gap: 30px;
     grid-template-columns: 1fr 1fr;
 
@@ -302,7 +310,7 @@
 
     @include vp-767 {
       display: block;
-      margin-top: 37px;
+      margin-top: 38px;
     }
   }
 
@@ -311,8 +319,8 @@
     border-radius: 22px;
     overflow: hidden;
     position: relative;
-    padding-top: 253px;
-    padding-bottom: 20px;
+    padding-top: 260px;
+    padding-bottom: 25px;
     min-height: 474px;
 
     transition: all $trans-default;
@@ -326,11 +334,13 @@
     }
 
     @include vp-767 {
-      border-radius: 20px;
+      padding-bottom: 17px;
+
+      border-radius: 12px;
       min-height: unset;
 
       .companions__profiles &:not(:last-child) {
-        margin-bottom: 47px;
+        margin-bottom: 43px;
       }
     }
 
@@ -347,17 +357,21 @@
       height: 50%;
       background-color: $color-default-white;
       z-index: 1;
+
+      @include vp-767 {
+        top: 271px;
+      }
     }
 
     h3 {
       text-align: center;
-      margin: 32px 30px 0;
+      margin: 28px 30px 0;
       position: relative;
       z-index: 1;
       word-break: break-word;
 
       @include vp-767 {
-        margin-top: 13px;
+        margin-top: 7px;
       }
 
       span {
@@ -369,6 +383,10 @@
 
         @include vp-1279 {
           font-size: 20px;
+        }
+
+        @include vp-767 {
+          letter-spacing: 0.5px;
         }
 
         &::before {
@@ -400,7 +418,8 @@
       }
 
       @include vp-767 {
-        margin-top: 8px;
+        margin-top: 12px;
+        line-height: 18px;
       }
     }
 
@@ -433,7 +452,7 @@
     left: 0;
     right: 0;
     width: 100%;
-    height: 285px;
+    height: 273px;
 
     img {
       width: inherit;
@@ -470,7 +489,8 @@
     margin-top: 25px;
 
     @include vp-767 {
-      margin-top: 8px;
+      margin-top: 10px;
+      gap: 1px;
     }
   }
 
@@ -482,8 +502,6 @@
       width: 32px;
       height: 32px;
 
-      border-radius: 50%;
-      background-color: $solitude;
       position: relative;
     }
 
@@ -493,8 +511,8 @@
 
       @include vp-767 {
         color: $catalina-blue;
-        width: 16px;
-        height: 20px;
+        width: 20.83px;
+        height: 21.12px;
 
         position: absolute;
         left: 50%;

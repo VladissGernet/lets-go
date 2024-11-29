@@ -1,5 +1,5 @@
 .profile {
-  padding-top: 126px;
+  padding-top: 99px;
   padding-bottom: 65px;
 
   @include vp-1023 {
@@ -25,7 +25,8 @@
     grid-template-areas:
       "title title"
       "list price"
-      "button price";
+      "button price"
+      ". price";
     align-items: start;
 
     @include vp-1023 {
@@ -41,12 +42,12 @@
     grid-area: title;
     font-size: 79px;
     font-weight: 700;
-    line-height: 45px;
+    line-height: 94px;
     color: $midnight-express;
     text-transform: uppercase;
     text-align: center;
     word-break: break-word;
-    margin: 0 30px 99px 0;
+    margin: 0 30px 76px 0;
     letter-spacing: 3px;
 
     @include vp-1279 {

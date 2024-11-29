@@ -33,7 +33,7 @@
   }
 
   &__element {
-    margin-bottom: 19px;
+    margin-bottom: 23px;
     margin-left: 17%;
     margin-right: 17%;
 
@@ -46,12 +46,19 @@
       margin-bottom: 22px;
     }
 
+    &--special-checkboxes {
+      &.is-active .accordion__content {
+        overflow: visible;
+      }
+    }
+
     &--slider {
       margin-left: 0;
       margin-right: 0;
 
       & .accordion__button {
-        margin: 0 48px;
+        margin: 0 17%;
+        max-width: 188px;
         width: 68%;
 
         @media (max-width: 1023px) {
@@ -60,6 +67,7 @@
 
         @media (max-width: 767px) {
           width: 100%;
+          max-width: unset;
         }
       }
     }
@@ -86,7 +94,7 @@
   }
 
   &__wrapper {
-    padding: 25px 0 15px;
+    padding: 29px 0 12px;
 
     @media (max-width: 767px) {
       padding: 10px 0 10px;

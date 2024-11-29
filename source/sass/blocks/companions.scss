@@ -533,9 +533,9 @@
       }
     }
   }
-
-  // Карточки в каталоге.
-
+  //=============================================================================================================================================
+  // Карточки в каталоге. Начало. ===============================================================================================================
+  //=============================================================================================================================================
   &--cards {
     margin: 0;
 
@@ -547,319 +547,576 @@
       display: none;
     }
 
-    .companions__like-button {
-      @include vp-767 {
-        position: absolute;
-        top: 56px;
-        left: 67px;
+    .companions {
+      &__like-button {
+        @include vp-767 {
+          position: absolute;
+          top: 56px;
+          left: 67px;
 
-        .like-btn__icon-wrapper {
-          width: 30px;
-          height: 30px;
+          .like-btn {
+            &__icon-wrapper {
+              width: 30px;
+              height: 30px;
 
-          svg {
-            transform: translate(-50%, -50%) scale(0.6);
+              svg {
+                transform: translate(-50%, -50%) scale(0.6);
+              }
+            }
+
+
+            &__value {
+              font-size: 14px;
+              font-weight: 700;
+              line-height: 16px;
+            }
+          }
+        }
+      }
+
+      &__profile {
+        padding: 0;
+        min-height: 285px;
+
+        display: grid;
+        justify-content: start;
+        justify-items: start;
+        align-items: start;
+        align-content: start;
+        grid-template-areas:
+          "avatar title flags flags"
+          "avatar description flags flags"
+          "avatar buttons-wrapper styles progress";
+        grid-template-columns: 30% 39% 20% 104px;
+        grid-template-rows: auto 1fr auto auto;
+
+        @include vp-1023 {
+          grid-template-areas:
+            "avatar title styles"
+            "avatar description styles"
+            "avatar buttons-wrapper progress"
+            "flags flags flags";
+          grid-template-columns: 240px 1fr 90px;
+          grid-template-rows: auto 1fr auto;
+        }
+
+        @include vp-767 {
+          padding-bottom: 26px;
+          grid-template-areas:
+            "avatar title title"
+            "description description description"
+            "flags flags flags"
+            "styles styles progress"
+            "buttons-wrapper buttons-wrapper buttons-wrapper";
+          grid-template-columns: 89px 1fr 98px;
+        }
+
+        h3 {
+          grid-area: title;
+
+          text-align: left;
+
+          margin-top: 47px;
+          margin-left: 17%;
+          margin-right: 0;
+
+          @include vp-1023 {
+            margin-top: 33px;
+            margin-left: 17px;
+            margin-right: 40px;
+          }
+
+          @include vp-767 {
+            line-height: 21px;
+
+            margin: 15px 15px 0;
           }
         }
 
-        .like-btn__value {
-          font-size: 14px;
-          font-weight: 700;
-          line-height: 16px;
-        }
-      }
-    }
-
-    .companions__profile {
-      padding: 0;
-      min-height: 285px;
-
-      display: grid;
-      justify-content: start;
-      justify-items: start;
-      align-items: start;
-      align-content: start;
-      grid-template-areas:
-        "avatar title flags flags"
-        "avatar description flags flags"
-        "avatar buttons-wrapper styles progress";
-      grid-template-columns: 30% 39% 20% 104px;
-      grid-template-rows: auto 1fr auto auto;
-
-      &:nth-child(2n-1) {
-        margin-bottom: 30px;
-
-        @include vp-1023 {
-          margin-bottom: 40px;
-        }
-
-        @include vp-767 {
-          padding-bottom: 26px;
-          margin-bottom: 9px;
-        }
-      }
-
-      &:nth-child(2n) {
-        margin-top: unset;
-        margin-bottom: 30px;
-
-        @include vp-1023 {
-          margin-bottom: 40px;
-        }
-
-        @include vp-767 {
-          padding-bottom: 26px;
-          margin-bottom: 9px;
-        }
-      }
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-
-      &::before {
-        display: none;
-      }
-
-      &:hover {
-        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.25);
-      }
-    }
-
-    .companions__flags {
-      grid-area: flags;
-
-      display: block;
-      margin-top: 50px;
-      margin-left: 6%;
-      padding: 0;
-
-      width: unset;
-      max-width: 175px;
-
-      @include vp-1023 {
-        max-width: unset;
-        width: 100%;
-      }
-    }
-
-    .companions__flag {
-      position: relative;
-      padding: 0 0 0 40px;
-
-      display: flex;
-      align-items: center;
-      min-height: 29px;
-
-      &:not(:last-child) {
-        margin-bottom: 8px;
-
-        @include vp-1023 {
-          margin-bottom: 0;
-        }
-      }
-
-      span {
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 20px;
-        text-transform: uppercase;
-        color: $catalina-blue;
-
-        @include vp-1279 {
-          font-size: 16px;
-        }
-
-        @include vp-1023 {
-          font-size: 20px;
-        }
-
-        @include vp-767 {
-          font-size: 15px;
-          line-height: 16px;
-        }
-      }
-
-      svg {
-        position: absolute;
-        left: 0;
-        top: 0;
-
-        @include vp-1023 {
-          width: 49.5px;
-          height: 27px;
-        }
-
-        @include vp-767 {
-          width: 26px;
-          height: 18px;
-          top: 3px;
-        }
-      }
-    }
-
-    h3 {
-      grid-area: title;
-
-      text-align: left;
-
-      margin-top: 47px;
-      margin-left: 17%;
-      margin-right: 0;
-
-      span {
-        font-size: 30px;
-        line-height: 30px;
-
-        @include vp-1279 {
-          font-size: 26px;
-        }
-
-        @include vp-1023 {
+        h3 span {
           font-size: 30px;
+          line-height: 30px;
+
+          @include vp-1279 {
+            font-size: 26px;
+          }
+
+          @include vp-1023 {
+            font-size: 30px;
+          }
+
+          @include vp-767 {
+            font-size: 20px;
+            line-height: 20px;
+
+            max-width: 112px;
+            display: block;
+          }
         }
 
-        @include vp-767 {
-          font-size: 20px;
-          line-height: 20px;
-        }
-
-        &::before {
+        h3 span::before {
           top: 15px;
           left: -26px;
           width: 8px;
+
+          @include vp-1023 {
+            left: unset;
+            right: -31px;
+          }
+
+          @include vp-767 {
+            top: 10px;
+            width: 6px;
+            height: 6px;
+            right: -31px;
+          }
+        }
+
+        p {
+          grid-area: description;
+
+          text-align: left;
+
+          margin-left: 17%;
+          margin-top: 20px;
+          margin-right: 0;
+
+          max-width: 60%;
+
+          @include vp-1279 {
+            font-size: 14px;
+          }
+
+          @include vp-1023 {
+            font-size: 20px;
+            margin-left: 6%;
+            margin-top: 18px;
+          }
+
+          @include vp-767 {
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 18px;
+
+            margin-left: 10%;
+            margin-top: 13px;
+            max-width: 196px;
+          }
+        }
+
+        &:nth-child(2n-1) {
+          margin-bottom: 30px;
+
+          @include vp-1023 {
+            margin-bottom: 40px;
+          }
+
+          @include vp-767 {
+            padding-bottom: 26px;
+            margin-bottom: 9px;
+          }
+        }
+
+        &:nth-child(2n) {
+          margin-top: unset;
+          margin-bottom: 30px;
+
+          @include vp-1023 {
+            margin-bottom: 40px;
+          }
+
+          @include vp-767 {
+            padding-bottom: 26px;
+            margin-bottom: 9px;
+          }
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &::before {
+          display: none;
+        }
+
+        &:hover {
+          box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.25);
         }
       }
-    }
 
-    p {
-      grid-area: description;
+      &__flags {
+        grid-area: flags;
 
-      text-align: left;
-
-      margin-left: 17%;
-      margin-top: 20px;
-      margin-right: 0;
-
-      max-width: 60%;
-
-      @include vp-1279 {
-        font-size: 14px;
-      }
-
-      @include vp-1023 {
-        font-size: 20px;
+        display: block;
+        margin-top: 50px;
         margin-left: 6%;
-        margin-top: 18px;
-      }
+        padding: 0;
 
-      @include vp-767 {
-        font-size: 15px;
-        font-weight: 400;
-        line-height: 18px;
-
-        margin-left: 10%;
-        margin-top: 13px;
-        max-width: 196px;
-      }
-    }
-
-    .companions__avatar {
-      grid-area: avatar;
-
-      position: relative;
-      display: block;
-      width: 100%;
-      height: 100%;
-
-      img {
-        width: 285px;
-        height: 285px;
+        width: unset;
+        max-width: 175px;
 
         @include vp-1023 {
+          max-width: unset;
           width: 100%;
-          height: 100%;
+          margin: 0 0 23px;
+          padding: 50px 35px 0;
+
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+
+          position: relative;
+
+          gap: 12px;
+
+          &::before {
+            content: "хочет посетить:";
+            position: absolute;
+            top: 14px;
+            left: 84px;
+
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 16px;
+            color: $charcoal;
+            background-color: $color-default-white;
+            z-index: 1;
+
+            @include vp-767 {
+              left: 24px;
+              letter-spacing: -0.5px;
+            }
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 22px;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background-color: rgb(237, 239, 246);
+          }
+        }
+
+        @include vp-767 {
+          margin-bottom: 4px;
+          padding: 44px 12px 0 25px;
+
+          display: block;
         }
       }
-    }
 
-    .companions__styles {
-      grid-area: styles;
+      &__flag {
+        position: relative;
+        padding: 0 0 0 53px;
 
-      justify-content: start;
-      margin-left: 9%;
-      margin-top: 18px;
-      margin-bottom: unset;
+        display: flex;
+        align-items: center;
+        min-height: 29px;
 
-      width: unset;
-    }
+        @include vp-767 {
+          padding-left: 40px;
+        }
 
-    .companions__progress {
-      grid-area: progress;
+        &:not(:last-child) {
+          margin-bottom: 8px;
 
-      width: 63px;
-      height: 63px;
-      padding-top: 12px;
-      padding-left: 0;
-      overflow: visible;
-      margin-bottom: 37px;
+          @include vp-1023 {
+            margin-bottom: 0;
+          }
+        }
 
-      position: relative;
-      top: unset;
-      left: unset;
-      z-index: unset;
+        span {
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 20px;
+          text-transform: uppercase;
+          color: $catalina-blue;
 
-      background-color: transparent;
+          @include vp-1279 {
+            font-size: 16px;
+          }
 
-      @include vp-1023 {
-        margin-left: 4px;
-        margin-top: 14px;
-        margin-bottom: 0;
+          @include vp-1023 {
+            font-size: 20px;
+          }
+
+          @include vp-767 {
+            font-size: 15px;
+            line-height: 16px;
+          }
+        }
+
+        svg {
+          position: absolute;
+          left: 0;
+          top: 0;
+
+          @include vp-1023 {
+            width: 49.5px;
+            height: 27px;
+          }
+
+          @include vp-767 {
+            width: 26px;
+            height: 18px;
+            top: 3px;
+          }
+        }
       }
 
-      .companions__progress-circle {
+      &__avatar {
+        grid-area: avatar;
+
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        @include vp-1023 {
+          margin-top: 35px;
+          margin-left: 35px;
+
+          width: 190px;
+          height: 190px;
+        }
+
+
+        @include vp-767 {
+          width: 70px;
+          height: 70px;
+          border-radius: 50%;
+          overflow: hidden;
+
+          margin: 15px 0 0 18px;
+        }
+
+        img {
+          width: 285px;
+          height: 285px;
+
+          @include vp-1023 {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+      &__styles {
+        grid-area: styles;
+
+        justify-content: start;
+        margin-left: 9%;
+        margin-top: 18px;
+        margin-bottom: unset;
+
+        width: unset;
+
+        @include vp-1023 {
+          margin: 38px 0 0 21px;
+
+          display: block;
+        }
+
+        @include vp-767 {
+          margin-top: 0;
+          margin-left: 0;
+          padding-top: 31px;
+          padding-left: 21px;
+
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+
+          position: relative;
+
+          width: 100%;
+          gap: 1px;
+
+          // Подпись для раздела.
+          &::before {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16px;
+            color: $charcoal;
+            background-color: $color-default-white;
+
+            z-index: 1;
+
+            content: "транспорт:";
+            position: absolute;
+            top: 0;
+            left: 25px;
+          }
+
+          // Подчеркивание для раздела.
+          &::after {
+            content: "";
+            position: absolute;
+            top: 8px;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background-color: rgb(237, 239, 246);
+          }
+        }
+      }
+
+      &__style {
+        @include vp-767 {
+          background-color: $solitude;
+          border-radius: 50%;
+
+          svg {
+            width: 14px;
+            height: 17px;
+          }
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 10px;
+
+          @include vp-767 {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      &__buttons-wrapper {
+        @include vp-1023 {
+          justify-self: unset;
+
+          margin: 17px 10px 0 14px;
+          gap: 7px;
+        }
+      }
+
+      &__progress {
+        grid-area: progress;
+
+        width: 63px;
+        height: 63px;
+        padding-top: 12px;
+        padding-left: 0;
+        overflow: visible;
+        margin-bottom: 37px;
+
+        position: relative;
+        top: unset;
+        left: unset;
+        z-index: unset;
+
+        background-color: transparent;
+
+        @include vp-1023 {
+          margin-left: 4px;
+          margin-top: 14px;
+          margin-bottom: 0;
+        }
+
+        @include vp-767 {
+          overflow: visible;
+          width: 100%;
+
+          margin: 0;
+          padding: 0;
+
+          &::before {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16px;
+            color: $charcoal;
+            background-color: $color-default-white;
+
+            z-index: 1;
+
+            content: "левел:";
+            position: absolute;
+            top: 0;
+            right: 22px;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 8px;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background-color: rgb(237, 239, 246);
+          }
+        }
+      }
+
+      &__progress-circle {
         stroke: rgb(255, 141, 48);
         stroke-width: 2px;
       }
 
-      .companions__progress-value {
+      &__progress-value {
         max-width: 27px;
         margin: 0 auto;
         overflow: hidden;
 
         @include vp-767 {
+          line-height: 20px;
+
+          position: absolute;
+          top: 51px;
+          left: 50%;
           right: 10px;
-          top: 50px;
+
+          transform: translate(-50%, -50%);
         }
-      }
 
-      .companions__progress-value span {
-        color: $catalina-blue;
+        span {
+          color: $catalina-blue;
+        }
 
-        &::before {
+        span::before {
           background-color: rgb($color-default-black, 0.1);
+
+          @include vp-767 {
+            display: none;
+          }
         }
       }
 
-      .companions__progress-level {
+      &__progress-level {
         margin: 2px auto 0;
 
         max-width: 27px;
         overflow: hidden;
+
+        span {
+          color: rgb($color-default-black, 0.4);
+        }
+
+        @include vp-767 {
+          display: none;
+        }
       }
 
-      .companions__progress-level span {
-        color: rgb($color-default-black, 0.4);
+      &__progress-icon {
+        overflow: visible;
+        width: 61px;
+        height: 61px;
+        top: -2px;
+        left: 1px;
+
+        @include vp-767 {
+          top: 26px;
+          left: unset;
+          right: 22px;
+          width: 43px;
+          height: 43px;
+
+          circle {
+            stroke-width: 2px;
+          }
+        }
       }
-    }
-
-
-    .companions__progress-icon {
-      overflow: visible;
-      width: 61px;
-      height: 61px;
-      top: -2px;
-      left: 1px;
     }
   }
 
@@ -873,6 +1130,12 @@
     gap: 4px;
 
     justify-self: stretch;
+
+    @include vp-767 {
+      margin: 28px 20px 0;
+
+      width: 86%;
+    }
   }
 
   &__call-button {

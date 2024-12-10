@@ -33,5 +33,6 @@ mixin header(headerMods, currentUrl)
         +contacts("header__contacts")
         +social()
       button(class="header__toggle", type="button", data-burger)
+        span.visually-hidden Открыть меню
         +icon("burger", 25, 12).header__icon.header__icon--burger
         +icon("cross", 19, 20).header__icon.header__icon--cross

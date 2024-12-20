@@ -6,9 +6,15 @@ mixin logoFooterContent()
   span.footer__logo-icon.footer__logo-icon--mobile
     +icon("logo-mobile", 96, 15)(aria-label="Логотип проекта Пакет X5.")
 
-mixin footer(footerMods)
+mixin footer(footerMods, currentUrl)
   footer.footer(class=footerMods)
     .container
-      a.footer__link(href="index.html", aria-label="Переход на главную")
-        +logoFooterContent()
+      //- Логотип
+      if(currentUrl === "index.html")
+        //- lighthouse снимает 10 баллов SEO за <a> без href, поэтому использую <span>
+        span.header__logo
+          +logoFooterContent()
+      else
+        a.header__logo(href="index.html", aria-label="Переход на главную")
+          +logoFooterContent()
       +social("footer__social")

@@ -319,7 +319,7 @@
     border-radius: 22px;
     overflow: hidden;
     position: relative;
-    padding-top: 260px;
+    padding-top: 253px;
     padding-bottom: 25px;
     min-height: 474px;
 
@@ -331,6 +331,8 @@
     @include vp-1023 {
       min-height: 484px;
       box-shadow: 0 0 10px 0 $color-default-white;
+
+      padding-top: 275px;
     }
 
     @include vp-767 {
@@ -358,6 +360,10 @@
       background-color: $color-default-white;
       z-index: 1;
 
+      @include vp-1279 {
+        display: none;
+      }
+
       @include vp-767 {
         top: 271px;
       }
@@ -365,10 +371,14 @@
 
     h3 {
       text-align: center;
-      margin: 28px 30px 0;
+      margin: 32px 30px 0;
       position: relative;
       z-index: 1;
       word-break: break-word;
+
+      @include vp-1023 {
+        margin-top: 10px;
+      }
 
       @include vp-767 {
         margin-top: 7px;
@@ -382,7 +392,7 @@
         position: relative;
 
         @include vp-1279 {
-          font-size: 20px;
+          font-size: 24px;
         }
 
         @include vp-767 {
@@ -393,7 +403,7 @@
           content: "";
           position: absolute;
           top: 11px;
-          left: -20px;
+          left: -22px;
           width: 8px;
           height: 8px;
           border-radius: 50%;
@@ -414,7 +424,7 @@
       word-break: break-word;
 
       @include vp-1279 {
-        font-size: 16px;
+        font-size: 20px;
       }
 
       @include vp-767 {
@@ -452,7 +462,7 @@
     left: 0;
     right: 0;
     width: 100%;
-    height: 273px;
+    height: 286px;
 
     img {
       width: inherit;

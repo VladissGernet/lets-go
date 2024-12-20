@@ -1,10 +1,5 @@
 import noUiSlider from '../../vendor/nouislider.min';
 
-// const InputsIdentifiers = {
-//   'user-level-from': 0,
-//   'user-level-to': 1,
-// };
-
 const initFilterSlider = () => {
   const slider = document.getElementById('slider');
   if (!slider) {
@@ -22,6 +17,10 @@ const initFilterSlider = () => {
       'min': 0,
       'max': 100,
     },
+    handleAttributes: [
+      {'aria-label': 'Настройка минимального уровня'},
+      {'aria-label': 'Настройка максимального уровня'}
+    ],
   });
 
   // Обновляет значение в слайдере и подставляет новые
@@ -37,7 +36,6 @@ const initFilterSlider = () => {
       return;
     }
     slider.noUiSlider.set([inputs[0].value, inputs[1].value]);
-
   });
 };
 

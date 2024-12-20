@@ -15,6 +15,8 @@ mixin cards-pagination(cardsControlsMods)
           button.cards-pagination__page-button(type="button") 4
       .cards-pagination__control-buttons-wrapper
         button.cards-pagination__control-button.cards-pagination__control-button--prev(type="button")
+          span.visually-hidden Назад
           +icon("control-button-arrow", 14, 20)
         button.cards-pagination__control-button.cards-pagination__control-button--next(type="button")
+          span.visually-hidden Вперед
           +icon("control-button-arrow", 14, 20)

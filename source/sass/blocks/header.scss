@@ -26,6 +26,8 @@
 
   .container {
     display: flex;
+    justify-content: space-between;
+
     transition: all $trans-default;
 
     @include vp-767 {

@@ -12,9 +12,9 @@ mixin footer(footerMods, currentUrl)
       //- Логотип
       if(currentUrl === "index.html")
         //- lighthouse снимает 10 баллов SEO за <a> без href, поэтому использую <span>
-        span.header__logo
+        span.footer__logo
           +logoFooterContent()
       else
-        a.header__logo(href="index.html", aria-label="Переход на главную")
+        a.footer__logo(href="index.html", aria-label="Переход на главную")
           +logoFooterContent()
       +social("footer__social")

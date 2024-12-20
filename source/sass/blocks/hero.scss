@@ -237,6 +237,11 @@
     animation-duration: 1s;
     animation-fill-mode: forwards;
 
+    // Исправление отступа согласно макету.
+    &:nth-child(4n) {
+      padding-right: 33px;
+    }
+
     @include vp-1279 {
       padding: 30px 4% 30px 2%;
     }

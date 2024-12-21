@@ -41,11 +41,11 @@
 </pattern>
 <image id="image0_1369_4628" width="70" height="47" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAvCAYAAABe1bwWAAABjElEQVRoBe2bQWvCMBTHc5zfaidnH7hbMZ6SnZZ62ycazFScsOqn2Jdo3bWCu47BYHbUoXO0Ccirh8C/EFoSXiE/Xn5J4VWIk4vGswGN0iVJW5K0O5K24rSPz6/qUq1Qpuqg7QplyrW+XxZ6MjhB8ft4rR+vSD7NORDaYi8FpX5vB1Ca79DJ/DV+6B0BkbTTtolx+4IDo0yVq2S6BxONbJ8LwBUfIpg6E3M16QuS6YtrYtz+UMEUymSCpN1yAbjiAwZT1mBYO48vPmAw3wDj2PYBBmDOOxAiY5AxyJjmUd+RFb7PCiwlBzSAARg4Bo7xyZM7BsfAMXAMHMP1iC8ejoFj4Bg4xucI7hgcA8fAMXAM1yO+eDgGjoFj4BifI7hjcAwcA8fAMVyP+OLhGDgGjunMMajBay6ndxFJm/nq6DhjAdfgZQJ1vk335HfmZl8EjcrwPzjHyvCaTBwveiTtM2fZtMWGtpTW2iz+/Utw+KkgGs+GJNMVSbtpm+i5fYGA2bxps8pVcnvgUN9/AJKaYqjGHF3PAAAAAElFTkSuQmCC"/>
 
-        <pattern id="pattern0_1369_4627" patternContentUnits="objectBoundingBox" width="1" height="1">
-            <use href="#image0_1369_4627" transform="scale(0.0142857 0.0212766)"/>
-        </pattern>
-        <image id="image0_1369_4627" width="70" height="47" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAvCAYAAABe1bwWAAABP0lEQVRoge3bMS9DURjG8f+96UBsjdDPYWLp2LBgEBZWfCSN1SA1mYpYsPgqEmaD4corp1Lkmc+J8/yWDr3D+/5zcu7SNsOtPeZsAifAOrAKNPxvHfACPANj4Ga2bZs+F4BLYArsAoMKopB2HKSdp6nBYnzRSw+cAwd5ZyxCNPgAjuLEjIDD2ovMiRajNt0p9tNphBk6yh8bEWa5sKFKsNKWP2MWrcMIDiM4jOAwgsMIDiM4jOAwQu9hqV/kYLn5xAgOIziM4DCCwwgOIziM4DCCwwgOIziM4DCCwwgOIziM0HT3a12Rk2XmEyM4jOAwgsMIDiM4jOAwgsMIEea1yMnyeoswTzUXEB4jzFmRo+U1jjB3wEXNFX6JFrezy/cYmBQzWj5XqcX3W+k9/Y5+G7hO/8ioRewaO+8A+18tgE/AISLV2zlDcAAAAABJRU5ErkJggg=="/>
-    
+<pattern id="pattern0_1369_4627" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_1369_4627" transform="scale(0.0142857 0.0212766)"/>
+</pattern>
+<image id="image0_1369_4627" width="70" height="47" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAvCAYAAABe1bwWAAABP0lEQVRoge3bMS9DURjG8f+96UBsjdDPYWLp2LBgEBZWfCSN1SA1mYpYsPgqEmaD4corp1Lkmc+J8/yWDr3D+/5zcu7SNsOtPeZsAifAOrAKNPxvHfACPANj4Ga2bZs+F4BLYArsAoMKopB2HKSdp6nBYnzRSw+cAwd5ZyxCNPgAjuLEjIDD2ovMiRajNt0p9tNphBk6yh8bEWa5sKFKsNKWP2MWrcMIDiM4jOAwgsMIDiM4jOAwQu9hqV/kYLn5xAgOIziM4DCCwwgOIziM4DCCwwgOIziM4DCCwwgOIziM0HT3a12Rk2XmEyM4jOAwgsMIDiM4jOAwgsMIEea1yMnyeoswTzUXEB4jzFmRo+U1jjB3wEXNFX6JFrezy/cYmBQzWj5XqcX3W+k9/Y5+G7hO/8ioRewaO+8A+18tgE/AISLV2zlDcAAAAABJRU5ErkJggg"/>
+
 <pattern id="pattern0_1369_4630" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image0_1369_4630" transform="scale(0.0142857 0.0212766)"/>
 </pattern>
@@ -144,8 +144,8 @@
 <rect width="70" height="47" fill="url(#pattern0_1369_4628)"/>
 
 </g></symbol><symbol id="germany" viewBox="0 0 70 47"><g fill="none">
-    <rect width="70" height="47" fill="url(#pattern0_1369_4627)"/>
-    
+<rect width="70" height="47" fill="url(#pattern0_1369_4627)"/>
+
 </g></symbol><symbol id="great-britan" viewBox="0 0 70 47"><g fill="none">
 <rect width="70" height="47" fill="url(#pattern0_1369_4630)"/>
 

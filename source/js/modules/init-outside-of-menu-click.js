@@ -16,7 +16,7 @@ const initOutsideOfMenuClick = () => {
     if (window.innerWidth >= DESKTOP_WIDTH) {
       return;
     }
-    if (evt.target.closest('.header') === null) {
+    if (evt.target.closest('.header') === null && header.classList.contains('is-open')) {
       headerBurgerButton.click();
     }
   });

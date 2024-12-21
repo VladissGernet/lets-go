@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Погнали? - Главная</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Погнали - это сервис для поиска попутчиков в путешествиях">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" href="img/favicon/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="img/favicon/favicon.svg">
+    <link rel="manifest" href="img/favicon/site.webmanifest" crossorigin="use-credentials">
+    <link rel="preload" href="fonts/roboto-light.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/roboto-regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/roboto-medium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/roboto-bold.woff2" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header" data-header>
+        <div class="container"><span class="header__logo"><span class="header__logo-icon header__logo-icon--desktop"><img src="img/svg/logo-light.svg" width="200" height="50" alt="Логотип проекта Пакет X5."></span><span class="header__logo-icon header__logo-icon--tablet">
+              <svg width="166" height="42" aria-hidden="true" aria-label="Логотип проекта Пакет X5.">
+                <use xlink:href="img/sprite.svg#logo-tablet"></use>
+              </svg></span><span class="header__logo-icon header__logo-icon--mobile">
+              <svg width="96" height="15" aria-hidden="true" aria-label="Логотип проекта Пакет X5.">
+                <use xlink:href="img/sprite.svg#logo-mobile"></use>
+              </svg></span></span>
+          <nav class="header__nav">
+            <ul class="header__list">
+              <li class="header__item"><a class="nav-link header__link" href="#"><span data-hover="о&nbsp;сервисе">о&nbsp;сервисе</span></a>
+              </li>
+              <li class="header__item"><a class="nav-link header__link" href="#"><span data-hover="направления">направления</span></a>
+              </li>
+              <li class="header__item"><a class="nav-link header__link" href="#"><span data-hover="попутчики">попутчики</span></a>
+              </li>
+            </ul>
+            <ul class="contacts header__contacts">
+              <li class="contacts__item"><a class="contacts__link" href="tel:88005558628"><span class="visually-hidden">Телефон</span><span class="contacts__icon contacts__icon--desktop">
+                    <svg width="18" height="18" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#phone"></use>
+                    </svg></span><span class="contacts__icon contacts__icon--mobile">
+                    <svg width="17" height="15" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#phone-2"></use>
+                    </svg></span><span class="contacts__text">8&nbsp;800 555-86-28</span></a></li>
+              <li class="contacts__item"><a class="contacts__link" href="mailto:mail@htmlacademy.ru"><span class="visually-hidden">E-mail</span><span class="contacts__icon contacts__icon--desktop">
+                    <svg width="16" height="14" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#mail"></use>
+                    </svg></span><span class="contacts__icon contacts__icon--mobile">
+                    <svg width="19" height="13" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#mail-2"></use>
+                    </svg></span><span class="contacts__text">mail@htmlacademy.ru</span></a></li>
+            </ul>
+            <ul class="social">
+              <li class="social__item"><a class="social__link" href="#" aria-label="Telegram">
+                  <svg width="25" height="25" aria-hidden="true">
+                    <use xlink:href="img/sprite.svg#telegram"></use>
+                  </svg></a></li>
+              <li class="social__item"><a class="social__link" href="#" aria-label="Вконтакте">
+                  <svg width="31" height="17" aria-hidden="true">
+                    <use xlink:href="img/sprite.svg#vk"></use>
+                  </svg></a></li>
+              <li class="social__item"><a class="social__link" href="#" aria-label="Youtube">
+                  <svg width="21" height="17" aria-hidden="true">
+                    <use xlink:href="img/sprite.svg#youtube"></use>
+                  </svg></a></li>
+            </ul>
+          </nav>
+          <button class="header__toggle" type="button" data-burger><span class="visually-hidden">Открыть меню</span>
+            <svg class="header__icon header__icon--burger" width="25" height="12" aria-hidden="true">
+              <use xlink:href="img/sprite.svg#burger"></use>
+            </svg>
+            <svg class="header__icon header__icon--cross" width="19" height="20" aria-hidden="true">
+              <use xlink:href="img/sprite.svg#cross"></use>
+            </svg>
+          </button>
+        </div>
+      </header>
+      <main>
+        <h1 class="visually-hidden">Главная страница сервиса "Погнали?".</h1>
+        <section class="hero">
+          <div class="hero__background">
+            <picture>
+              <source media="(max-width: 1023px)" srcset="img/content/hero/globe-back-tablet.jpg 1x, img/content/hero/globe-back-tablet@2x.jpg 2x" type="image/jpg"><img src="img/content/hero/globe-back-desktop.png" srcset="img/content/hero/globe-back-desktop@2x.png 2x" width="1440" height="750" alt="">
+            </picture>
+          </div>
+          <div class="hero__picture">
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/content/hero/traveller-mobile.png 1x, img/content/hero/traveller-mobile@2x.png 2x" type="image/png">
+              <source media="(max-width: 1023px)" srcset="img/content/hero/traveller-tablet.png 1x, img/content/hero/traveller-tablet@2x.png 2x" type="image/png"><img src="img/content/hero/traveller-desktop.png" srcset="img/content/hero/traveller-desktop@2x.png 2x" width="431" height="640" alt="">
+            </picture>
+          </div>
+          <div class="container">
+            <h2>
+              В&nbsp;путешествие
+              с&nbsp;крутыми
+              попутчиками<span>!</span>
+            </h2>
+            <ol class="hero__list">
+              <li class="hero__item hero__item--1">
+                <p>Выберите направление</p>
+              </li>
+              <li class="hero__item hero__item--2">
+                <p>Изучите идеи путешественников</p>
+              </li>
+              <li class="hero__item hero__item--3">
+                <p>Находите тех, кто&nbsp;похож на&nbsp;вас</p>
+              </li>
+              <li class="hero__item hero__item--4">
+                <p>Путешествуйте вместе!</p>
+              </li>
+            </ol>
+          </div>
+        </section>
+        <section class="about">
+          <div class="container">
+            <div class="about__content">
+              <h2>О&nbsp;сервисе</h2>
+              <div class="about__description">
+                <p>
+                  Любое путешествие веселее с&nbsp;попутчиками, которые
+                  на&nbsp;одной волне с&nbsp;тобой! Делитесь своими идеями
+                  путешествий и&nbsp;черпайте вдохновение в&nbsp;чужих.
+                </p>
+              </div>
+              <div class="about__additional">
+                <p>А&nbsp;если найдете кого-то близкого по&nbsp;духу&nbsp;-скорее<br>зовите в&nbsp;совместный трип!</p>
+              </div>
+              <a class="btn about__button" href="#">Подробнее
+                <svg width="14" height="14" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#button-arrow"></use>
+                </svg>
+              </a>
+            </div>
+            <div class="about__background" data-speed="0.18">
+              <picture>
+                <source media="(max-width: 767px)" srcset="img/content/about/about-back-mobile.png 1x, img/content/about/about-back-mobile@2x.png 2x" type="image/png">
+                <source media="(max-width: 1023px)" srcset="img/content/about/about-back-tablet.png 1x, img/content/about/about-back-tablet@2x.png 2x" type="image/png"><img src="img/content/about/about-back-desktop.png" srcset="img/content/about/about-back-desktop@2x.png 2x" width="655" height="665" alt="Скриншот страницы сервиса.">
+              </picture>
+            </div>
+          </div>
+        </section>
+        <section class="directions">
+          <div class="container">
+            <div class="directions__content">
+              <h2>Направления</h2>
+              <p>Мы&nbsp;не&nbsp;продаем туры и&nbsp;ничего не&nbsp;рекламируем.<br>Люди сами пишут о&nbsp;странах, куда хотели&nbsp;бы отправиться и&nbsp;чем можно там заняться.</p>
+            </div>
+            <div class="directions__swiper">
+              <div class="directions__fade directions__fade--top"><img src="img/content/directions/fade/fade-top.png" srcset="img/content/directions/fade/fade-top@2x.png 2x" width="610" height="81" alt="">
+              </div>
+              <div class="directions__fade directions__fade--bottom"><img src="img/content/directions/fade/fade-bottom.png" srcset="img/content/directions/fade/fade-bottom@2x.png 2x" width="619" height="81" alt="">
+              </div>
+              <div class="directions__swiper-wrapper">
+                <div class="directions__slide directions__slide--1">
+                  <h3>Франция</h3>
+                  <p>Трэ бьен, манифик!</p>
+                  <div class="directions__status">
+                    <svg width="20" height="20" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#person-icon"></use>
+                    </svg><span>12518</span>
+                  </div>
+                  <div class="directions__picture">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="img/content/directions/countries/france-mobile.png 1x, img/content/directions/countries/france-mobile@2x.png 2x" type="image/png">
+                      <source media="(max-width: 1023px)" srcset="img/content/directions/countries/france-tablet.png 1x, img/content/directions/countries/france-tablet@2x.png 2x" type="image/png"><img src="img/content/directions/countries/france-desktop.png" srcset="img/content/directions/countries/france-desktop@2x.png 2x" width="186" height="140" alt="Улица во Франции.">
+                    </picture>
+                  </div>
+                  <div class="directions__flag">
+                    <svg width="70" height="47" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#france"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="directions__slide directions__slide--2">
+                  <h3>Чехия</h3>
+                  <p>Закоулки старой Европы</p>
+                  <div class="directions__status">
+                    <svg width="20" height="20" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#person-icon"></use>
+                    </svg><span>5326</span>
+                  </div>
+                  <div class="directions__picture">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="img/content/directions/countries/czech-mobile.png 1x, img/content/directions/countries/czech-mobile@2x.png 2x" type="image/png">
+                      <source media="(max-width: 1023px)" srcset="img/content/directions/countries/czech-tablet.png 1x, img/content/directions/countries/czech-tablet@2x.png 2x" type="image/png"><img src="img/content/directions/countries/czech-desktop.png" srcset="img/content/directions/countries/czech-desktop@2x.png 2x" width="201" height="140" alt="Паром на реке на фоне города в Чехии.">
+                    </picture>
+                  </div>
+                  <div class="directions__flag">
+                    <svg width="70" height="47" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#czech"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="directions__slide directions__slide--3">
+                  <h3>Таиланд</h3>
+                  <p>Джунгли зовут!</p>
+                  <div class="directions__status">
+                    <svg width="20" height="20" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#person-icon"></use>
+                    </svg><span>18321</span>
+                  </div>
+                  <div class="directions__picture">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="img/content/directions/countries/thailand-mobile.png 1x, img/content/directions/countries/thailand-mobile@2x.png 2x" type="image/png">
+                      <source media="(max-width: 1023px)" srcset="img/content/directions/countries/thailand-tablet.png 1x, img/content/directions/countries/thailand-tablet@2x.png 2x" type="image/png"><img src="img/content/directions/countries/thailand-desktop.png" srcset="img/content/directions/countries/thailand-desktop@2x.png 2x" width="201" height="140" alt="Вид с вершины горы вниз на песчаный пляж в Тайланде.">
+                    </picture>
+                  </div>
+                  <div class="directions__flag">
+                    <svg width="70" height="47" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#thailand"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="directions__slide directions__slide--plug">
+                  <h3>Таиланд</h3>
+                  <p>Джунгли зовут!</p>
+                  <div class="directions__status">
+                    <svg width="20" height="20" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#person-icon"></use>
+                    </svg><span>18321</span>
+                  </div>
+                  <div class="directions__picture">
+                    <picture>
+                      <source media="(max-width: 767px)" srcset="img/content/directions/countries/thailand-mobile.png 1x, img/content/directions/countries/thailand-mobile@2x.png 2x" type="image/png">
+                      <source media="(max-width: 1023px)" srcset="img/content/directions/countries/thailand-tablet.png 1x, img/content/directions/countries/thailand-tablet@2x.png 2x" type="image/png"><img src="img/content/directions/countries/thailand-desktop.png" srcset="img/content/directions/countries/thailand-desktop@2x.png 2x" width="201" height="140" alt="Вид с вершины горы вниз на песчаный пляж в Тайланде.">
+                    </picture>
+                  </div>
+                  <div class="directions__flag">
+                    <svg width="70" height="47" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#thailand"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a class="btn directions__button" href="catalog.html">Показать все
+              <svg width="14" height="14" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#button-arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </section>
+        <section class="companions">
+          <div class="container">
+            <div class="companions__content">
+              <h2>Попутчики</h2>
+              <p>Все мы&nbsp;индивидуальны и&nbsp;у&nbsp;каждого свой взгляд на&nbsp;идеальный отдых.<br>Одному нужен пляж и&nbsp;коктейль, а&nbsp;другому маршрут для хайкинга.</p>
+              <div class="companions__additional">
+                <p>Теперь можно легко найти единомышленников!</p>
+              </div>
+            </div>
+            <ul class="companions__profiles">
+              <li class="companions__profile companions__profile--99">
+                <ul class="companions__flags">
+                  <li class="companions__flag">
+                    <svg width="35" height="24" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#sri-lanka"></use>
+                    </svg>
+                  </li>
+                  <li class="companions__flag">
+                    <svg width="35" height="24" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#thailand"></use>
+                    </svg>
+                  </li>
+                  <li class="companions__flag">
+                    <svg width="35" height="24" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#seychelles"></use>
+                    </svg>
+                  </li>
+                </ul>
+                <h3><span>Таня Фирсова</span></h3>
+                <p>
+                  #ЗОЖ #ПП #Фитнес #пляж
+                  #авокадо #смузи
+                </p>
+                <div class="companions__progress">
+                  <div class="companions__progress-value"><span>99</span></div>
+                  <div class="companions__progress-level"><span>level</span></div>
+                  <svg class="companions__progress-icon" viewBox="0 0 36 36">
+                    <circle class="companions__progress-circle" cx="18" cy="18" r="17" stroke="#4d99d6" fill="none" stroke-width="3" stroke-dasharray="10" stroke-dashoffset="50"></circle>
+                  </svg>
+                </div>
+                <div class="companions__avatar"><img src="img/content/profiles/firsova.jpg" srcset="img/content/profiles/firsova@2x.jpg 2x" width="285" height="285" alt="Таня Фирсова.">
+                </div>
+                <ul class="companions__styles">
+                  <li class="companions__style">
+                    <svg width="35" height="24" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#aircraft"></use>
+                    </svg>
+                  </li>
+                  <li class="companions__style companions__style--disabled">
+                    <svg width="35" height="24" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#bus"></use>
+                    </svg>
+                  </li>
+                  <li class="companions__style companions__style--disabled">
+                    <svg width="35" height="24" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#bicycle"></use>
+                    </svg>
+                  </li>
+                  <li class="companions__style companions__style--disabled">
+                    <svg width="35" height="24" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#run"></use>
+                    </svg>
+                  </li>
+                </ul>
+              </li>
+              <li class="companions__profile companions__profile--online companions__profile--80">
+                <ul class="companions__flags">
+                  <li class="companions__flag">
+                    <svg width="35" height="24" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#germany"></use>
+                    </svg>
+                  </li>
+                  <li class="companions__flag">
+                    <svg width="35" height="24" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#czechia"></use>
+                    </svg>
+                  </li>
+                </ul>
+                <h3><span>Петя Демин</span></h3>
+                <p>
+                  #бургер #бар #футбол
+                  #концерт #крафт
+                </p>
+                <div class="companions__progress">
+                  <div class="companions__progress-value"><span>80</span></div>
+                  <div class="companions__progress-level"><span>level</span></div>
+                  <svg class="companions__progress-icon" viewBox="0 0 36 36">
+                    <circle class="companions__progress-circle" cx="18" cy="18" r="17" stroke="#4d99d6" fill="none" stroke-width="3" stroke-dasharray="100" stroke-dashoffset="50"></circle>
+                  </svg>
+                </div>
+                <div class="companions__avatar"><img src="img/content/profiles/demin.png" srcset="img/content/profiles/demin@2x.png 2x" width="285" height="285" alt="Петя Демин.">
+                </div>
+                <ul class="companions__styles">
+                  <li class="companions__style">
+                    <svg width="35" height="24" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#aircraft"></use>
+                    </svg>
+                  </li>
+                  <li class="companions__style">
+                    <svg width="35" height="24" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#bus"></use>
+                    </svg>
+                  </li>
+                  <li class="companions__style companions__style--disabled">
+                    <svg width="35" height="24" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#bicycle"></use>
+                    </svg>
+                  </li>
+                  <li class="companions__style">
+                    <svg width="35" height="24" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#run"></use>
+                    </svg>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <a class="btn companions__button" href="catalog.html">Показать всех
+              <svg width="14" height="14" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#button-arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </section>
+        <section class="profile">
+          <div class="container">
+            <h2>Добавьте свой профиль</h2>
+            <ol class="profile__list">
+              <li class="profile__item"><span>Базовое размещение</span></li>
+              <li class="profile__item"><span>Вывод на первых позициях</span></li>
+              <li class="profile__item"><span>Кастомный цвет карточки</span></li>
+            </ol>
+            <div class="profile__price">
+              <div class="profile__text"><span>Бесплатно</span></div>
+              <div class="profile__price-value"><span>99 руб./мес</span></div>
+              <div class="profile__price-value"><span>59 руб./мес</span></div>
+              <div class="profile__icon">
+                <svg width="200" height="200" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#price"></use>
+                </svg>
+              </div>
+            </div>
+            <button class="profile__button" type="button" data-open-modal="feedback"><span>Показать тарифы для бизнеса</span><span class="profile__button-icon">
+                <svg width="29" height="28" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#businessman"></use>
+                </svg></span></button>
+          </div>
+        </section>
+        <section class="registration">
+          <div class="container">
+            <h2>Заинтересовались<span>?</span></h2>
+            <p>
+              Зарегистрируйтесь, это быстро и&nbsp;бесплатно!
+              Уже&nbsp;зарегистрированы?&nbsp;<br>Тогда скорее&nbsp;<br><a class="registration__link" href="#">авторизуйтесь</a>.
+            </p>
+            <div class="registration__form" data-form-validate data-callback="base">
+              <form method="post" enctype="multipart/form-data" action="#" autocomplete="off" data-form-validate data-callback="base">
+                <div class="custom-input" data-validate-type="email" data-required>
+                  <label>
+                    <input type="email" name="user-email" placeholder="E-mail">
+                  </label>
+                </div>
+                <button class="btn" type="submit">Регистрация
+                  <svg width="14" height="14" aria-hidden="true">
+                    <use xlink:href="img/sprite.svg#button-arrow"></use>
+                  </svg>
+                </button>
+              </form>
+            </div>
+            <div class="registration__question">Остались вопросы? Мы&nbsp;с&nbsp;радостью на&nbsp;них ответим!</div>
+            <ul class="contacts registration__contacts">
+              <li class="contacts__item"><a class="contacts__link" href="tel:88005558628"><span class="visually-hidden">Телефон</span><span class="contacts__icon contacts__icon--desktop">
+                    <svg width="18" height="18" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#phone"></use>
+                    </svg></span><span class="contacts__icon contacts__icon--mobile">
+                    <svg width="17" height="15" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#phone-2"></use>
+                    </svg></span><span class="contacts__text">8&nbsp;800 555-86-28</span></a></li>
+              <li class="contacts__item"><a class="contacts__link" href="mailto:mail@htmlacademy.ru"><span class="visually-hidden">E-mail</span><span class="contacts__icon contacts__icon--desktop">
+                    <svg width="16" height="14" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#mail"></use>
+                    </svg></span><span class="contacts__icon contacts__icon--mobile">
+                    <svg width="19" height="13" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#mail-2"></use>
+                    </svg></span><span class="contacts__text">mail@htmlacademy.ru</span></a></li>
+            </ul>
+          </div>
+        </section>
+        <div class="map">
+          <div class="map__content">
+            <div class="container">
+              <address class="map__address">
+                <div class="map__icon">
+                  <svg width="42" height="42" aria-hidden="true">
+                    <use xlink:href="img/sprite.svg#map-pin"></use>
+                  </svg>
+                </div><span>ул. Большая Конюшенная, 19/8</span>
+              </address>
+              <button class="btn btn--secondary map__button" type="button">Проложить маршрут
+                <svg width="14" height="14" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#button-arrow"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="map__wrapper">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5930184071713!2d30.320592712712962!3d59.93889516197496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fceae1c83%3A0xe98045a979b09260!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE3LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1732257911036!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" aria-label="карта"></iframe>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="container"><span class="footer__logo"><span class="footer__logo-icon footer__logo-icon--desktop">
+              <svg width="200" height="50" aria-hidden="true" aria-label="Логотип проекта Пакет X5.">
+                <use xlink:href="img/sprite.svg#logo-tablet"></use>
+              </svg></span><span class="footer__logo-icon footer__logo-icon--tablet"><img src="img/svg/logo.svg" width="200" height="50" alt="Логотип проекта Пакет X5."></span><span class="footer__logo-icon footer__logo-icon--mobile">
+              <svg width="96" height="15" aria-hidden="true" aria-label="Логотип проекта Пакет X5.">
+                <use xlink:href="img/sprite.svg#logo-mobile"></use>
+              </svg></span></span>
+          <ul class="social footer__social">
+            <li class="social__item"><a class="social__link" href="#" aria-label="Telegram">
+                <svg width="25" height="25" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#telegram"></use>
+                </svg></a></li>
+            <li class="social__item"><a class="social__link" href="#" aria-label="Вконтакте">
+                <svg width="31" height="17" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#vk"></use>
+                </svg></a></li>
+            <li class="social__item"><a class="social__link" href="#" aria-label="Youtube">
+                <svg width="21" height="17" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#youtube"></use>
+                </svg></a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+    <div class="modal modal--preload profile-modal" data-modal="feedback">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <h2>Бизнес-тарифы</h2>
+          <dl class="profile-modal__list">
+            <div class="profile-modal__item">
+              <dt>Реклама у блоггера</dt>
+              <dd>300 000 руб./пост</dd>
+            </div>
+            <div class="profile-modal__item">
+              <dt>Накрутка подписчиков</dt>
+              <dd>от 1 руб./шт.</dd>
+            </div>
+            <div class="profile-modal__item">
+              <dt>Лайки от ботов</dt>
+              <dd>от 20 коп./лайк</dd>
+            </div>
+            <div class="profile-modal__item">
+              <dt>Ваш продакт-плейсмент</dt>
+              <dd>Индивидуально</dd>
+            </div>
+          </dl>
+          <button class="modal__close-btn" type="button" aria-label="Закрыть окно" data-close-modal>Закрыть окно</button>
+        </div>
+      </div>
+    </div>
+    <script src="js/vendor.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

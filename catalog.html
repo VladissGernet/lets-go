@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Попутчики - Погнали?</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Погнали - это сервис для поиска попутчиков в путешествиях">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" href="img/favicon/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="img/favicon/favicon.svg">
+    <link rel="manifest" href="img/favicon/site.webmanifest" crossorigin="use-credentials">
+    <link rel="preload" href="fonts/roboto-light.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/roboto-regular.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/roboto-medium.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/roboto-bold.woff2" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <div class="wrapper wrapper--catalog">
+      <header class="header header--catalog" data-header>
+        <div class="container"><a class="header__logo" href="index.html" aria-label="Переход на главную"><span class="header__logo-icon header__logo-icon--desktop"><img src="img/svg/logo-light.svg" width="200" height="50" alt="Логотип проекта Пакет X5."></span><span class="header__logo-icon header__logo-icon--tablet">
+              <svg width="166" height="42" aria-hidden="true" aria-label="Логотип проекта Пакет X5.">
+                <use xlink:href="img/sprite.svg#logo-tablet"></use>
+              </svg></span><span class="header__logo-icon header__logo-icon--mobile">
+              <svg width="96" height="15" aria-hidden="true" aria-label="Логотип проекта Пакет X5.">
+                <use xlink:href="img/sprite.svg#logo-mobile"></use>
+              </svg></span></a>
+          <nav class="header__nav">
+            <ul class="header__list">
+              <li class="header__item"><a class="nav-link header__link" href="#"><span data-hover="о&nbsp;сервисе">о&nbsp;сервисе</span></a>
+              </li>
+              <li class="header__item"><a class="nav-link header__link" href="#"><span data-hover="направления">направления</span></a>
+              </li>
+              <li class="header__item"><a class="nav-link header__link" href="#"><span data-hover="попутчики">попутчики</span></a>
+              </li>
+            </ul>
+            <ul class="contacts header__contacts">
+              <li class="contacts__item"><a class="contacts__link" href="tel:88005558628"><span class="visually-hidden">Телефон</span><span class="contacts__icon contacts__icon--desktop">
+                    <svg width="18" height="18" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#phone"></use>
+                    </svg></span><span class="contacts__icon contacts__icon--mobile">
+                    <svg width="17" height="15" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#phone-2"></use>
+                    </svg></span><span class="contacts__text">8&nbsp;800 555-86-28</span></a></li>
+              <li class="contacts__item"><a class="contacts__link" href="mailto:mail@htmlacademy.ru"><span class="visually-hidden">E-mail</span><span class="contacts__icon contacts__icon--desktop">
+                    <svg width="16" height="14" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#mail"></use>
+                    </svg></span><span class="contacts__icon contacts__icon--mobile">
+                    <svg width="19" height="13" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#mail-2"></use>
+                    </svg></span><span class="contacts__text">mail@htmlacademy.ru</span></a></li>
+            </ul>
+            <ul class="social">
+              <li class="social__item"><a class="social__link" href="#" aria-label="Telegram">
+                  <svg width="25" height="25" aria-hidden="true">
+                    <use xlink:href="img/sprite.svg#telegram"></use>
+                  </svg></a></li>
+              <li class="social__item"><a class="social__link" href="#" aria-label="Вконтакте">
+                  <svg width="31" height="17" aria-hidden="true">
+                    <use xlink:href="img/sprite.svg#vk"></use>
+                  </svg></a></li>
+              <li class="social__item"><a class="social__link" href="#" aria-label="Youtube">
+                  <svg width="21" height="17" aria-hidden="true">
+                    <use xlink:href="img/sprite.svg#youtube"></use>
+                  </svg></a></li>
+            </ul>
+          </nav>
+          <button class="header__toggle" type="button" data-burger><span class="visually-hidden">Открыть меню</span>
+            <svg class="header__icon header__icon--burger" width="25" height="12" aria-hidden="true">
+              <use xlink:href="img/sprite.svg#burger"></use>
+            </svg>
+            <svg class="header__icon header__icon--cross" width="19" height="20" aria-hidden="true">
+              <use xlink:href="img/sprite.svg#cross"></use>
+            </svg>
+          </button>
+        </div>
+      </header>
+      <main>
+        <section class="catalog-title">
+          <div class="container">
+            <h1>Попутчики</h1>
+          </div>
+        </section>
+        <section class="filter">
+          <div class="container">
+            <div class="filter__header">
+              <svg width="23" height="15" aria-hidden="true">
+                <use xlink:href="img/sprite.svg#filter-icon"></use>
+              </svg>
+              <h2>Фильтрация по странам:</h2>
+              <ul class="filter__continents">
+                <li class="filter__continent">
+                  <button class="filter__continent-button" type="button">Шаблон для JS</button>
+                </li>
+              </ul>
+            </div>
+            <ul class="filter__content"></ul>
+            <div class="filter__tablet-content-wrapper">
+              <div class="filter__tablet-content">
+                <ul class="filter__tablet-alphabet"></ul>
+                <ul class="filter__selected-letter-content"></ul>
+                <button class="btn filter__hide-button filter__hide-button--inner" type="button"><span class="filter__hide-button-inner-content"><span class="filter__hide-button-icon filter__hide-button-icon--close">
+                      <svg width="22" height="24" aria-hidden="true">
+                        <use xlink:href="img/sprite.svg#close-filter"></use>
+                      </svg></span><span class="filter__hide-button-text">Свернуть</span></span></button>
+              </div>
+            </div>
+            <button class="btn filter__hide-button filter__hide-button--outer" type="button"><span class="filter__hide-button-inner-content"><span class="filter__hide-button-icon filter__hide-button-icon--close">
+                  <svg width="22" height="24" aria-hidden="true">
+                    <use xlink:href="img/sprite.svg#close-filter"></use>
+                  </svg></span><span class="filter__hide-button-icon filter__hide-button-icon--open">
+                  <svg width="22" height="24" aria-hidden="true">
+                    <use xlink:href="img/sprite.svg#open-filter"></use>
+                  </svg></span><span class="filter__hide-button-text">Показать все</span></span></button>
+          </div>
+        </section>
+        <div class="cards">
+          <div class="container">
+            <section class="cards-filter cards__filter" data-tabs="element">
+              <h2>Подберите идеального  попутчика</h2>
+              <form method="post" enctype="multipart/form-data" action="#" autocomplete="off">
+                <div class="accordion" data-accordion="parent">
+                  <div class="accordion__element" data-accordion="element">
+                    <button class="accordion__button cards-filter__accordion-button" type="button" data-accordion="button"><span>Хобби</span><span class="cards-filter__accordion-button-icon">
+                        <svg width="10" height="6" aria-hidden="true">
+                          <use xlink:href="img/sprite.svg#accordion-arrow"></use>
+                        </svg></span></button>
+                    <div class="accordion__content" data-accordion="content">
+                      <div class="accordion__wrapper">
+                        <div class="custom-toggle custom-toggle--checkbox">
+                          <label>
+                            <input type="checkbox" value="filter-hobby-1" name="filter-hobby" checked><span class="custom-toggle__icon">
+                              <svg width="12" height="12" aria-hidden="true">
+                                <use xlink:href="img/sprite.svg#checkbox-checked"></use>
+                              </svg></span><span class="custom-toggle__label">Спортзал</span>
+                          </label>
+                        </div>
+                        <div class="custom-toggle custom-toggle--checkbox">
+                          <label>
+                            <input type="checkbox" value="filter-hobby-2" name="filter-hobby"><span class="custom-toggle__icon">
+                              <svg width="12" height="12" aria-hidden="true">
+                                <use xlink:href="img/sprite.svg#checkbox-checked"></use>
+                              </svg></span><span class="custom-toggle__label">Кальян</span>
+                          </label>
+                        </div>
+                        <div class="custom-toggle custom-toggle--checkbox">
+                          <label>
+                            <input type="checkbox" value="filter-hobby-3" name="filter-hobby"><span class="custom-toggle__icon">
+                              <svg width="12" height="12" aria-hidden="true">
+                                <use xlink:href="img/sprite.svg#checkbox-checked"></use>
+                              </svg></span><span class="custom-toggle__label">Диван</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion__element is-active" data-accordion="element">
+                    <button class="accordion__button cards-filter__accordion-button" type="button" data-accordion="button"><span>Музыка</span><span class="cards-filter__accordion-button-icon">
+                        <svg width="10" height="6" aria-hidden="true">
+                          <use xlink:href="img/sprite.svg#accordion-arrow"></use>
+                        </svg></span></button>
+                    <div class="accordion__content" data-accordion="content">
+                      <div class="accordion__wrapper">
+                        <div class="custom-toggle custom-toggle--checkbox">
+                          <label>
+                            <input type="checkbox" value="filter-music-1" name="filter-music" checked><span class="custom-toggle__icon">
+                              <svg width="12" height="12" aria-hidden="true">
+                                <use xlink:href="img/sprite.svg#checkbox-checked"></use>
+                              </svg></span><span class="custom-toggle__label">Тяжелый рок</span>
+                          </label>
+                        </div>
+                        <div class="custom-toggle custom-toggle--checkbox">
+                          <label>
+                            <input type="checkbox" value="filter-music-2" name="filter-music"><span class="custom-toggle__icon">
+                              <svg width="12" height="12" aria-hidden="true">
+                                <use xlink:href="img/sprite.svg#checkbox-checked"></use>
+                              </svg></span><span class="custom-toggle__label">Русский рэп</span>
+                          </label>
+                        </div>
+                        <div class="custom-toggle custom-toggle--checkbox">
+                          <label>
+                            <input type="checkbox" value="filter-music-3" name="filter-music"><span class="custom-toggle__icon">
+                              <svg width="12" height="12" aria-hidden="true">
+                                <use xlink:href="img/sprite.svg#checkbox-checked"></use>
+                              </svg></span><span class="custom-toggle__label">Евроденс</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion__element" data-accordion="element">
+                    <button class="accordion__button cards-filter__accordion-button" type="button" data-accordion="button"><span>Еда</span><span class="cards-filter__accordion-button-icon">
+                        <svg width="10" height="6" aria-hidden="true">
+                          <use xlink:href="img/sprite.svg#accordion-arrow"></use>
+                        </svg></span></button>
+                    <div class="accordion__content" data-accordion="content">
+                      <div class="accordion__wrapper">
+                        <div class="custom-toggle custom-toggle--checkbox">
+                          <label>
+                            <input type="checkbox" value="filter-food-1" name="filter-food" checked><span class="custom-toggle__icon">
+                              <svg width="12" height="12" aria-hidden="true">
+                                <use xlink:href="img/sprite.svg#checkbox-checked"></use>
+                              </svg></span><span class="custom-toggle__label">Мясоед</span>
+                          </label>
+                        </div>
+                        <div class="custom-toggle custom-toggle--checkbox">
+                          <label>
+                            <input type="checkbox" value="filter-food-2" name="filter-food"><span class="custom-toggle__icon">
+                              <svg width="12" height="12" aria-hidden="true">
+                                <use xlink:href="img/sprite.svg#checkbox-checked"></use>
+                              </svg></span><span class="custom-toggle__label">Сидит на ПП</span>
+                          </label>
+                        </div>
+                        <div class="custom-toggle custom-toggle--checkbox">
+                          <label>
+                            <input type="checkbox" value="filter-food-3" name="filter-food"><span class="custom-toggle__icon">
+                              <svg width="12" height="12" aria-hidden="true">
+                                <use xlink:href="img/sprite.svg#checkbox-checked"></use>
+                              </svg></span><span class="custom-toggle__label">Веган-сыроед</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion__element accordion__element--special-checkboxes is-active" data-accordion="element">
+                    <button class="accordion__button cards-filter__accordion-button" type="button" data-accordion="button"><span>Транспорт</span><span class="cards-filter__accordion-button-icon">
+                        <svg width="10" height="6" aria-hidden="true">
+                          <use xlink:href="img/sprite.svg#accordion-arrow"></use>
+                        </svg></span></button>
+                    <div class="accordion__content" data-accordion="content">
+                      <div class="accordion__wrapper cards-filter__special-checkboxes">
+                        <div class="custom-toggle custom-toggle--special-checkbox">
+                          <label>
+                            <input type="checkbox" value="filter-transport-1" name="filter-transport" checked="checked"><span class="custom-toggle__icon">
+                              <svg width="23" height="22" aria-hidden="true">
+                                <use xlink:href="img/sprite.svg#aircraft"></use>
+                              </svg></span><span class="custom-toggle__label visually-hidden">Самолет</span>
+                          </label>
+                        </div>
+                        <div class="custom-toggle custom-toggle--special-checkbox">
+                          <label>
+                            <input type="checkbox" value="filter-transport-2" name="filter-transport" checked="checked"><span class="custom-toggle__icon">
+                              <svg width="23" height="22" aria-hidden="true">
+                                <use xlink:href="img/sprite.svg#bus"></use>
+                              </svg></span><span class="custom-toggle__label visually-hidden">Автобус</span>
+                          </label>
+                        </div>
+                        <div class="custom-toggle custom-toggle--special-checkbox">
+                          <label>
+                            <input type="checkbox" value="filter-transport-3" name="filter-transport"><span class="custom-toggle__icon">
+                              <svg width="23" height="22" aria-hidden="true">
+                                <use xlink:href="img/sprite.svg#bicycle"></use>
+                              </svg></span><span class="custom-toggle__label visually-hidden">Велосипед</span>
+                          </label>
+                        </div>
+                        <div class="custom-toggle custom-toggle--special-checkbox">
+                          <label>
+                            <input type="checkbox" value="filter-transport-4" name="filter-transport" checked="checked"><span class="custom-toggle__icon">
+                              <svg width="23" height="22" aria-hidden="true">
+                                <use xlink:href="img/sprite.svg#run"></use>
+                              </svg></span><span class="custom-toggle__label visually-hidden">Бегун</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion__element accordion__element--slider is-active" data-accordion="element">
+                    <button class="accordion__button cards-filter__accordion-button" type="button" data-accordion="button"><span>Левел</span><span class="cards-filter__accordion-button-icon">
+                        <svg width="10" height="6" aria-hidden="true">
+                          <use xlink:href="img/sprite.svg#accordion-arrow"></use>
+                        </svg></span></button>
+                    <div class="accordion__content" data-accordion="content">
+                      <div class="accordion__wrapper accordion__wrapper--slider">
+                        <div class="cards-filter__slider-inputs">
+                          <div class="custom-input">
+                            <label><span class="custom-input__label">Поле ввода минимального уровня</span>
+                              <input type="text" name="user-level-from">
+                            </label>
+                          </div>
+                          <div class="custom-input">
+                            <label><span class="custom-input__label">Поле ввода минимального уровня</span>
+                              <input type="text" name="user-level-to">
+                            </label>
+                          </div>
+                        </div>
+                        <div class="cards-filter__slider-wrapper">
+                          <div class="cards-filter__slider" id="slider"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="btn btn--tertiary cards-filter__button" type="submit">Показать
+                  <svg width="14" height="14" aria-hidden="true">
+                    <use xlink:href="img/sprite.svg#button-arrow"></use>
+                  </svg>
+                </button>
+              </form>
+            </section>
+            <ul class="cards-list companions cards__list companions--cards">
+              <li class="companions__profile companions__profile--99">
+                <ul class="companions__flags">
+                  <li class="companions__flag">
+                    <svg width="35" height="24" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#sri-lanka"></use>
+                    </svg><span>шри-ланка</span>
+                  </li>
+                  <li class="companions__flag">
+                    <svg width="35" height="24" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#thailand"></use>
+                    </svg><span>Таиланд</span>
+                  </li>
+                  <li class="companions__flag">
+                    <svg width="35" height="24" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#seychelles"></use>
+                    </svg><span>Сейшелы</span>
+                  </li>
+                </ul>
+                <h3><span>Таня Фирсова</span></h3>
+                <p>
+                  #ЗОЖ #ПП #Фитнес #пляж
+                  #авокадо #смузи
+                </p>
+                <div class="companions__progress">
+                  <div class="companions__progress-value"><span>99</span></div>
+                  <div class="companions__progress-level"><span>level</span></div>
+                  <svg class="companions__progress-icon" viewBox="0 0 36 36">
+                    <circle class="companions__progress-circle" cx="18" cy="18" r="18" stroke="#4d99d6" fill="none" stroke-width="3" stroke-dasharray="10" stroke-dashoffset="50"></circle>
+                  </svg>
+                </div>
+                <div class="companions__avatar">
+                  <picture>
+                    <source media="(max-width: 1023px)" srcset="img/content/filter-cards/firsova-tablet.png 1x, img/content/filter-cards/firsova-tablet@2x.png 2x" type="image/png"><img src="img/content/filter-cards/firsova-desktop.png" srcset="img/content/filter-cards/firsova-desktop@2x.png 2x" width="285" height="285" alt="Таня Фирсова.">
+                  </picture>
+                </div>
+                <ul class="companions__styles">
+                  <li class="companions__style">
+                    <svg width="35" height="24" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#aircraft"></use>
+                    </svg>
+                  </li>
+                  <li class="companions__style companions__style--disabled">
+                    <svg width="35" height="24" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#bus"></use>
+                    </svg>
+                  </li>
+                  <li class="companions__style companions__style--disabled">
+                    <svg width="35" height="24" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#bicycle"></use>
+                    </svg>
+                  </li>
+                  <li class="companions__style companions__style--disabled">
+                    <svg width="35" height="24" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#run"></use>
+                    </svg>
+                  </li>
+                </ul>
+              </li>
+              <li class="companions__profile companions__profile--80">
+                <ul class="companions__flags">
+                  <li class="companions__flag">
+                    <svg width="35" height="24" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#belgium"></use>
+                    </svg><span>Бельгия</span>
+                  </li>
+                  <li class="companions__flag">
+                    <svg width="35" height="24" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#czechia"></use>
+                    </svg><span>Чехия</span>
+                  </li>
+                </ul>
+                <h3><span>Петя Демин</span></h3>
+                <p>
+                  #бургер #бар #футбол
+                  #концерт #крафт
+                </p>
+                <div class="companions__progress">
+                  <div class="companions__progress-value"><span>80</span></div>
+                  <div class="companions__progress-level"><span>level</span></div>
+                  <svg class="companions__progress-icon" viewBox="0 0 36 36">
+                    <circle class="companions__progress-circle" cx="18" cy="18" r="18" stroke="#4d99d6" fill="none" stroke-width="3" stroke-dasharray="10" stroke-dashoffset="50"></circle>
+                  </svg>
+                </div>
+                <div class="companions__avatar">
+                  <picture>
+                    <source media="(max-width: 1023px)" srcset="img/content/filter-cards/demin-tablet.png 1x, img/content/filter-cards/demin-tablet@2x.png 2x" type="image/png"><img src="img/content/filter-cards/demin-desktop.png" srcset="img/content/filter-cards/demin-desktop@2x.png 2x" width="285" height="285" alt="Петя Демин.">
+                  </picture>
+                </div>
+                <ul class="companions__styles">
+                  <li class="companions__style">
+                    <svg width="35" height="24" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#aircraft"></use>
+                    </svg>
+                  </li>
+                  <li class="companions__style">
+                    <svg width="35" height="24" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#bus"></use>
+                    </svg>
+                  </li>
+                  <li class="companions__style companions__style--disabled">
+                    <svg width="35" height="24" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#bicycle"></use>
+                    </svg>
+                  </li>
+                  <li class="companions__style">
+                    <svg width="35" height="24" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#run"></use>
+                    </svg>
+                  </li>
+                </ul>
+                <div class="companions__buttons-wrapper">
+                  <button class="btn btn--quaternary companions__call-button" type="button">Позвать!
+                    <svg width="14" height="14" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#button-arrow"></use>
+                    </svg>
+                  </button>
+                  <button class="like-btn companions__like-button" type="button"><span class="like-btn__icon-wrapper">
+                      <svg class="like-btn__icon like-btn__icon--empty" width="20" height="18" aria-hidden="true">
+                        <use xlink:href="img/sprite.svg#like-empty"></use>
+                      </svg>
+                      <svg class="like-btn__icon like-btn__icon--active" width="20" height="18" aria-hidden="true">
+                        <use xlink:href="img/sprite.svg#like-active"></use>
+                      </svg></span><span class="visually-hidden">Кнопка лайка.</span><span class="like-btn__value">1500</span></button>
+                </div>
+              </li>
+              <li class="companions__profile companions__profile--25">
+                <ul class="companions__flags">
+                  <li class="companions__flag">
+                    <svg width="35" height="24" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#usa"></use>
+                    </svg><span>США</span>
+                  </li>
+                  <li class="companions__flag">
+                    <svg width="35" height="24" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#australia"></use>
+                    </svg><span>Австралия</span>
+                  </li>
+                  <li class="companions__flag">
+                    <svg width="35" height="24" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#dominicana"></use>
+                    </svg><span>Доминикана</span>
+                  </li>
+                </ul>
+                <h3><span>Марк Смолов</span></h3>
+                <p>
+                  #рэп #тату #хайпбист
+                  #кроссовки #суприм
+                </p>
+                <div class="companions__progress">
+                  <div class="companions__progress-value"><span>25</span></div>
+                  <div class="companions__progress-level"><span>level</span></div>
+                  <svg class="companions__progress-icon" viewBox="0 0 36 36">
+                    <circle class="companions__progress-circle" cx="18" cy="18" r="18" stroke="#4d99d6" fill="none" stroke-width="3" stroke-dasharray="10" stroke-dashoffset="50"></circle>
+                  </svg>
+                </div>
+                <div class="companions__avatar">
+                  <picture>
+                    <source media="(max-width: 1023px)" srcset="img/content/filter-cards/smolov-tablet.png 1x, img/content/filter-cards/smolov-tablet@2x.png 2x" type="image/png"><img src="img/content/filter-cards/smolov-desktop.png" srcset="img/content/filter-cards/smolov-desktop@2x.png 2x" width="285" height="285" alt="Петя Демин.">
+                  </picture>
+                </div>
+                <ul class="companions__styles">
+                  <li class="companions__style">
+                    <svg width="35" height="24" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#aircraft"></use>
+                    </svg>
+                  </li>
+                  <li class="companions__style companions__style--disabled">
+                    <svg width="35" height="24" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#bus"></use>
+                    </svg>
+                  </li>
+                  <li class="companions__style">
+                    <svg width="35" height="24" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#bicycle"></use>
+                    </svg>
+                  </li>
+                  <li class="companions__style companions__style--disabled">
+                    <svg width="35" height="24" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#run"></use>
+                    </svg>
+                  </li>
+                </ul>
+                <div class="companions__buttons-wrapper">
+                  <button class="btn btn--quaternary companions__call-button" type="button">Позвать!
+                    <svg width="14" height="14" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#button-arrow"></use>
+                    </svg>
+                  </button>
+                  <button class="like-btn companions__like-button" type="button"><span class="like-btn__icon-wrapper">
+                      <svg class="like-btn__icon like-btn__icon--empty" width="20" height="18" aria-hidden="true">
+                        <use xlink:href="img/sprite.svg#like-empty"></use>
+                      </svg>
+                      <svg class="like-btn__icon like-btn__icon--active" width="20" height="18" aria-hidden="true">
+                        <use xlink:href="img/sprite.svg#like-active"></use>
+                      </svg></span><span class="visually-hidden">Кнопка лайка.</span><span class="like-btn__value">170</span></button>
+                </div>
+              </li>
+              <li class="companions__profile companions__profile--online companions__profile--50">
+                <ul class="companions__flags">
+                  <li class="companions__flag">
+                    <svg width="35" height="24" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#great-britan"></use>
+                    </svg><span>Великобритания</span>
+                  </li>
+                  <li class="companions__flag">
+                    <svg width="35" height="24" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#germany"></use>
+                    </svg><span>Германия</span>
+                  </li>
+                </ul>
+                <h3><span>Лариса Роговая</span></h3>
+                <p>
+                  #образование #карьера
+                  #учеба #линкедин
+                </p>
+                <div class="companions__progress">
+                  <div class="companions__progress-value"><span>50</span></div>
+                  <div class="companions__progress-level"><span>level</span></div>
+                  <svg class="companions__progress-icon" viewBox="0 0 36 36">
+                    <circle class="companions__progress-circle" cx="18" cy="18" r="18" stroke="#4d99d6" fill="none" stroke-width="3" stroke-dasharray="10" stroke-dashoffset="50"></circle>
+                  </svg>
+                </div>
+                <div class="companions__avatar">
+                  <picture>
+                    <source media="(max-width: 1023px)" srcset="img/content/filter-cards/rogovaya-tablet.png 1x, img/content/filter-cards/rogovaya-tablet@2x.png 2x" type="image/png"><img src="img/content/filter-cards/rogovaya-desktop.png" srcset="img/content/filter-cards/rogovaya-desktop@2x.png 2x" width="285" height="285" alt="Петя Демин.">
+                  </picture>
+                </div>
+                <ul class="companions__styles">
+                  <li class="companions__style">
+                    <svg width="35" height="24" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#aircraft"></use>
+                    </svg>
+                  </li>
+                  <li class="companions__style">
+                    <svg width="35" height="24" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#bus"></use>
+                    </svg>
+                  </li>
+                  <li class="companions__style companions__style--disabled">
+                    <svg width="35" height="24" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#bicycle"></use>
+                    </svg>
+                  </li>
+                  <li class="companions__style companions__style--disabled">
+                    <svg width="35" height="24" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#run"></use>
+                    </svg>
+                  </li>
+                </ul>
+                <div class="companions__buttons-wrapper">
+                  <button class="btn btn--quaternary companions__call-button" type="button">Позвать!
+                    <svg width="14" height="14" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#button-arrow"></use>
+                    </svg>
+                  </button>
+                  <button class="like-btn companions__like-button" type="button"><span class="like-btn__icon-wrapper">
+                      <svg class="like-btn__icon like-btn__icon--empty" width="20" height="18" aria-hidden="true">
+                        <use xlink:href="img/sprite.svg#like-empty"></use>
+                      </svg>
+                      <svg class="like-btn__icon like-btn__icon--active" width="20" height="18" aria-hidden="true">
+                        <use xlink:href="img/sprite.svg#like-active"></use>
+                      </svg></span><span class="visually-hidden">Кнопка лайка.</span><span class="like-btn__value">23</span></button>
+                </div>
+              </li>
+            </ul>
+            <div class="cards-pagination">
+              <button class="btn btn--show-more cards-pagination__show-more" type="button"><span>Показать еще</span>
+                <svg width="26" height="26" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#show-more"></use>
+                </svg>
+              </button>
+              <div class="cards-pagination__page-controls">
+                <ol class="cards-pagination__page-list">
+                  <li class="cards-pagination__page-item">
+                    <button class="cards-pagination__page-button cards-pagination__page-button--active" type="button">1</button>
+                  </li>
+                  <li class="cards-pagination__page-item">
+                    <button class="cards-pagination__page-button" type="button">2</button>
+                  </li>
+                  <li class="cards-pagination__page-item">
+                    <button class="cards-pagination__page-button" type="button">3</button>
+                  </li>
+                  <li class="cards-pagination__page-item">
+                    <button class="cards-pagination__page-button" type="button">4</button>
+                  </li>
+                </ol>
+                <div class="cards-pagination__control-buttons-wrapper">
+                  <button class="cards-pagination__control-button cards-pagination__control-button--prev" type="button"><span class="visually-hidden">Назад</span>
+                    <svg width="14" height="20" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#control-button-arrow"></use>
+                    </svg>
+                  </button>
+                  <button class="cards-pagination__control-button cards-pagination__control-button--next" type="button"><span class="visually-hidden">Вперед</span>
+                    <svg width="14" height="20" aria-hidden="true">
+                      <use xlink:href="img/sprite.svg#control-button-arrow"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer footer--catalog">
+        <div class="container"><a class="footer__logo" href="index.html" aria-label="Переход на главную"><span class="footer__logo-icon footer__logo-icon--desktop">
+              <svg width="200" height="50" aria-hidden="true" aria-label="Логотип проекта Пакет X5.">
+                <use xlink:href="img/sprite.svg#logo-tablet"></use>
+              </svg></span><span class="footer__logo-icon footer__logo-icon--tablet"><img src="img/svg/logo.svg" width="200" height="50" alt="Логотип проекта Пакет X5."></span><span class="footer__logo-icon footer__logo-icon--mobile">
+              <svg width="96" height="15" aria-hidden="true" aria-label="Логотип проекта Пакет X5.">
+                <use xlink:href="img/sprite.svg#logo-mobile"></use>
+              </svg></span></a>
+          <ul class="social footer__social">
+            <li class="social__item"><a class="social__link" href="#" aria-label="Telegram">
+                <svg width="25" height="25" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#telegram"></use>
+                </svg></a></li>
+            <li class="social__item"><a class="social__link" href="#" aria-label="Вконтакте">
+                <svg width="31" height="17" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#vk"></use>
+                </svg></a></li>
+            <li class="social__item"><a class="social__link" href="#" aria-label="Youtube">
+                <svg width="21" height="17" aria-hidden="true">
+                  <use xlink:href="img/sprite.svg#youtube"></use>
+                </svg></a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+    <script src="js/vendor.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

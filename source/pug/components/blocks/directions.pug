@@ -26,7 +26,7 @@ mixin directions()
                 source(media="(max-width: 1023px)", srcset="img/content/directions/countries/france-tablet.png 1x, img/content/directions/countries/france-tablet@2x.png 2x", type="image/png")
                 img(src="img/content/directions/countries/france-desktop.png", srcset="img/content/directions/countries/france-desktop@2x.png 2x", width="186", height="140", alt="Улица во Франции.")
             .directions__flag
-              +icon("france", 70, 47)
+              +img("flags", "france", "png", 70, 47, "Франция.")
           .directions__slide.directions__slide--2
             h3 Чехия
             p Закоулки старой Европы
@@ -39,7 +39,7 @@ mixin directions()
                 source(media="(max-width: 1023px)", srcset="img/content/directions/countries/czech-tablet.png 1x, img/content/directions/countries/czech-tablet@2x.png 2x", type="image/png")
                 img(src="img/content/directions/countries/czech-desktop.png", srcset="img/content/directions/countries/czech-desktop@2x.png 2x", width="201", height="140", alt="Паром на реке на фоне города в Чехии.")
             .directions__flag
-              +icon("czech", 70, 47)
+              +img("flags", "czech", "png", 70, 47, "Чехия.")
           .directions__slide.directions__slide--3
             h3 Таиланд
             p Джунгли зовут!
@@ -52,7 +52,7 @@ mixin directions()
                 source(media="(max-width: 1023px)", srcset="img/content/directions/countries/thailand-tablet.png 1x, img/content/directions/countries/thailand-tablet@2x.png 2x", type="image/png")
                 img(src="img/content/directions/countries/thailand-desktop.png", srcset="img/content/directions/countries/thailand-desktop@2x.png 2x", width="201", height="140", alt="Вид с вершины горы вниз на песчаный пляж в Тайланде.")
             .directions__flag
-              +icon("thailand", 70, 47)
+              +img("flags", "thailand", "png", 70, 47, "Таиланд.")
           .directions__slide.directions__slide--plug
             h3 Таиланд
             p Джунгли зовут!
@@ -65,5 +65,5 @@ mixin directions()
                 source(media="(max-width: 1023px)", srcset="img/content/directions/countries/thailand-tablet.png 1x, img/content/directions/countries/thailand-tablet@2x.png 2x", type="image/png")
                 img(src="img/content/directions/countries/thailand-desktop.png", srcset="img/content/directions/countries/thailand-desktop@2x.png 2x", width="201", height="140", alt="Вид с вершины горы вниз на песчаный пляж в Тайланде.")
             .directions__flag
-              +icon("thailand", 70, 47)
+              +img("flags", "thailand", "png", 70, 47, "Таиланд.")
       +btn({text: "Показать все", href: "catalog.html"}).directions__button

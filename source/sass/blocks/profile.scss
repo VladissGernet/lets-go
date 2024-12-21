@@ -1,6 +1,6 @@
 .profile {
-  padding-top: 99px;
-  padding-bottom: 65px;
+  padding-top: 103px;
+  padding-bottom: 63px;
 
   @include vp-1023 {
     padding-top: 43px;
@@ -240,7 +240,7 @@
     color: $color-default-white;
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 22px;
+    margin-bottom: 20px;
     word-break: break-all;
 
     @include vp-1279 {

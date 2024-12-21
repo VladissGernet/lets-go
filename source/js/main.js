@@ -6,6 +6,7 @@ import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
 import {Burger} from './vendor/burger';
 import {initAboutParallax} from './modules/about-parallax';
 import {initDirectionsSwiper} from './modules/directions-swiper';
+import {initOutsideOfMenuClick} from './modules/init-outside-of-menu-click';
 
 import {initCountriesFilter} from './modules/catalog/filter';
 import {initAccordions} from './vendor/accordion/init-accordion';
@@ -42,6 +43,8 @@ window.addEventListener('DOMContentLoaded', () => {
     const burger = new Burger();
     burger.init();
 
+    initOutsideOfMenuClick();
+
     initAboutParallax();
     initDirectionsSwiper();
 
@@ -53,6 +56,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initCardsFilter();
 
     initFilterAccordion();
+
   });
 });
 

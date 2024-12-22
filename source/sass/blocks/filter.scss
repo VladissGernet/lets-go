@@ -503,7 +503,7 @@
     font-weight: 700;
     line-height: 60px;
     text-transform: uppercase;
-    color: $midnight-express;
+    color: rgb($midnight-express, 0.3);
     word-break: break-all;
 
     border: none;
@@ -517,6 +517,10 @@
 
     transition: all $trans-default;
 
+    &.js-letter-active {
+      color: $midnight-express;
+    }
+
     @include hover-focus {
       opacity: 0.6;
 
@@ -529,6 +533,7 @@
       font-size: 14px;
       font-weight: 500;
       line-height: 14px;
+      color: $midnight-express;
       background-color: $color-default-white;
 
       width: 43px;

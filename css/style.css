@@ -9201,6 +9201,7 @@ button,
   }
 
   .cards-pagination__control-buttons-wrapper {
+    width: 100%;
     position: relative;
   }
 
@@ -9215,7 +9216,7 @@ button,
   }
 
   .cards-pagination__control-button {
-    width: 135px;
+    width: 100%;
     height: 51px;
   }
 

@@ -4,8 +4,6 @@ mixin logoFooterContent()
     source(media="(max-width: 1023px)", srcset="img/logo/footer-logo-tablet.png 1x, img/logo/footer-logo-tablet@2x.png 2x", type="image/png")
     img(src="img/logo/footer-logo-desktop.png", srcset="img/logo/footer-logo-desktop@2x.png 2x", width="200", height="50", alt="Логотип проекта Пакет X5.")
 
-    //- Сделать все как picture и исправить планшетный алфавит, активная буква должна быть покрашена, а остальные бледные
-
 mixin footer(footerMods, currentUrl)
   footer.footer(class=footerMods)
     .container

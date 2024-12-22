@@ -30,6 +30,10 @@
 
     transition: all $trans-default;
 
+    @include vp-1023 {
+      height: 44px;
+    }
+
     @include vp-767 {
       padding-right: 16px;
     }
@@ -59,30 +63,49 @@
     img {
       width: 200px;
       height: 50px;
+
+      @include vp-1023 {
+        width: 166px;
+        height: 42px;
+
+        transition: all $trans-default;
+
+        .header.is-open & {
+          opacity: 0;
+          height: 0;
+        }
+      }
+
+      @include vp-767 {
+        display: none;
+      }
     }
 
-    .header__logo-icon--tablet,
-    .header__logo-icon--mobile {
+    .header__logo-mobile-icon {
       display: none;
+
+      @include vp-1023 {
+        display: block;
+        opacity: 0;
+        height: 0;
+
+        transition: all $trans-default;
+
+        .header.is-open & {
+          opacity: 1;
+          height: 100%;
+        }
+      }
+
+      @include vp-767 {
+        opacity: unset;
+      }
     }
 
     @include vp-1023 {
       margin-right: 156px;
       color: $color-default-white;
       transition: all $trans-default;
-
-      img {
-        display: none;
-      }
-
-      .header__logo-icon--tablet {
-        display: block;
-
-        svg {
-          width: 166px;
-          height: 42px;
-        }
-      }
 
       .is-open & {
         color: $midnight-express;
@@ -93,11 +116,7 @@
       margin-right: auto;
       margin-top: 10px;
 
-      .header__logo-icon--tablet {
-        display: none;
-      }
-
-      .header__logo-icon--mobile {
+      .header__logo-mobile-icon {
         display: block;
 
         svg {

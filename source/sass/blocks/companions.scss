@@ -633,6 +633,8 @@
             "styles styles progress"
             "buttons-wrapper buttons-wrapper buttons-wrapper";
           grid-template-columns: 89px 1fr 98px;
+
+          border-radius: 20px;
         }
 
         h3 {
@@ -689,10 +691,10 @@
           }
 
           @include vp-767 {
-            top: 10px;
+            top: 8px;
             width: 6px;
             height: 6px;
-            right: -31px;
+            right: -32px;
           }
         }
 
@@ -824,7 +826,7 @@
         }
 
         @include vp-767 {
-          margin-bottom: 4px;
+          margin-bottom: 7px;
           padding: 44px 12px 0 25px;
 
           display: block;
@@ -837,7 +839,7 @@
 
         display: flex;
         align-items: center;
-        min-height: 29px;
+        min-height: 28px;
 
         @include vp-767 {
           padding-left: 40px;

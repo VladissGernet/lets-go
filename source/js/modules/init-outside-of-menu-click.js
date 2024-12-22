@@ -1,5 +1,7 @@
 const DESKTOP_WIDTH = 1024;
 
+const breakpoint = window.matchMedia(`(min-width:${DESKTOP_WIDTH}px)`);
+
 const initOutsideOfMenuClick = () => {
   const header = document.querySelector('.header');
   if (header === null) {
@@ -13,7 +15,7 @@ const initOutsideOfMenuClick = () => {
   const headerBurgerButton = header.querySelector('.header__toggle');
 
   document.addEventListener('click', (evt) => {
-    if (window.innerWidth >= DESKTOP_WIDTH) {
+    if (breakpoint.matches) {
       return;
     }
     if (evt.target.closest('.header') === null && header.classList.contains('is-open')) {

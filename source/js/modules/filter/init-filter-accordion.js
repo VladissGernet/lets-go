@@ -1,5 +1,9 @@
 const TABLET_WIDTH_MIN = 768;
 const TABLET_WIDTH_MAX = 1023;
+const DESKTOP_WIDTH = 1024;
+
+const breakpointDesktop = window.matchMedia(`(min-width:${DESKTOP_WIDTH}px)`);
+const breakpointTablet = window.matchMedia(`(min-width:${TABLET_WIDTH_MIN}px) and (max-width:${TABLET_WIDTH_MAX}px)`);
 
 const activeAccordionElements = (accordion) => {
   const accordionElements = accordion.querySelectorAll('.accordion__element');
@@ -15,11 +19,11 @@ const hideAccordionElements = (accordion) => {
   });
 };
 
-const defineTypeOfWindow = (width) => {
+const defineTypeOfWindow = () => {
   let typeOfWindow = '';
-  if (width > TABLET_WIDTH_MAX) {
+  if (breakpointDesktop.matches) {
     typeOfWindow = 'desktop';
-  } else if (width <= TABLET_WIDTH_MAX && width >= TABLET_WIDTH_MIN) {
+  } else if (breakpointTablet.matches) {
     typeOfWindow = 'tablet';
   } else {
     typeOfWindow = 'mobile';
@@ -34,10 +38,10 @@ const initFilterAccordion = () => {
   }
 
   // Проверка на изменение ширины экрана
-  let initialPageWidthType = defineTypeOfWindow(window.innerWidth);
+  let initialPageWidthType = defineTypeOfWindow();
 
   window.addEventListener('resize', () => {
-    const newPageWidthType = defineTypeOfWindow(window.innerWidth);
+    const newPageWidthType = defineTypeOfWindow();
     if (newPageWidthType !== initialPageWidthType) {
       if (newPageWidthType === 'desktop' || newPageWidthType === 'mobile') {
         initialPageWidthType = newPageWidthType;

@@ -2208,22 +2208,30 @@ button,
   align-items: flex-start;
 }
 
+.footer a.footer__logo {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.footer a.footer__logo.focus-visible:focus {
+  opacity: 0.6;
+}
+
+.footer a.footer__logo.focus-visible:focus:active {
+  opacity: 0.3;
+}
+
 .footer__logo {
   margin-top: 7px;
 }
 
-.footer__catalog .footer__logo {
-  margin: 4px;
-}
-
-.footer__logo-icon {
+.footer__logo img {
   width: 200px;
   height: 50px;
 }
 
-.footer__logo-icon--tablet,
-.footer__logo-icon--mobile {
-  display: none;
+.footer__catalog .footer__logo {
+  margin: 4px;
 }
 
 .footer__social {
@@ -4325,7 +4333,7 @@ button,
 
 .companions__profile h3 {
   text-align: center;
-  margin: 32px 30px 0;
+  margin: 39px 30px 0;
   position: relative;
   z-index: 1;
   word-break: break-word;
@@ -4563,7 +4571,7 @@ button,
   color: #1d2e5b;
 }
 
-.companions--cards .companions__flag svg {
+.companions--cards .companions__flag img {
   position: absolute;
   left: 0;
   top: 0;
@@ -4679,8 +4687,8 @@ button,
 }
 
 .profile {
-  padding-top: 99px;
-  padding-bottom: 65px;
+  padding-top: 103px;
+  padding-bottom: 63px;
 }
 
 .profile .container {
@@ -4820,7 +4828,7 @@ button,
   color: #ffffff;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
   word-break: break-all;
 }
 
@@ -6481,17 +6489,9 @@ button,
     margin-top: 11px;
   }
 
-  .footer__logo-icon {
+  .footer__logo img {
     width: 166px;
     height: 42px;
-  }
-
-  .footer__logo-icon--desktop {
-    display: none;
-  }
-
-  .footer__logo-icon--tablet {
-    display: block;
   }
 
   .footer__social {
@@ -6947,7 +6947,7 @@ button,
   }
 
   .companions__profile h3 {
-    margin-top: 10px;
+    margin-top: 17px;
   }
 
   .companions__profile:nth-child(2n-1) {
@@ -7064,7 +7064,7 @@ button,
     font-size: 20px;
   }
 
-  .companions--cards .companions__flag svg {
+  .companions--cards .companions__flag img {
     width: 43.5px;
     height: 25px;
   }
@@ -7768,8 +7768,21 @@ button,
   }
 
   .footer {
-    padding-top: 35px;
+    padding-top: 38px;
+    padding-bottom: 100px;
     border-radius: 28px 28px 0 0;
+  }
+
+  .footer::before {
+    content: "";
+    position: absolute;
+    bottom: 63px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    width: calc(100% - 48px);
+    height: 1px;
+    background-color: #f2f2f2;
   }
 
   .footer .container {
@@ -7786,21 +7799,13 @@ button,
     justify-content: center;
   }
 
-  .footer__logo-icon {
-    width: 96px;
+  .footer__logo img {
+    width: 95px;
     height: 15px;
   }
 
-  .footer__logo-icon--tablet {
-    display: none;
-  }
-
-  .footer__logo-icon--mobile {
-    display: block;
-  }
-
   .footer__social {
-    margin: 42px auto 0;
+    margin: 40px auto 0;
   }
 
   .footer__social .social__link {
@@ -8190,7 +8195,7 @@ button,
     z-index: 1;
   }
 
-  .directions__flag svg {
+  .directions__flag img {
     width: inherit;
     height: inherit;
   }
@@ -8306,7 +8311,7 @@ button,
   }
 
   .companions__profile h3 {
-    margin-top: 6px;
+    margin-top: 13px;
   }
 
   .companions__profile h3 span {
@@ -8461,7 +8466,7 @@ button,
     line-height: 16px;
   }
 
-  .companions--cards .companions__flag svg {
+  .companions--cards .companions__flag img {
     width: 26px;
     height: 18px;
     top: 3px;
@@ -9441,6 +9446,14 @@ button,
 
   .nav-link:hover:not(.focus-visible) span:active {
     color: #4e91d1;
+  }
+
+  .footer a.footer__logo:hover:not(.focus-visible) {
+    opacity: 0.6;
+  }
+
+  .footer a.footer__logo:hover:not(.focus-visible):active {
+    opacity: 0.3;
   }
 
   .modal__close-btn:hover:not(.focus-visible) {

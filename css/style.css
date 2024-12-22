@@ -2113,6 +2113,19 @@ button,
   transition: all 0.3s ease;
 }
 
+.header a.header__logo {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.header a.header__logo.focus-visible:focus {
+  opacity: 0.6;
+}
+
+.header a.header__logo.focus-visible:focus:active {
+  opacity: 0.3;
+}
+
 .header__logo {
   position: relative;
   z-index: 1;
@@ -2130,8 +2143,7 @@ button,
   height: 50px;
 }
 
-.header__logo .header__logo-icon--tablet,
-.header__logo .header__logo-icon--mobile {
+.header__logo .header__logo-mobile-icon {
   display: none;
 }
 
@@ -4556,7 +4568,7 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  min-height: 29px;
+  min-height: 28px;
 }
 
 .companions--cards .companions__flag:not(:last-child) {
@@ -5609,7 +5621,7 @@ button,
   font-weight: 700;
   line-height: 60px;
   text-transform: uppercase;
-  color: #192144;
+  color: rgba(25, 33, 68, 0.3);
   word-break: break-all;
   border: none;
   padding: 0;
@@ -5622,6 +5634,10 @@ button,
   display: block;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+
+.filter__tablet-letter-button.js-letter-active {
+  color: #192144;
 }
 
 .filter__tablet-letter-button.focus-visible:focus {
@@ -6022,12 +6038,12 @@ button,
   display: grid;
   -ms-grid-columns: 1fr 6.5% 21.5%;
   grid-template-columns: 1fr 21.5%;
-  -ms-grid-rows: auto 6.5% auto;
+  -ms-grid-rows: auto 0 auto;
   grid-template-areas: "list filter" "controls filter";
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
-  gap: 6.5%;
+  gap: 0 6.5%;
 }
 
 .cards__list {
@@ -6348,24 +6364,40 @@ button,
     transition: all 0.3s ease;
   }
 
+  .header .container {
+    height: 44px;
+  }
+
+  .header__logo img {
+    width: 166px;
+    height: 42px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .header.is-open .header__logo img {
+    opacity: 0;
+    height: 0;
+  }
+
+  .header__logo .header__logo-mobile-icon {
+    display: block;
+    opacity: 0;
+    height: 0;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  .header.is-open .header__logo .header__logo-mobile-icon {
+    opacity: 1;
+    height: 100%;
+  }
+
   .header__logo {
     margin-right: 156px;
     color: #ffffff;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
-  }
-
-  .header__logo img {
-    display: none;
-  }
-
-  .header__logo .header__logo-icon--tablet {
-    display: block;
-  }
-
-  .header__logo .header__logo-icon--tablet svg {
-    width: 166px;
-    height: 42px;
   }
 
   .is-open .header__logo {
@@ -6634,7 +6666,7 @@ button,
   }
 
   .hero {
-    padding-top: 66px;
+    padding-top: 70px;
     position: relative;
     border-radius: unset;
   }
@@ -7308,7 +7340,7 @@ button,
   }
 
   .catalog-title {
-    padding-top: 134px;
+    padding-top: 139px;
     padding-bottom: 74px;
     border-radius: 0 0 60px 60px;
     position: relative;
@@ -7744,20 +7776,24 @@ button,
     padding-right: 16px;
   }
 
+  .header__logo img {
+    display: none;
+  }
+
+  .header__logo .header__logo-mobile-icon {
+    opacity: unset;
+  }
+
   .header__logo {
     margin-right: auto;
     margin-top: 10px;
   }
 
-  .header__logo .header__logo-icon--tablet {
-    display: none;
-  }
-
-  .header__logo .header__logo-icon--mobile {
+  .header__logo .header__logo-mobile-icon {
     display: block;
   }
 
-  .header__logo .header__logo-icon--mobile svg {
+  .header__logo .header__logo-mobile-icon svg {
     width: 96px;
     height: 15px;
   }
@@ -8393,6 +8429,7 @@ button,
     grid-template-areas: "avatar title title" "description description description" "flags flags flags" "styles styles progress" "buttons-wrapper buttons-wrapper buttons-wrapper";
     -ms-grid-columns: 89px 1fr 98px;
     grid-template-columns: 89px 1fr 98px;
+    border-radius: 20px;
   }
 
   .companions--cards .companions__profile > h3 {
@@ -8426,10 +8463,10 @@ button,
   }
 
   .companions--cards .companions__profile h3 span::before {
-    top: 10px;
+    top: 8px;
     width: 6px;
     height: 6px;
-    right: -31px;
+    right: -32px;
   }
 
   .companions--cards .companions__profile p {
@@ -8452,7 +8489,7 @@ button,
   }
 
   .companions--cards .companions__flags {
-    margin-bottom: 4px;
+    margin-bottom: 7px;
     padding: 44px 12px 0 25px;
     display: block;
   }
@@ -9047,6 +9084,7 @@ button,
     font-size: 14px;
     font-weight: 500;
     line-height: 14px;
+    color: #192144;
     background-color: #ffffff;
     width: 43px;
     height: 40px;
@@ -9446,6 +9484,14 @@ button,
 
   .nav-link:hover:not(.focus-visible) span:active {
     color: #4e91d1;
+  }
+
+  .header a.header__logo:hover:not(.focus-visible) {
+    opacity: 0.6;
+  }
+
+  .header a.header__logo:hover:not(.focus-visible):active {
+    opacity: 0.3;
   }
 
   .footer a.footer__logo:hover:not(.focus-visible) {

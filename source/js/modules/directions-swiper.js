@@ -8,6 +8,8 @@ const AUTOPLAY_DELAY = 3000;
 const PAGE_RELOAD_DELAY = 1000;
 const TABLET_WIDTH = 768;
 
+const breakpoint = window.matchMedia(`(min-width:${TABLET_WIDTH}px)`);
+
 const onPageResize = () => {
   location.reload();
 };
@@ -42,19 +44,17 @@ const initDirectionsSwiper = () => {
 
   // Проверка на ширину экрана
   // Swiper активизируется только на desktop и tablet разметке
-  if (window.innerWidth >= TABLET_WIDTH) {
+  if (breakpoint.matches) {
     createSwiper();
   }
-  const initialPageWidth = window.innerWidth;
+  const initialPageWidthIsNotMobile = breakpoint.matches;
   // Проверка на изменение ширины экрана
   window.addEventListener('resize', () => {
-    const newPageWidth = window.innerWidth;
-
-    if (initialPageWidth < TABLET_WIDTH && newPageWidth >= TABLET_WIDTH || initialPageWidth >= TABLET_WIDTH && newPageWidth < TABLET_WIDTH) {
+    const newPageWidthIsNotMobile = breakpoint.matches;
+    if (initialPageWidthIsNotMobile !== newPageWidthIsNotMobile) {
       throttledPageResizing();
     }
   });
-
 };
 
 export {initDirectionsSwiper};

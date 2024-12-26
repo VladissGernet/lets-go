@@ -1,7 +1,7 @@
 .header {
   padding-top: 47px;
   background-color: $chambray;
-  z-index: 1;
+  z-index: 4;
 
   @include vp-1023 {
     padding-top: 45px;

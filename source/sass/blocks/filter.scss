@@ -240,6 +240,16 @@
     cursor: pointer;
     user-select: none;
 
+    transition: all $trans-default;
+
+    @include hover-focus {
+      opacity: 0.6;
+
+      &:active {
+        opacity: 0.3;
+      }
+    }
+
     @include vp-1279 {
       font-size: 16px;
     }

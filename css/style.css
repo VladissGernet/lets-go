@@ -2099,7 +2099,7 @@ button,
 .header {
   padding-top: 47px;
   background-color: #516172;
-  z-index: 1;
+  z-index: 4;
 }
 
 .header .container {
@@ -3569,45 +3569,14 @@ button,
 }
 
 .hero {
+  margin-bottom: -60px;
   background-color: #516172;
   position: relative;
   min-height: 642px;
   border-radius: 0 0 58px 58px;
   padding-top: 95px;
-}
-
-.hero::before {
-  position: absolute;
-  content: "";
-  bottom: 0;
-  right: 0;
-  width: 116px;
-  height: 116px;
-  z-index: 1;
-  background-color: #272b3b;
-  -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, from(#272b3b), to(#272b3b)), radial-gradient(circle 72px at center, #272b3b 80%, transparent 81%);
-  -webkit-mask-image: linear-gradient(to top, #272b3b, #272b3b), radial-gradient(circle 72px at center, #272b3b 80%, transparent 81%);
-  mask-image: -webkit-gradient(linear, left bottom, left top, from(#272b3b), to(#272b3b)), radial-gradient(circle 72px at center, #272b3b 80%, transparent 81%);
-  mask-image: linear-gradient(to top, #272b3b, #272b3b), radial-gradient(circle 72px at center, #272b3b 80%, transparent 81%);
-  -webkit-mask-size: 58px 58px, 100%;
-  mask-size: 58px 58px, 100%;
-  -webkit-mask-position: bottom right, center;
-  mask-position: bottom right, center;
-  -webkit-mask-repeat: no-repeat, repeat;
-  mask-repeat: no-repeat, repeat;
-  -webkit-mask-composite: source-out;
-  mask-composite: subtract;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #272b3b;
-  height: 201px;
-  z-index: -1;
+  overflow: hidden;
+  z-index: 3;
 }
 
 .hero__background {
@@ -3788,7 +3757,7 @@ button,
 }
 
 .about {
-  padding-top: 86px;
+  padding-top: 146px;
   padding-bottom: 64px;
   background-color: #272b3b;
   overflow: hidden;
@@ -6661,14 +6630,23 @@ button,
     max-width: 200px;
   }
 
-  .hero::before {
-    display: none;
+  .hero::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #272b3b;
+    height: 201px;
+    z-index: -1;
   }
 
   .hero {
     padding-top: 70px;
     position: relative;
     border-radius: unset;
+    overflow: visible;
+    margin-bottom: 0;
   }
 
   .hero::after {
@@ -7963,6 +7941,10 @@ button,
     border-radius: unset;
   }
 
+  .hero__item:nth-child(4n) {
+    padding-right: 20px;
+  }
+
   .hero__item {
     padding: 22px 20px 22px 25px;
     display: -ms-grid;
@@ -8224,10 +8206,10 @@ button,
   }
 
   .directions__flag {
-    top: 88px;
+    top: 91px;
     left: 25px;
     width: 35px;
-    height: 32px;
+    height: 25px;
     z-index: 1;
   }
 
